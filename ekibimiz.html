@@ -19,20 +19,22 @@
             z-index: 2;
         }
 
-        .glow {
-            position: absolute;
-            inset: -20px;
-            z-index: 1;
-            background: radial-gradient(circle,
-                rgba(254, 26, 80, 0.65),
-                rgba(120, 0, 255, 0.45),
-                transparent 90%);
-            filter: blur(35px);
-            opacity: 0;
-            transition: opacity 0.4s ease;
-            animation: glowMove 6s infinite linear;
-            pointer-events: none;
-        }
+    .glow {
+        position: absolute;
+        inset: -20px;
+        z-index: 1;
+
+        background: radial-gradient(circle,
+        var(--glow-color1, rgba(254, 26, 80, 0.65)),
+        var(--glow-color2, rgba(120, 0, 255, 0.45)),
+        transparent 90%);
+
+        filter: blur(35px);
+        opacity: 0;
+        transition: opacity 0.4s ease;
+        animation: glowMove 6s infinite linear;
+        pointer-events: none;
+    }
 
         .music-card.playing .glow {
             opacity: 0.85;
@@ -99,24 +101,27 @@
             <p>As long as i breath this fansub shall not be fall down</p>
         </div>
 
-        <div class="team-card">
-            <div class="project-image">
-                <img src="ekip-pp/images.jpeg" alt="Azra">
-            </div>
+        <div class="team-card music-card" style="--glow-color1: rgba(255, 70, 130, 0.75); --glow-color2: rgba(106, 16, 16, 0.985);">
+            <div class="project-image" onclick="playMusic('azraMusic', this)">
+            <div class="glow"></div>
+            <img src="ekip-pp/images.jpeg" alt="Azra">
+        </div>
             <h3>Leydi Azra</h3>
             <p>Redaktör</p>
-            <p>KarBon'u seviyorum</p>
+            <p>KarBon'a çok aşığım</p>
         </div>
+        <audio id="azraMusic" src="Azraeasteregg.mp3"></audio>
 
-        <div class="team-card">
-            <div class="project-image">
+        <div class="team-card music-card" style="--glow-color1: rgba(255, 0, 0, 0.75); --glow-color2: rgba(141, 0, 144, 0.985);">
+            <div class="project-image" onclick="playMusic('karbonMusic', this)">
+                <div class="glow"></div>
                 <img src="ekip-pp/images2.jpeg" alt="KarBon">
             </div>
             <h3>KarBon Sama</h3>
             <p>Redaktör/Yönetici</p>
             <p>Azra'ya çok aşığım</p>
         </div>
-
+            <audio id="karbonMusic" src="Karboneasteregg.mp3"></audio>
 
         <div class="team-card">
             <div class="project-image">
@@ -156,17 +161,16 @@
             <p>Yoğurtlu Pilav</p>
         </div>
 
-        <div class="team-card music-card">
-            <div class="project-image" onclick="playMusic()">
+        <div class="team-card music-card" style="--glow-color1: rgb(217, 0, 255); --glow-color2: rgb(0, 0, 0);">
+            <div class="project-image" onclick="playMusic('toprakMusic', this)">
                 <div class="glow"></div>
-                <img src="ekip-pp/Toprağammm.jpg" alt="Redpandapp">
-            </div>
+                    <img src="ekip-pp/Toprağammm.jpg" alt="Redpandapp">
+                </div>
             <h3>RedPandaa</h3>
             <p>Çevirmen</p>
             <p>Sabah Tornacı Akşam Purnacı</p>
         </div>
-
-        <audio id="music" src="Toprakeasteregg.mp3"></audio>
+        <audio id="toprakMusic" src="Toprakeasteregg.mp3"></audio>
 
         <div class="team-card">
             <div class="project-image">
@@ -225,18 +229,29 @@
 
 <script>
 let fadeInterval;
+let currentMusic = null;
+let currentCard = null;
 
-function playMusic() {
-    const music = document.getElementById("music");
-    const card = document.querySelector(".music-card");
+function playMusic(musicId, clickedElement) {
+    const music = document.getElementById(musicId);
+    const card = clickedElement.closest(".music-card");
 
     clearInterval(fadeInterval);
+
+    if (currentMusic && currentMusic !== music) {
+        currentMusic.pause();
+        currentMusic.currentTime = 0;
+        if (currentCard) currentCard.classList.remove("playing");
+    }
 
     if (music.paused) {
         music.volume = 0;
         music.play();
 
         card.classList.add("playing");
+
+        currentMusic = music;
+        currentCard = card;
 
         let volume = 0;
         const target = 0.25;
@@ -257,6 +272,9 @@ function playMusic() {
         music.pause();
         music.currentTime = 0;
         card.classList.remove("playing");
+
+        currentMusic = null;
+        currentCard = null;
     }
 }
 </script>
