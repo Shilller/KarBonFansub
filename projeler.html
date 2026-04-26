@@ -107,7 +107,9 @@
             <div class="project-grid">
 
                 <a href="projeler/andrew-ve-reneenin-tabutu/index.html" class="project-card">
-                    <div class="project-image"> <img src="projeler/andrew-ve-reneenin-tabutu/Yeni_Proje_25.png" alt=""></div>
+                    <div class="project-image random-image" data-images="projeler/andrew-ve-reneenin-tabutu/Yeni_Proje_25.png|projeler/andrew-ve-reneenin-tabutu/tcoaarpng.png">
+                    <img src="projeler/andrew-ve-reneenin-tabutu/Yeni_Proje_25.png" alt="Andrew ve Renee'nin Tabutu">
+                    </div>
                     <h3>Andrew ve Renee'nin Tabutu</h3>
                     <p>Orjinal oyunun fan yapımı alternatif versiyonu.</p>
                     <span class="project-meta">Psikolojik Korku / +16</span>
@@ -158,7 +160,15 @@
         <a href="bize-katilin.html" class="btn">Bize Katılın</a>
         <a href="bagis.html" class="btn">Bağış</a>
     </div>
+<script>
+document.querySelectorAll(".random-image").forEach(function(box) {
+    const images = box.dataset.images.split("|");
+    const randomImage = images[Math.floor(Math.random() * images.length)];
+    const img = box.querySelector("img");
 
+    img.src = randomImage;
+});
+</script>
 </body>
 
 </html>
