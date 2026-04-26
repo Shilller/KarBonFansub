@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <link rel="icon" href="icon.ico">
+    <meta charset="UTF-8">
+    <title>Ekibimiz</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css">
+
+    <style>
+        .music-card .project-image {
+            position: relative;
+            cursor: pointer;
+            overflow: visible;
+        }
+
+        .music-card .project-image img {
+            position: relative;
+            z-index: 2;
+        }
+
+        .glow {
+            position: absolute;
+            inset: -20px;
+            z-index: 1;
+            background: radial-gradient(circle,
+                rgba(254, 26, 80, 0.65),
+                rgba(120, 0, 255, 0.45),
+                transparent 90%);
+            filter: blur(35px);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            animation: glowMove 6s infinite linear;
+            pointer-events: none;
+        }
+
+        .music-card.playing .glow {
+            opacity: 0.85;
+        }
+
+        @keyframes glowMove {
+            0% {
+                transform: scale(1) rotate(0deg);
+            }
+
+            50% {
+                transform: scale(1.15) rotate(180deg);
+            }
+
+            100% {
+                transform: scale(1) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- LOGO -->
+<a href="index.html" class="logo">
+    <img src="../Logomuz.png">
+</a>
+
+<!-- ÜST MENÜ -->
+<div class="top-menu">
+
+    <a href="index.html" class="btn">Ana Sayfa</a>
+    <a href="projeler.html" class="btn">Projeler</a>
+
+    <a href="https://www.youtube.com/@KarBonFansub" target="_blank" class="social yt">
+        <i class="bi bi-youtube"></i>
+    </a>
+
+    <a href="https://discord.gg/yXbsKXv8J7" target="_blank" class="social dc">
+        <i class="bi bi-discord"></i>
+    </a>
+
+    <a href="bize-katilin.html" class="btn">Bize Katılın</a>
+    <a href="bagis.html" class="btn">Bağış</a>
+
+</div>
+
+<div class="line"></div>
+
+<!-- CONTENT -->
+<div class="content">
+
+    <div class="page-title">
+        <h1>Ekibimiz</h1>
+    </div>
+
+    <div class="project-grid">
+
+        <div class="team-card">
+            <div class="project-image">
+                <img src="../ekip-pp/yeni pp fotosu.jpg" alt="Shilller">
+            </div>
+            <h3>Shilller</h3>
+            <p>Yönetici/Çevirmen/Paketleme</p>
+            <p>As long as i breath this fansub shall not be fall down</p>
+        </div>
+
+        <div class="team-card">
+            <div class="project-image">
+                <img src="../ekip-pp/images.jpg" alt="KarBon">
+            </div>
+            <h3>KarBon Sama</h3>
+            <p>Redaktör/Yönetici</p>
+            <p>Azra'yı seviyorum</p>
+        </div>
+
+        <div class="team-card">
+            <div class="project-image">
+                <img src="../ekip-pp/images2.jpg" alt="Azra">
+            </div>
+            <h3>Leydi Azra</h3>
+            <p>Redaktör</p>
+            <p>KarBon'u seviyorum</p>
+        </div>
+
+        <div class="team-card">
+            <div class="project-image">
+                <img src="../ekip-pp/Korsanmaid.png" alt="korsanmaid">
+            </div>
+            <h3>Korsan Maid</h3>
+            <p>Play Tester</p>
+            <p>"Kader Mahkumu"-KarBon</p>
+        </div>
+
+        <div class="team-card">
+            <div class="project-image">
+                <img src="ekip-pp/hasmetlikesi.jfif" alt="Nisa">
+            </div>
+            <h3>Haşmetli Kedi</h3>
+            <p>Redaktör</p>
+            <p>"Kaplumbağa"-KorsanMaid</p>
+        </div>
+
+        <div class="team-card">
+            <div class="project-image">
+                <a href="Secret.html" target="_blank">
+                    <img src="ekip-pp/Uttku.jpg" alt="utku">
+                </a>
+            </div>
+            <h3>Uttukiş</h3>
+            <p>Çevirmen</p>
+            <p>Soytarı Loli</p>
+        </div>
+
+        <div class="team-card">
+            <div class="project-image">
+                <img src="ekip-pp/North.jpg" alt="Northwind">
+            </div>
+            <h3>NorthWind</h3>
+            <p>Çevirmen</p>
+            <p>Yoğurtlu Pilav</p>
+        </div>
+
+        <div class="team-card music-card">
+            <div class="project-image" onclick="playMusic()">
+                <div class="glow"></div>
+                <img src="ekip-pp/Toprağammm.jpg" alt="Redpandapp">
+            </div>
+            <h3>RedPandaa</h3>
+            <p>Çevirmen</p>
+            <p>Sabah Tornacı Akşam Purnacı</p>
+        </div>
+
+        <audio id="music" src="Toprakeasteregg.mp3"></audio>
+
+        <div class="team-card">
+            <div class="project-image">
+                <img src="ekip-pp/.jpg" alt="İzban">
+            </div>
+            <h3>İzban</h3>
+            <p>Sözde Çizer</p>
+            <p>Logo tasarımcısı</p>
+        </div>
+
+        <div class="team-card">
+            <div class="project-image">
+                <img src="ekip-pp/image.png" alt="Etrickster">
+            </div>
+            <h3>Etrickster</h3>
+            <p>Çevirmen</p>
+            <p>Açıklama istenecek</p>
+        </div>
+
+        <!-- BOŞ -->
+        <div class="team-card empty">
+            <div class="project-image"></div>
+            <h3>???</h3>
+        </div>
+
+        <!-- BOŞ -->
+        <div class="team-card empty">
+            <div class="project-image"></div>
+            <h3>???</h3>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="line"></div>
+
+<!-- ALT MENÜ -->
+<div class="bottom-menu">
+
+    <a href="index.html" class="btn">Ana Sayfa</a>
+    <a href="projeler.html" class="btn">Projeler</a>
+
+    <a href="https://www.youtube.com/@KarBonFansub" target="_blank" class="social yt">
+        <i class="bi bi-youtube"></i>
+    </a>
+
+    <a href="https://discord.gg/yXbsKXv8J7" target="_blank" class="social dc">
+        <i class="bi bi-discord"></i>
+    </a>
+
+    <a href="bize-katilin.html" class="btn">Bize Katılın</a>
+    <a href="bagis.html" class="btn">Bağış</a>
+
+</div>
+
+<script>
+let fadeInterval;
+
+function playMusic() {
+    const music = document.getElementById("music");
+    const card = document.querySelector(".music-card");
+
+    clearInterval(fadeInterval);
+
+    if (music.paused) {
+        music.volume = 0;
+        music.play();
+
+        card.classList.add("playing");
+
+        let volume = 0;
+        const target = 0.25;
+        const step = 0.01;
+
+        fadeInterval = setInterval(() => {
+            volume += step;
+
+            if (volume >= target) {
+                volume = target;
+                clearInterval(fadeInterval);
+            }
+
+            music.volume = volume;
+        }, 150);
+
+    } else {
+        music.pause();
+        music.currentTime = 0;
+        card.classList.remove("playing");
+    }
+}
+</script>
+</body>
+</html>

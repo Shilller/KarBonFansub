@@ -1,0 +1,433 @@
+body {
+margin: 0;
+background: #d3d3d3;
+font-family: "Comic Sans MS", cursive;
+}
+
+/* LOGO */
+.logo {
+position: absolute;
+top: 15px;
+left: 20px;
+}
+
+.logo img {
+height: 60px;
+}
+
+/* MENÜ */
+.top-menu, .bottom-menu {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 15px;
+margin: 20px 0;
+}
+
+/* BUTON */
+.btn {
+background: #2e6b4f;
+color: white;
+padding: 12px 22px;
+border-radius: 10px;
+text-decoration: none;
+}
+
+/* SOSYAL */
+.social {
+width: 40px;
+height: 40px;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+color: white;
+font-size: 20px;
+}
+
+.yt {
+background: red;
+}
+
+.dc {
+background: #5865f2;
+}
+
+/* ÇİZGİ */
+.line {
+width: 80%;
+height: 1px;
+background: #999;
+margin: 20px auto;
+}
+
+/* CONTENT */
+.content {
+width: 80%;
+margin: auto;
+}
+
+/* HERO */
+.hero {
+display: flex;
+gap: 40px;
+align-items: center;
+margin: 60px 0;
+}
+
+.big-box {
+width: 400px;
+height: 250px;
+border: 1px dotted #585555;
+}
+
+.hero-text h1 {
+color: #2e6b4f;
+}
+
+/* KARTLAR */
+.cards {
+display: flex;
+gap: 20px;
+}
+
+.card {
+flex: 1;
+text-align: center;
+}
+
+.box {
+height: 150px;
+border: 1px dotted #585555;
+margin-bottom: 10px;
+}
+
+.page-title {
+text-align: center;
+margin: 40px 0 50px 0;
+}
+
+.page-title h1 {
+margin: 0;
+color: #2e6b4f;
+font-size: 40px;
+}
+
+.project-section {
+margin-bottom: 65px;
+}
+
+.project-section h2 {
+margin-bottom: 25px;
+color: #2e6b4f;
+text-align: left;
+font-size: 30px;
+}
+
+.project-grid {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 25px;
+}
+
+.project-card {
+display: block;
+background: rgba(255, 255, 255, 0.18);
+backdrop-filter: blur(2px);
+padding: 16px;
+border-radius: 18px;
+text-align: center;
+text-decoration: none;
+color: inherit;
+border: 2px solid rgba(46, 107, 79, 0.2);
+box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+}
+
+/* ✅ DÜZELTİLMİŞ FOTO SİSTEMİ */
+.project-image {
+width: 100%;
+aspect-ratio: 1 / 1;
+overflow: hidden;
+border-radius: 12px;
+margin-bottom: 15px;
+}
+
+.project-image img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.project-card:hover {
+transform: translateY(-5px);
+background: rgba(255, 255, 255, 0.28);
+box-shadow: 0 14px 24px rgba(0, 0, 0, 0.12);
+}
+
+.project-card h3 {
+margin: 10px 0 8px 0;
+color: #2e6b4f;
+font-size: 24px;
+}
+
+.project-card p {
+margin: 0 0 10px 0;
+color: #333;
+font-size: 18px;
+line-height: 1.4;
+}
+
+.project-meta {
+display: block;
+color: #4c5a53;
+font-size: 16px;
+}
+
+/* BOŞ KARTLAR */
+.project-card.empty {
+position: relative;
+background: linear-gradient(145deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
+border: 2px dashed rgba(70, 70, 70, 0.35);
+box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08);
+opacity: 0.85;
+pointer-events: none;
+}
+
+.project-card.empty:hover {
+transform: none;
+box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08);
+background: linear-gradient(145deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
+}
+
+.empty-image {
+display: flex;
+align-items: center;
+justify-content: center;
+background:
+linear-gradient(135deg, rgba(255,255,255,0.08), rgba(0,0,0,0.03)),
+repeating-linear-gradient(
+45deg,
+rgba(0,0,0,0.03),
+rgba(0,0,0,0.03) 12px,
+rgba(255,255,255,0.03) 12px,
+rgba(255,255,255,0.03) 24px
+);
+border: 2px dashed rgba(90, 90, 90, 0.45);
+}
+
+.empty-image span {
+font-size: 64px;
+color: rgba(70, 70, 70, 0.45);
+text-shadow: 0 2px 4px rgba(255,255,255,0.35);
+}
+
+.project-card.empty h3 {
+color: #666;
+letter-spacing: 2px;
+}
+
+.project-card.empty p,
+.project-card.empty .project-meta {
+color: #777;
+}
+
+@media (max-width: 1100px) {
+.project-grid {
+grid-template-columns: repeat(2, 1fr);
+}
+}
+
+@media (max-width: 650px) {
+.project-grid {
+grid-template-columns: 1fr;
+}
+}
+/* EKİBİMİZ KARTLARI */
+.team-card {
+display: block;
+background: rgba(255, 255, 255, 0.18);
+backdrop-filter: blur(2px);
+padding: 16px;
+border-radius: 18px;
+text-align: center;
+color: inherit;
+border: 2px solid rgba(46, 107, 79, 0.2);
+box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+.team-card h3 {
+margin: 10px 0 8px 0;
+color: #2e6b4f;
+font-size: 24px;
+}
+
+.team-card p {
+margin: 0 0 10px 0;
+color: #333;
+font-size: 18px;
+line-height: 1.4;
+}
+
+.team-card.empty {
+position: relative;
+background: linear-gradient(145deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
+border: 2px dashed rgba(70, 70, 70, 0.35);
+box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08);
+opacity: 0.85;
+pointer-events: none;
+}
+
+.team-card.empty h3,
+.team-card.empty p {
+color: #777;
+}
+.hero-text img {
+    width: 100%;
+    max-width: 620px;
+    height: auto;
+    border-radius: 14px;
+    display: block;
+    margin-bottom: 20px;
+}
+.big-box,
+.box {
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.big-box img,
+.box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.box {
+    height: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+     object-position: top;
+}
+.discord-stats {
+    margin: 30px auto;
+    width: fit-content;
+}
+.discord-presence-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 35px 0;
+}
+
+.discord-presence-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 18px;
+    padding: 22px 28px;
+    min-width: 280px;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.10);
+    text-align: center;
+}
+
+.discord-presence-card h3 {
+    margin: 0 0 18px 0;
+    color: #2e6b4f;
+    font-size: 26px;
+}
+
+.presence-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 12px 14px;
+    margin-bottom: 12px;
+    border-radius: 12px;
+    font-size: 20px;
+    background: rgba(0, 0, 0, 0.04);
+}
+
+.presence-row:last-child {
+    margin-bottom: 0;
+}
+
+.presence-row .label {
+    flex: 1;
+    text-align: left;
+    font-weight: bold;
+}
+
+.presence-row .count {
+    font-weight: bold;
+    color: #222;
+}
+
+.dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    display: inline-block;
+    animation: pulse 1.6s infinite;
+}
+
+.online .dot {
+    background: #2ecc71;
+    box-shadow: 0 0 10px rgba(46, 204, 113, 0.6);
+}
+
+.offline .dot {
+    background: #e74c3c;
+    box-shadow: 0 0 10px rgba(231, 76, 60, 0.45);
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.18);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+.reklam-alani {
+  width: 728px;
+  height: 90px;
+  margin: 20px auto;
+  overflow: hidden;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .reklam-alani {
+    width: 100%;
+    max-width: 728px;
+    transform: scale(0.85);
+    transform-origin: top center;
+    height: 90px;
+  }
+}
+    
+.cards .box {
+    aspect-ratio: 1 / 1;
+    height: auto;
+}
+
+.cards .box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+.cards .card:nth-child(2) .box img {
+    object-fit: contain;
+    background: #111;
+}
