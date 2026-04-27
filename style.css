@@ -1,7 +1,7 @@
 body {
     margin: 0;
     background: #d3d3d3;
-    font-family: 'Comic Neue', "Comic Sans MS", cursive, sans-serif;
+    font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
 /* LOGO */
@@ -557,67 +557,29 @@ color: #777;
 
     body {
         overflow-x: hidden;
+        font-family: "Comic Sans MS", cursive, sans-serif;
+        line-height: 1.5;
     }
 
     .logo {
         position: static;
         display: flex;
         justify-content: center;
-        margin: 18px 0 10px 0;
-    }
-
-    .logo img {
-        height: 70px;
+        margin: 15px 0;
     }
 
     .top-menu,
     .bottom-menu {
-        width: 92%;
-        margin: 15px auto;
-        display: flex;
         flex-wrap: wrap;
         justify-content: center;
         gap: 10px;
-    }
-
-    .btn {
-        padding: 11px 16px;
-        font-size: 15px;
-        border-radius: 9px;
-    }
-
-    .social {
-        width: 42px;
-        height: 42px;
-        font-size: 20px;
-        flex-shrink: 0;
-    }
-
-    .line {
-        width: 90%;
-        margin: 28px auto;
-    }
-
-    .content {
-        width: 92%;
-    }
-
-    .discord-presence-card {
-        width: 82%;
-        min-width: unset;
-        padding: 16px;
-    }
-
-    .presence-row {
-        font-size: 16px;
-        gap: 8px;
+        padding: 0 10px;
     }
 
     .hero {
         flex-direction: column;
         text-align: center;
-        gap: 18px;
-        margin: 35px 0;
+        gap: 20px;
     }
 
     .big-box {
@@ -626,43 +588,18 @@ color: #777;
         aspect-ratio: 16 / 9;
     }
 
-    .hero-text h1 {
-        font-size: 30px;
-        margin-top: 10px;
-    }
-
-    .hero-text p {
-        font-size: 16px;
-        line-height: 1.5;
-    }
-
     .cards {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 18px;
-    }
-
-    .card {
-        width: 100%;
+        gap: 15px;
     }
 
     .box {
-        width: 100%;
-        height: auto;
         aspect-ratio: 1 / 1;
+        height: auto;
     }
 
-    .card h3 {
-        font-size: 17px;
-        margin: 8px 0 6px;
-    }
-
-    .card p {
-        font-size: 14px;
-        margin: 0;
-    }
-
-    .page-title h1 {
-        font-size: 30px;
+    .content {
+        width: 92%;
     }
 }
