@@ -1,7 +1,7 @@
 body {
 margin: 0;
 background: #d3d3d3;
-font-family: "Comic Sans MS", cursive;
+font-family: "Comic Sans MS", "Comic Neue", cursive, sans-serif;
 }
 
 /* LOGO */
