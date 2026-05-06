@@ -8,7 +8,237 @@
     <link rel="stylesheet" href="../../style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css">
 
-    <style> @font-face { font-family: 'Faustina'; src: url('Faustina-Regular.ttf') format('truetype'); } body { margin: 0; font-family: 'Faustina', serif; background: linear-gradient(rgba(8,12,16,0.88), rgba(5,8,12,0.95)), url("arka-plan.jpg") center/cover fixed no-repeat; color: #e6edf3; } .theme-overlay { width: 100%; min-height: 100vh; background: linear-gradient( to bottom, rgba(18,26,34,0.25), rgba(8,12,18,0.45) ); } /* MENÜ */ .top-menu .btn, .bottom-menu .btn { background: rgba(40,55,70,0.85); color: #e6edf3; border: 1px solid rgba(120,160,200,0.25); box-shadow: 0 0 12px rgba(0,0,0,0.25); transition: 0.25s ease; } .top-menu .btn:hover, .bottom-menu .btn:hover { background: rgba(60,80,100,0.95); box-shadow: 0 0 16px rgba(120,170,220,0.35); } /* ÇİZGİ */ .line { width: 80%; height: 1px; margin: 24px auto; background: linear-gradient( to right, transparent, rgba(120,160,200,0.3), transparent ); } .content { width: 82%; margin: auto; } /* BAŞLIK */ .game-title { text-align: center; margin: 30px 0 15px 0; } .game-title h1 { margin: 0; font-size: 46px; color: #f0f6fb; text-shadow: 0 0 12px rgba(120,170,220,0.35); } /* KUTU */ .section-box { background: rgba(20,28,36,0.75); border: 1px solid rgba(120,150,180,0.18); border-radius: 18px; padding: 28px; box-shadow: 0 10px 28px rgba(0,0,0,0.45), inset 0 0 0 1px rgba(255,255,255,0.03); backdrop-filter: blur(3px); } /* LOGO */ .logo-area { text-align: center; } .logo-area img { max-width: 100%; width: 500px; filter: drop-shadow(0 0 14px rgba(0,0,0,0.6)); } /* ALT BAŞLIK */ .section-title { text-align: center; margin-bottom: 20px; font-size: 32px; color: #eaf2f8; text-shadow: 0 0 8px rgba(120,160,200,0.3); } /* METİN */ .description-text { max-width: 900px; margin: 0 auto; text-align: center; font-size: 20px; line-height: 1.8; color: #b9c6d2; } /* STAFF */ .staff-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; } .staff-card { background: rgba(40,55,70,0.45); border: 1px solid rgba(120,150,180,0.15); border-radius: 16px; padding: 20px; text-align: center; box-shadow: inset 0 0 14px rgba(0,0,0,0.2); transition: 0.25s; } .staff-card:hover { background: rgba(60,75,90,0.6); transform: translateY(-2px); } .staff-card h3 { color: #f0f6fb; } .staff-card p { color: #c2ced8; } /* DOWNLOAD */ .download-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 18px; } .download-btn { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; padding: 16px 28px; border-radius: 14px; font-size: 20px; background: linear-gradient(180deg, #3a4b5c, #25313d); color: #f0f6fb; border: 1px solid rgba(120,160,200,0.3); box-shadow: 0 8px 20px rgba(0,0,0,0.3); transition: 0.25s; } .download-btn:hover { background: linear-gradient(180deg, #4c6278, #2f3f4e); box-shadow: 0 10px 24px rgba(0,0,0,0.45); } /* SLIDER */ .slider-wrapper { max-width: 950px; margin: 0 auto; } .slider { position: relative; overflow: hidden; border-radius: 18px; border: 1px solid rgba(120,150,180,0.15); box-shadow: 0 12px 24px rgba(0,0,0,0.35); } .slides { display: flex; transition: transform 0.4s ease; } .slides img { width: 100%; flex-shrink: 0; aspect-ratio: 16 / 9; object-fit: cover; filter: brightness(0.85); } /* SLIDER BUTTON */ .slider-btn { position: absolute; top: 50%; transform: translateY(-50%); width: 52px; height: 52px; border: none; border-radius: 50%; cursor: pointer; background: rgba(30,45,60,0.85); color: #fff; font-size: 24px; } .slider-btn:hover { background: rgba(60,80,100,0.95); } .slider-btn.prev { left: 16px; } .slider-btn.next { right: 16px; } /* DOTS */ .dots { display: flex; justify-content: center; gap: 10px; margin-top: 18px; } .dot { width: 12px; height: 12px; border-radius: 50%; background: rgba(255,255,255,0.2); } .dot.active { background: #6fa8dc; box-shadow: 0 0 10px rgba(111,168,220,0.6); } @media (max-width: 900px) { .staff-grid { grid-template-columns: 1fr; } .game-title h1 { font-size: 34px; } } </style>
+<style>
+@font-face {
+    font-family: 'Pixellium';
+    src: url('Pixellium.ttf') format('truetype');
+}
+
+/* GENEL */
+body {
+    margin: 0;
+    font-family: 'Pixellium', monospace;
+    background: linear-gradient(rgba(8,12,16,0.88), rgba(5,8,12,0.95)), url("arka-plan.jpg") center/cover fixed no-repeat;
+    color: #e6edf3;
+}
+
+.theme-overlay {
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* MENÜ */
+.top-menu, .bottom-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.top-menu .btn, .bottom-menu .btn {
+    background: rgba(40,55,70,0.85);
+    color: #e6edf3;
+    padding: 10px 18px;
+    border-radius: 10px;
+    text-decoration: none;
+    border: 1px solid rgba(120,160,200,0.25);
+     font-size: 22px;
+}
+
+/* ÇİZGİ */
+.line {
+    width: 80%;
+    height: 1px;
+    margin: 24px auto;
+    background: linear-gradient(to right, transparent, rgba(120,160,200,0.3), transparent);
+}
+
+/* CONTENT */
+.content {
+    width: 82%;
+    margin: auto;
+}
+
+.game-title {
+    text-align: center;
+    margin: 40px 0 20px 0;
+}
+
+.game-title h1 {
+    font-family: 'Pixellium';
+    font-size: 64px;
+    letter-spacing: 2px;
+}
+
+/* KUTU */
+.section-box {
+    background: rgba(20,28,36,0.75);
+    border-radius: 18px;
+    padding: 28px;
+    margin-bottom: 30px;
+}
+
+/* LOGO */
+.logo-area {
+    text-align: center;
+}
+
+.logo-area img {
+    width: 400px;
+    max-width: 100%;
+}
+
+/* ALT BAŞLIK */
+.section-title {
+    text-align: center;
+    font-family: 'Pixellium';
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/* METİN */
+.description-text {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    font-size: 26px;
+    line-height: 1.7;
+}
+
+/* STAFF */
+.staff-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 19px;
+}
+
+.staff-card {
+    background: rgba(40,55,70,0.4);
+    padding: 18px;
+    border-radius: 12px;
+    text-align: center;
+    min-height: 160px;
+}
+.staff-card h3 {
+    font-size: 28px;
+}
+
+.staff-card p {
+    font-size: 25px;
+}
+
+/* DOWNLOAD */
+.download-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.download-btn {
+    padding: 14px 24px;
+    border-radius: 10px;
+    font-size: 22px;
+    background: #2f3f4e;
+    color: white;
+    text-decoration: none;
+}
+
+/* SLIDER */
+.slider-wrapper {
+    max-width: 950px;
+    margin: auto;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 18px;
+    border: 1px solid rgba(170, 80, 80, 0.12);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.4s ease;
+}
+
+.slides img {
+    width: 100%;
+    flex-shrink: 0;
+    display: block;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    background: #111;
+    filter: brightness(0.82) contrast(1.05) saturate(0.8);
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 52px;
+    height: 52px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background: rgba(81, 84, 171, 0.78);
+    color: #fff;
+    font-size: 24px;
+    z-index: 2;
+}
+        .slider-btn:hover {
+            background: rgba(57, 112, 160, 0.92);
+        }
+
+        .slider-btn.prev {
+            left: 16px;
+        }
+
+        .slider-btn.next {
+            right: 16px;
+        }
+
+        .dots {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 18px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.18);
+            cursor: pointer;
+            transition: 0.2s ease;
+        }
+
+        .dot.active {
+            background: #a33f3f;
+            box-shadow: 0 0 10px rgba(163, 63, 63, 0.5);
+        }
+
+/* MOBİL */
+@media (max-width: 900px) {
+    .staff-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .game-title h1 {
+        font-size: 36px;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+}
+</style>    
+
 </head>
 <body>
 
@@ -42,11 +272,11 @@
 
             <!-- OYUN LOGOSU -->
             <div class="game-title">
-                <h1>Andrew ve Renee'nin Tabutu</h1>
+                <h1>Klinik Deney</h1>
             </div>
 
             <div class="section-box logo-area">
-                <img src="Book_2.png" alt="OYUN ADI Logo">
+                <img src="oyunlogo.png" alt="OYUN ADI Logo">
             </div>
 
             <div class="line"></div>
@@ -62,9 +292,9 @@
                         </button>
 
                         <div class="slides" id="slides">
-                            <img src="Dönenyazi1.png" alt="Ekran görüntüsü 1">
-                            <img src="ekran2.jpg" alt="Ekran görüntüsü 2">
-                            <img src="ekran3.jpg" alt="Ekran görüntüsü 3">
+                            <img src="Ekrangörüntüsü1.png" alt="Ekran görüntüsü 1">
+                            <img src="Ekrangörüntüsü2.png" alt="Ekran görüntüsü 2">
+                            <img src="Ekrangörüntüsü3.png" alt="Ekran görüntüsü 3">
                         </div>
 
                         <button class="slider-btn next" onclick="changeSlide(1)">
@@ -86,10 +316,13 @@
             <div class="section-box">
                 <h2 class="section-title">Oyun Hakkında</h2>
                 <div class="description-text">
-                    Andy ve Leyley'in Tabutu isimli oyunun alternatif evren modu. <br>
-                    Bu sefer ana karakterlerin annnesi olan Renee orjinal oyunun aksine iyi bir anne olmaya karar veriyor ve
-                    bu kararın sonucunu bu sefer o apartmanda sıkışırak ödüyor. <br>
-                    Uzun zamandır beklenen yamamız elbet bir gün sizlerle olacak. 
+                    Para karşılığında psikiyatrik ilaç testlerine kaydolma ve hasta-sağlık <br>
+                    hizmeti sağlayıcı ilişkileri hakkında bir gerilim hikayesi. <br>
+                    RPGMaker ile yapılmış hikaye odaklı oyun. Etrafta gezip görebileceğiniz <br>
+                    görsel roman gerçeklik testi simülasyonu. <br>
+                    Yetişkinlere yönelik yapılmıştır. Korkunç ve rahatsız edici öğeler içerir. <br>
+                    Yaklaşık oynanış süresi: 3 saat. Oyunda iki son bulunmaktadır. <br>
+                    Not: Bu yama <b>Bara Hana ekibine aittir.</b>
                 </div>
             </div>
 
@@ -102,17 +335,17 @@
                 <div class="staff-grid">
                     <div class="staff-card">
                         <h3>Çeviri</h3>
-                        <p>Shilller / Uttukiş / NorthWind</p>
+                        <p>_._Kirigaya_Kazuto_._  / Korsanmaid / Gamedese / Minnestbird / Mramor</p>
                     </div>
 
                     <div class="staff-card">
                         <h3>Redakte</h3>
-                        <p>Haşmetli Kedi</p>
+                        <p>Ayzakki / Kedonivon</p>
                     </div>
 
                     <div class="staff-card">
                         <h3>Kalite Kontrol Ve Test</h3>
-                        <p>KarBon Sama / İlhamBey</p>
+                        <p>Shilller / İhate.money</p>
                     </div>
                 </div>
             </div>
@@ -124,17 +357,17 @@
                 <h2 class="section-title">Yükleme Linkleri</h2>
 
                 <div class="download-links">
-                    <a href="dosyalar/dosyadi.zip" class="download-btn" download="Divilethion-Turkce-Yama.zip">
+                    <a href="https://github.com/Shilller/KarBonFansub/releases/download/V1.2/Klinik.Deney.V1.2.zip" class="download-btn" download="Klinik Deney V1.2.zip">
                         <i class="bi bi-download"></i>
                         İndir
                     </a>
 
-                    <a href="BURAYA_ITCHIO_LINKI" class="download-btn" target="_blank">
+                    <a href="https://shilller.itch.io/clinical-trial-turkish-language" class="download-btn" target="_blank">
                         <i class="bi bi-controller"></i>
                         Itch.io Sayfası
                     </a>
 
-                    <a href="BURAYA_ALTERNATIF_LINK" class="download-btn" target="_blank">
+                    <a href="https://drive.google.com/file/d/1XPHoAWIvzxIqlwKyOJG9AvNmls-mPb0o/view?usp=sharing" class="download-btn" target="_blank">
                         <i class="bi bi-box-arrow-up-right"></i>
                         Alternatif Link
                     </a>

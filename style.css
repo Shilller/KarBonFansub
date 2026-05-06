@@ -1,18 +1,18 @@
 body {
     margin: 0;
     background: #d3d3d3;
-    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-family: "Comic Sans MS", sans-serif;
 }
 
 /* LOGO */
 .logo {
 position: absolute;
-top: 15px;
-left: 20px;
+top: 2px;
+left: 5px;
 }
 
 .logo img {
-height: 60px;
+height: 100px;
 }
 
 /* MENÜ */
