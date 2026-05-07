@@ -1,7 +1,23 @@
+@font-face {
+    font-family: 'ComicCustom';
+    src: url('fonts/ComicSansMS.ttf') format('truetype');
+}
 body {
     margin: 0;
     background: #d3d3d3;
     font-family: "Comic Sans MS", sans-serif;
+}
+
+/* SADECE ANA SAYFA */
+.home-page .logo {
+    position: static;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.home-page .logo img {
+    height: 180px;
 }
 
 /* LOGO */
@@ -12,7 +28,7 @@ left: 5px;
 }
 
 .logo img {
-height: 100px;
+height: 110px;
 }
 
 /* MENÜ */
@@ -431,6 +447,12 @@ color: #777;
     object-fit: contain;
     background: #111;
 }
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
 /* MOBİL UYUMLULUK */
 @media (max-width: 768px) {
 
@@ -447,7 +469,7 @@ color: #777;
     }
 
     .logo img {
-        height: 55px;
+        height: 90px;
     }
 
     .top-menu,
@@ -557,7 +579,7 @@ color: #777;
 
     body {
         overflow-x: hidden;
-        font-family: 'ComicCustom', "Comic Sans MS", cursive, sans-serif;
+        font-family: 'ComicCustom', "Comic Sans MS", sans-serif;
         line-height: 1.5;
     }
 
