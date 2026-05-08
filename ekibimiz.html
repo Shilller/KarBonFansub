@@ -88,6 +88,14 @@ body {
     <a href="bize-katilin.html" class="btn">Bize Katılın</a>
     <a href="bagis.html" class="btn">Bağış</a>
 
+    <label class="theme-switch">
+  <input type="checkbox" onchange="toggleTheme()" id="themeToggle">
+  <span class="slider">
+    <span class="icon sun">☀️</span>
+    <span class="icon moon">🌙</span>
+  </span>
+  </label>
+
 </div>
 
 <div class="line"></div>
@@ -134,24 +142,6 @@ body {
 
         <div class="team-card">
             <div class="project-image">
-                <img src="ekip-pp/Korsanmaid.png" alt="korsanmaid">
-            </div>
-            <h3>Korsan Maid</h3>
-            <p>Play Tester</p>
-            <p>"Kader Mahkumu"-KarBon</p>
-        </div>
-
-        <div class="team-card">
-            <div class="project-image">
-                <img src="ekip-pp/hasmetlikesi.jfif" alt="Nisa">
-            </div>
-            <h3>Haşmetli Kedi</h3>
-            <p>Redaktör</p>
-            <p>"Kaplumbağa"-KorsanMaid</p>
-        </div>
-
-        <div class="team-card">
-            <div class="project-image">
                     <img src="ekip-pp/Uttku.jpg" alt="utku">
                 </a>
             </div>
@@ -162,11 +152,29 @@ body {
 
         <div class="team-card">
             <div class="project-image">
-                <img src="ekip-pp/North.jpg" alt="Northwind">
+                <img src="ekip-pp/Northwind.png" alt="Northwind">
             </div>
             <h3>NorthWind</h3>
             <p>Çevirmen</p>
             <p>Yoğurtlu Pilav</p>
+        </div>
+
+        <div class="team-card">
+            <div class="project-image">
+                <img src="ekip-pp/hasmetlikesi.jpg" alt="Nisa">
+            </div>
+            <h3>Haşmetli Kedi</h3>
+            <p>Redaktör</p>
+            <p>"Kaplumbağa"-KorsanMaid</p>
+        </div>
+
+                <div class="team-card">
+            <div class="project-image">
+                <img src="ekip-pp/korcanmaid.jpg" alt="korsanmaid">
+            </div>
+            <h3>Korsan Maid</h3>
+            <p>Play Tester</p>
+            <p>"Kader Mahkumu"-KarBon</p>
         </div>
 
         <div class="team-card music-card" style="--glow-color1: rgb(217, 0, 255); --glow-color2: rgb(0, 0, 0);">
@@ -216,6 +224,14 @@ body {
 
 </div>
 
+<!-- Politika ve hakkımızda -->
+
+<div class="footer-links">
+    <a href="Gizlilik-Politikasi.html" target="_blank">Gizlilik Politikası</a>
+    <Span>|</Span>
+    <a href="hakkimizda.html" target="_blank">Hakkımızda</a>
+</div>
+
 <div class="line"></div>
 
 <!-- ALT MENÜ -->
@@ -236,6 +252,8 @@ body {
     <a href="bagis.html" class="btn">Bağış</a>
 
 </div>
+
+<script src="theme.js"></script>
 
 <script>
 let fadeInterval;

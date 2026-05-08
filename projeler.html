@@ -36,7 +36,15 @@
 
         <a href="bize-katilin.html" class="btn">Bize Katılın</a>
         <a href="bagis.html" class="btn">Bağış</a>
+
+        <label class="theme-switch">
+  <input type="checkbox" onchange="toggleTheme()" id="themeToggle">
+  <span class="slider">
+    <span class="icon sun">☀️</span>
+    <span class="icon moon">🌙</span>
+  </span>
     </div>
+    </label>
 
     <!-- AYIRICI -->
     <div class="line"></div>
@@ -55,9 +63,13 @@
             <div class="project-grid">
 
              <a href="projeler/divilethion/index.html" class="project-card">
-    <div class="project-image">
-        <img src="projeler/divilethion/Kapak resmi.png">
+    <div class="project-image random-image"
+         data-images="projeler/divilethion/AZ_COKTAN_IYIDIR.png|projeler/divilethion/Kapak resmi.png">
+
+        <img src="projeler/divilethion/Kapak resmi.png" alt="Divilethion">
+
     </div>
+
     <h3>Divilethion</h3>
     <p>Karbon Fansub'un Yayınladığı ilk proje.</p>
     <span class="project-meta">Visual Novel / +8</span>
@@ -105,7 +117,7 @@
                     </div>
                     <h3>Andrew ve Renee'nin Tabutu</h3>
                     <p>Orjinal oyunun fan yapımı alternatif versiyonu.</p>
-                    <span class="project-meta">Psikolojik Korku / +16</span>
+                    <span class="project-meta">Psikolojik Korku / +18</span>
                 </a>
 
                 <a href="projeler/beceriksiz-noelle/index.html" class="project-card">
@@ -140,6 +152,13 @@
         </div>
 
     </div>
+    <!-- Politika ve hakkımızda -->
+
+<div class="footer-links">
+    <a href="Gizlilik-Politikasi.html" target="_blank">Gizlilik Politikası</a>
+    <Span>|</Span>
+    <a href="hakkimizda.html" target="_blank">Hakkımızda</a>
+</div>
     <div class="line"></div>
     <div class="top-menu">
         <a href="index.html" class="btn">Ana Sayfa</a>
@@ -156,7 +175,12 @@
         <a href="bize-katilin.html" class="btn">Bize Katılın</a>
         <a href="bagis.html" class="btn">Bağış</a>
     </div>
+
+    <script src="theme.js"></script>
+
 <script>
+
+
 document.querySelectorAll(".random-image").forEach(function(box) {
     const images = box.dataset.images.split("|");
     const randomImage = images[Math.floor(Math.random() * images.length)];
