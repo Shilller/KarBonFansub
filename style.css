@@ -46,7 +46,7 @@ body {
 }
 
 .home-page .logo img {
-    height: 180px;
+    height: 220px;
 }
 
 /* LOGO */
@@ -951,4 +951,26 @@ body.dark .partner-card .project-meta {
     .partner-grid {
         grid-template-columns: 1fr;
     }
+}
+.role {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    font-weight: bold;
+}
+
+.role-icon {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+
+    filter: drop-shadow(0 0 4px rgba(0,0,0,0.35));
+}
+body.dark .role-icon {
+    filter:
+        brightness(0)
+        invert(1)
+        drop-shadow(0 0 4px rgba(255,255,255,0.25));
 }
