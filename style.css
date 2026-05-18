@@ -116,20 +116,68 @@ width: 80%;
 margin: auto;
 }
 
-/* HERO */
+/* HERO KARTININ KENDİSİ */
 .hero {
-display: flex;
-gap: 40px;
-align-items: center;
-margin: 60px 0;
+  background-color: #999;
+  display: flex;
+  gap: 30px;                /* Resim ve yazı arasındaki boşluğu biraz açtık */
+  align-items: center;      /* İçindekileri dikeyde ortalar */
+  justify-content: center; 
+  
+  max-width: 1100px;        
+  padding: 30px;            /* Kartın iç nefes alma payını her yönden eşitledik */
+  margin: 20px auto 30px auto; /* Alttaki başlıkla arayı açmamak için alt boşluğu 30px yaptık */
+
+  backdrop-filter: blur(2px);
+  border-radius: 18px;
+  text-decoration: none;
+  color: inherit;
+  border: 2px solid rgba(46, 107, 79, 0.2);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
 }
 
+/* HOVER */
+.hero:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 28px rgba(0, 0, 0, 0.15);
+}
+
+/* 🛠️ YAZILARI SIĞDIRAN VE DÜZENLEYEN KISIM: */
+.hero-text {
+  flex: 1;                  /* Yazı alanının kalan tüm boşluğu kaplamasını sağlar (Sığma problemini çözer) */
+  text-align: left;         /* Uzun paragraflarda 'center' kötü durur, sola hizaladık */
+  font-size: 15px;
+  line-height: 1.6;         /* Satır aralarını açarak okunabilirliği artırdık */
+}
+
+.hero-text h1 {
+  color: #2e6b4f;
+  margin-top: 0;            /* Başlığın tepesindeki gereksiz boşluğu sıfırladık */
+  margin-bottom: 15px;
+}
+
+.hero-text p {
+  margin-bottom: 12px;      /* Paragrafların altına tatlı birer boşluk verdik */
+}
+.hero-text p:last-child {
+  margin-bottom: 0;         /* Son paragrafın alt boşluğunu sıfırladık */
+}
+
+/* 🛠️ RESİM KUTUSU DÜZENLEMESİ */
 .big-box {
-width: 400px;
-height: 250px;
-border: 1px dotted #585555;
+  width: 450px;             /* Yazılara daha çok yer kalsın diye genişliği ideal boyuta çektik */
+  height: 400px;            /* Sabit 600px çok büyüktü, 350px yaparak kartı kibarlaştırdık */
+  flex-shrink: 0;           /* Kart daralınca resmin büzüşmesini engeller */
+  border-radius: 12px;      /* Resim kutusunun köşelerini hafifçe yuvarlattık */
+  overflow: hidden;
 }
 
+.big-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
 .hero-text h1 {
 color: #2e6b4f;
 }
@@ -193,7 +241,6 @@ box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
 transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
 }
 
-/* ✅ DÜZELTİLMİŞ FOTO SİSTEMİ */
 .project-image {
 width: 100%;
 aspect-ratio: 1 / 1;
