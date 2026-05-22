@@ -11,7 +11,7 @@ body.dark {
     --bg: #121212;
     --text: #f1f1f1;
     --card: rgba(255,255,255,0.08);
-    --primary: #6ee7b7;
+    --primary: #4699ef;
 }
 body.dark .presence-row {
     background: rgba(255, 255, 255, 0.05);
@@ -75,7 +75,7 @@ margin: 20px 0;
 
 /* BUTON */
 .btn {
-background: #2e6b4f;
+background: #284063;
 color: white;
 padding: 12px 22px;
 border-radius: 10px;
@@ -152,7 +152,7 @@ margin: auto;
 }
 
 .hero-text h1 {
-  color: #2e6b4f;
+  color: #284063;
   margin-top: 0;            /* Başlığın tepesindeki gereksiz boşluğu sıfırladık */
   margin-bottom: 15px;
 }
@@ -179,7 +179,7 @@ margin: auto;
   object-fit: cover; 
 }
 .hero-text h1 {
-color: #2e6b4f;
+color: #284063;
 }
 
 /* KARTLAR */
@@ -206,7 +206,7 @@ margin: 40px 0 50px 0;
 
 .page-title h1 {
 margin: 0;
-color: #2e6b4f;
+color: #284063;
 font-size: 40px;
 }
 
@@ -216,7 +216,7 @@ margin-bottom: 65px;
 
 .project-section h2 {
 margin-bottom: 25px;
-color: #2e6b4f;
+color: #284063;
 text-align: left;
 font-size: 30px;
 }
@@ -263,7 +263,7 @@ box-shadow: 0 14px 24px rgba(0, 0, 0, 0.12);
 
 .project-card h3 {
 margin: 10px 0 8px 0;
-color: #2e6b4f;
+color: #284063;
 font-size: 24px;
 }
 
@@ -354,7 +354,7 @@ box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
 
 .team-card h3 {
 margin: 10px 0 8px 0;
-color: #2e6b4f;
+color: #284063;
 font-size: 24px;
 }
 
@@ -441,7 +441,7 @@ color: #777;
 
 .discord-presence-card h3 {
     margin: 0 0 18px 0;
-    color: #2e6b4f;
+    color: #284063;
     font-size: 26px;
 }
 
@@ -487,7 +487,7 @@ color: #777;
 }
 
 .online .dot {
-    background: #2ecc71;
+    background: #4699ef;
     box-shadow: 0 0 10px rgba(46, 204, 113, 0.6);
 }
 
@@ -842,7 +842,7 @@ input:checked + .slider:before {
 
 /* dark aktifken */
 input:checked + .slider {
-    background: #2e6b4f;
+    background: #4699ef;
 }
 
 input:checked + .slider:before {
@@ -874,7 +874,7 @@ body.dark .project-meta {
 }
 body.dark .project-card h3,
 body.dark .team-card h3 {
-    color: #6ee7b7;
+    color: #81a9e3;
 }
 body.dark .project-card,
 body.dark .team-card {
@@ -922,7 +922,7 @@ box-shadow: 0 14px 24px rgba(0, 0, 0, 0.12);
 
 .partner-card h3 {
 margin: 10px 0 8px 0;
-color: #2e6b4f;
+color: #284063;
 font-size: 24px;
 }
 
