@@ -75,11 +75,30 @@ margin: 20px 0;
 
 /* BUTON */
 .btn {
-background: #284063;
-color: white;
-padding: 12px 22px;
-border-radius: 10px;
-text-decoration: none;
+    background: #284063;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 10px;
+    text-decoration: none;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0 12px rgba(70, 153, 239, 0.45),
+        0 0 24px rgba(70, 153, 239, 0.25);
+
+    background: #345381;
+}
+
+.btn:active {
+    transform: translateY(0);
 }
 
 /* SOSYAL */
@@ -517,6 +536,19 @@ color: #777;
   overflow: hidden;
   text-align: center;
 }
+    .partner-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .partner-card h3 {
+        font-size: 18px;
+    }
+
+    .partner-card p {
+        font-size: 14px;
+    }
+
 
 @media (max-width: 768px) {
   .reklam-alani {
@@ -526,6 +558,16 @@ color: #777;
     transform-origin: top center;
     height: 90px;
   }
+      .home-page .logo img {
+        height: 110px;
+    }
+        .donation-box {
+        overflow-x: auto;
+    }
+
+    .donation-box > div {
+        min-width: 700px;
+    }
 }
     
 .cards .box {
@@ -1020,4 +1062,11 @@ body.dark .role-icon {
         brightness(0)
         invert(1)
         drop-shadow(0 0 4px rgba(255,255,255,0.25));
+}
+html.dark,
+body.dark {
+    --bg: #121212;
+    --text: #f1f1f1;
+    --card: rgba(255,255,255,0.08);
+    --primary: #4699ef;
 }
