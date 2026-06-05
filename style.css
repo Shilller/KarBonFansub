@@ -190,6 +190,11 @@ margin: auto;
   flex-shrink: 0;           /* Kart daralınca resmin büzüşmesini engeller */
   border-radius: 12px;      /* Resim kutusunun köşelerini hafifçe yuvarlattık */
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
 }
 
 .big-box img {
@@ -1081,4 +1086,11 @@ body.dark {
   margin: 20px auto 30px auto;
   padding: 20px; /* dış katman kalınlığı */
   border-radius: 22px;
+}
+#hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
 }
