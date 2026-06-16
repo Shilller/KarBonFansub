@@ -94,14 +94,15 @@ if (localStorage.getItem("theme") === "dark") {
 <a href="projeler/divilethion/index.html" class="hero">
 
     <div class="big-box">
-        <img src="projeler/divilethion/Kapak resmi.png" alt="Divi kapak" id="hero-img" id="hero" class="hero">
+        <img src="projeler/divilethion/Kapak resmi.png" alt="Divi Kapak resmi">
     </div>
 
     <div class="hero-text">
-        <h1 id="hero-title"></h1>
-        <p id="hero-p1"></p>
-        <p id="hero-p2"></p>
-        <p id="hero-p3"></p>
+        <h1>Divilethion</h1>
+        <p>Kurban ayinleri ve farklı sonlar. Yüce Divilethion'a şükürler olsun.</p>
+        <p>The Coffin Of Andy And Leyley isimli oyunun yapımcısı olan Nemlei'nin eski bir projesidir.</p>
+        <p>Hiçliğin ortasındaki köyde yaşayan Rahip Lynn ve kardeşi Marrow'un başına gelen çeşitli şeylere tanıklık ediyoruz ve seçimlerimizle köyün kaderini belirliyoruz.</p>
+        <p>Yüce Divilethion'a karşı mı çıkacaksın yoksa boyun mu eğeceksin?</p>
     </div>
 
 </a>
@@ -266,40 +267,6 @@ function updateDiscord() {
 
 updateDiscord();
 setInterval(updateDiscord, 10000);
-</script>
-
-<script>
-const SHEET_URL = "https://docs.google.com/spreadsheets/d/1P-SS3OclpfYZhta_4haj9rHcrpBfBJfWyhA5fW-zmzQ/gviz/tq?tqx=out:json";
-
-async function loadHero() {
-    try {
-        const res = await fetch(SHEET_URL + "&nocache=" + Date.now());
-        const rep = await res.text();
-
-        const json = JSON.parse(rep.substring(47).slice(0, -2));
-        const row = json.table.rows[0].c;
-
-        const aktif = row[0]?.v;
-        if (aktif !== true && aktif !== "TRUE") return;
-
-        document.getElementById("hero-title").textContent = row[1]?.v || "";
-        document.getElementById("hero-p1").textContent = row[2]?.v || "";
-        document.getElementById("hero-p2").textContent = row[3]?.v || "";
-        document.getElementById("hero-p3").textContent = row[4]?.v || "";
-
-        const hero = document.getElementById("hero");
-        if (hero) hero.href = row[5]?.v || "#";
-
-        const img = document.getElementById("hero-img");
-        if (img) img.src = row[6]?.v || "";
-
-    } catch (e) {
-        console.error("Sheet hatası:", e);
-    }
-}
-
-loadHero();
-setInterval(loadHero, 30000); // 30 saniyede bir günceller
 </script>
 
 </body>
