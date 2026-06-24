@@ -70,6 +70,19 @@ body {
                 transform: scale(1) rotate(360deg);
             }
         }
+        
+    .music-card.playing .project-image img {
+    box-shadow:
+        0 0 20px var(--glow-color1),
+        0 0 40px var(--glow-color2),
+        inset 0 0 20px var(--glow-color1);
+}
+.music-card.playing .project-image img {
+    box-shadow:
+        0 0 25px var(--glow-color1),
+        0 0 50px var(--glow-color2),
+        inset 0 0 25px var(--glow-color1);
+}
     </style>
 </head>
 <body>
@@ -142,13 +155,14 @@ body {
             <p>KarBon'a çok aşığım</p>
         </div>
         <audio id="azraMusic" src="Azraeasteregg.mp3"></audio>
+        <audio id="azraMusicV2" src="azraninkabaetieasteregg.mp3"></audio>
 
         <div class="team-card music-card" style="--glow-color1: rgba(255, 0, 0, 0.75); --glow-color2: rgba(141, 0, 144, 0.985);">
             <div class="project-image" onclick="playMusic('karbonMusic', this)">
                 <div class="glow"></div>
                 <img src="ekip-pp/images2.jpeg" alt="KarBon">
             </div>
-            <h3>KarBon Sama</h3>
+            <h3><a href="javascript:void(0)"onclick="playMusic('azraMusicV2', this)">K</a>arBon Sama</h3>
             <p class="role">
     <img src="ekip-pp/yonetim.png" class="role-icon">
     Yönetici/Redaktör
@@ -235,18 +249,6 @@ body {
 
         <div class="team-card">
             <div class="project-image">
-                <img src="ekip-pp/image.png" alt="Etrickster">
-            </div>
-            <h3>Etrickster</h3>
-            <p class="role">
-            <img src="ekip-pp/Çevirmen.png" class="role-icon">
-            Çevirmen
-            </p>
-            <p>Hacker değil</p>
-        </div>
-
-        <div class="team-card">
-            <div class="project-image">
                 <img src="ekip-pp/Es07.png" alt="Etrickster">
             </div>
             <h3>ES07</h3>
@@ -257,6 +259,12 @@ body {
             <p>He regrets nothing</p>
         </div>
 
+                <!-- BOŞ -->
+        <div class="team-card empty">
+            <div class="project-image"></div>
+            <h3>???</h3>
+        </div>
+
         <!-- BOŞ -->
         <div class="team-card empty">
             <div class="project-image"></div>
@@ -265,6 +273,49 @@ body {
         
 
     </div>
+    
+        <div class="page-title">
+        <h1>Şeref Duvarı</h1>
+    </div>
+
+                <p style="font-size: 20px; line-height: 1.7; color: #333; margin-bottom: 20px; text-align: center;">
+                Bir dönem aramızda bulunan ekip arkadaşlarımız veya bize yardımcı olmuş olan dostlarımızın anısına... <br>
+                Buradaki insanlar ekip içinde aktif rol almayan ekibin üyesi olmayan ama yinede bizde iz bırakmış kişilerdir.
+            </p>
+
+<div class="project-grid">
+
+        <div class="team-card">
+            <div class="project-image">
+                <img src="ekip-pp/image.png" alt="Etrickster">
+            </div>
+            <h3>Etrickster</h3>
+            <p class="role">
+            <img src="ekip-pp/Çevirmen.png" class="role-icon">
+            Çevirmen
+            </p>
+            <p>Hacker değil</p>
+        </div>
+        
+                <!-- BOŞ -->
+        <div class="team-card empty">
+            <div class="project-image"></div>
+            <h3>???</h3>
+        </div>
+
+                <!-- BOŞ -->
+        <div class="team-card empty">
+            <div class="project-image"></div>
+            <h3>???</h3>
+        </div>
+
+                <!-- BOŞ -->
+        <div class="team-card empty">
+            <div class="project-image"></div>
+            <h3>???</h3>
+        </div>
+
+</div>
 
 </div>
 
@@ -310,8 +361,8 @@ let currentCard = null;
 
 function playMusic(musicId, clickedElement) {
     const music = document.getElementById(musicId);
-    const card = clickedElement.closest(".music-card");
-
+    const card = clickedElement.closest(".music-card") ||
+             clickedElement.parentElement.closest(".music-card");
     clearInterval(fadeInterval);
 
     if (currentMusic && currentMusic !== music) {
