@@ -1,301 +1,544 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="tr">
-<head>
-    <link rel="icon" href="icon.ico">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <link rel="icon" href="icon.ico" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bağış</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css">
-    <link rel="canonical" href="https://karbonfansub.com/bagis.html">
-    
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css"
+    />
+    <link rel="canonical" href="https://karbonfansub.com/bagis.html" />
+
     <script>
-if (localStorage.getItem("theme") === "dark") {
-    document.documentElement.classList.add("dark");
-}
-</script>
-    
+      if (localStorage.getItem("theme") === "dark") {
+        document.documentElement.classList.add("dark");
+      }
+    </script>
+
     <style>
-        @font-face {
-    font-family: 'ComicCustom';
-    src: url('fonts/ComicSans.ttf') format('truetype');
-        }
+      @font-face {
+        font-family: "ComicCustom";
+        src: url("fonts/ComicSans.ttf") format("truetype");
+      }
     </style>
-
-</head>
-<body>
-
+  </head>
+  <body>
     <!-- LOGO -->
     <a href="index.html" class="logo">
-        <img src="Logomuz.png" alt="KarBon Fansub Logo">
+      <img src="Logomuz.png" alt="KarBon Fansub Logo" />
     </a>
 
     <!-- ÜST MENÜ -->
     <div class="top-menu">
+      <a href="index.html" class="btn">Ana Sayfa</a>
+      <a href="projeler.html" class="btn">Projeler</a>
 
-        <a href="index.html" class="btn">Ana Sayfa</a>
-        <a href="projeler.html" class="btn">Projeler</a>
+      <a
+        href="https://www.youtube.com/@KarBonFansub"
+        target="_blank"
+        class="social yt"
+      >
+        <i class="bi bi-youtube"></i>
+      </a>
 
-        <a href="https://www.youtube.com/@KarBonFansub" target="_blank" class="social yt">
-            <i class="bi bi-youtube"></i>
-        </a>
+      <a href="https://discord.gg/yXbsKXv8J7" target="_blank" class="social dc">
+        <i class="bi bi-discord"></i>
+      </a>
 
-        <a href="https://discord.gg/yXbsKXv8J7" target="_blank" class="social dc">
-            <i class="bi bi-discord"></i>
-        </a>
+      <a href="bize-katilin.html" class="btn">Bize Katılın</a>
+      <a href="ekibimiz.html" class="btn">Ekibimiz</a>
 
-        <a href="bize-katilin.html" class="btn">Bize Katılın</a>
-        <a href="ekibimiz.html" class="btn">Ekibimiz</a>
-        
-        <label class="theme-switch">
-  <input type="checkbox" onchange="toggleTheme()" id="themeToggle">
-  <span class="slider">
-    <span class="icon sun">☀️</span>
-    <span class="icon moon">🌙</span>
-  </span>
-</label>
-
+      <label class="theme-switch">
+        <input type="checkbox" onchange="toggleTheme()" id="themeToggle" />
+        <span class="slider">
+          <span class="icon sun">☀️</span>
+          <span class="icon moon">🌙</span>
+        </span>
+      </label>
     </div>
 
     <div class="line"></div>
 
     <!-- CONTENT -->
     <div class="content">
+      <div class="page-title">
+        <h1>Bağış</h1>
+      </div>
 
-        <div class="page-title">
-            <h1>Bağış</h1>
-        </div>
+      <!-- AÇIKLAMA + BUTON -->
+      <div style="max-width: 800px; margin: 0 auto; text-align: center">
+        <p
+          style="
+            font-size: 20px;
+            line-height: 1.7;
+            color: #333;
+            margin-bottom: 30px;
+          "
+        >
+          Destek olmak için aşağıdaki düğme ile ByNoGame üzerinden bağış
+          yapabilirsin. Bağışlarınız site ve sunucu giderleri için
+          kullanılacaktır.
+        </p>
 
-        <!-- AÇIKLAMA + BUTON -->
-        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-            <p style="font-size: 20px; line-height: 1.7; color: #333; margin-bottom: 30px;">
-                Destek olmak için aşağıdaki düğme ile ByNoGame üzerinden bağış yapabilirsin.
-                Bağışlarınız site ve sunucu giderleri için kullanılacaktır.
-            </p>
+        <a
+          href="https://donate.bynogame.com/karbon"
+          target="_blank"
+          class="btn"
+          style="font-size: 22px; padding: 18px 36px; display: inline-block"
+        >
+          ByNoGame Üzerinden Bağış Yap
+        </a>
+      </div>
 
-            <a href="https://donate.bynogame.com/karbon" target="_blank"
-               class="btn"
-               style="font-size: 22px; padding: 18px 36px; display: inline-block;">
-                ByNoGame Üzerinden Bağış Yap
-            </a>
-        </div>
+      <!-- AYIRICI -->
+      <div class="line" style="margin-top: 60px; margin-bottom: 50px"></div>
 
-        <!-- AYIRICI -->
-        <div class="line" style="margin-top: 60px; margin-bottom: 50px;"></div>
-
-        <!-- TOP 10 -->
-        <div style="max-width: 950px; margin: 0 auto; text-align: center;">
-
-            <h2 style="color: #284063; font-size: 32px;">Top 10 Bağışçı</h2>
-            <p style="color: #555; font-size: 18px; margin-bottom: 30px;">
-                Liste her pazar günü yenilenir.
-            </p>
-
-            <div class="donation-box" id="donation-top10">
-
-                <!-- HEADER -->
-                <div style="
-                    display: grid;
-                    grid-template-columns: 60px 1fr 2fr 150px 140px;
-                    font-weight: bold;
-                    color: #284063;
-                    padding: 12px 15px;
-                    border-bottom: 2px solid rgba(46, 107, 79, 0.2);
-                    text-align: left;
-                ">
-                    <div>#</div>
-                    <div>Nick</div>
-                    <div>Açıklama</div>
-                    <div>Miktar</div>
-                    <div>Tarih</div>
-                </div>
-
-                <!-- 1 -->
-                <div style="display:grid; grid-template-columns:60px 1fr 2fr 150px 140px; padding:12px 15px; border-bottom:1px solid rgba(0,0,0,0.1); text-align:left; background:rgba(255,215,0,0.15);">
-                    <div>1 🥇</div>
-                    <div>Lexy</div>
-                    <div>Lexy was here</div>
-                    <div style="color:#2e6b4f; font-weight:bold;">100₺</div>
-                    <div>01.06.2026</div>
-                </div>
-
-                <!-- 2 -->
-                <div style="display:grid; grid-template-columns:60px 1fr 2fr 150px 140px; padding:12px 15px; border-bottom:1px solid rgba(0,0,0,0.1); text-align:left; background:rgba(192,192,192,0.15);">
-                    <div>2 🥈</div>
-                    <div>Gordd</div>
-                    <div>Nazik ve  <span style="color: red;">*<u>naif</u></span> bir adam</div>
-                    <div style="color:#2e6b4f; font-weight:bold;">30₺</div>
-                    <div>01.06.2026</div>
-                </div>
-
-                <!-- 3 -->
-                <div style="display:grid; grid-template-columns:60px 1fr 2fr 150px 140px; padding:12px 15px; border-bottom:1px solid rgba(0,0,0,0.1); text-align:left; background:rgba(205,127,50,0.15);">
-                    <div>3 🥉</div>
-                    <div>Shilller</div>
-                    <div>Deneme</div>
-                    <div style="color:#2e6b4f; font-weight:bold;">20₺</div>
-                    <div>01.04.2026</div>
-                </div>
-
-                <!-- 4-10 -->
-                <div style="display:grid; grid-template-columns:60px 1fr 2fr 150px 140px; padding:12px 15px; border-bottom:1px solid rgba(0,0,0,0.1); text-align:left;">
-                    <div>4</div><div>KorsanMaid</div><div>Zorla bağış attırılıyorum</div><div>20₺</div><div>03.04.2026</div>
-                </div>
-
-                <div style="display:grid; grid-template-columns:60px 1fr 2fr 150px 140px; padding:12px 15px; border-bottom:1px solid rgba(0,0,0,0.1); text-align:left;">
-                    <div>5</div><div>-</div><div>-</div><div>-₺</div><div>-</div>
-                </div>
-
-                <div style="display:grid; grid-template-columns:60px 1fr 2fr 150px 140px; padding:12px 15px; border-bottom:1px solid rgba(0,0,0,0.1); text-align:left;">
-                    <div>6</div><div>-</div><div>-</div><div>-₺</div><div>-</div>
-                </div>
-
-                <div style="display:grid; grid-template-columns:60px 1fr 2fr 150px 140px; padding:12px 15px; border-bottom:1px solid rgba(0,0,0,0.1); text-align:left;">
-                    <div>7</div><div>-</div><div>-</div><div>-₺</div><div>-</div>
-                </div>
-
-                <div style="display:grid; grid-template-columns:60px 1fr 2fr 150px 140px; padding:12px 15px; border-bottom:1px solid rgba(0,0,0,0.1); text-align:left;">
-                    <div>8</div><div>-</div><div>-</div><div>-₺</div><div>-</div>
-                </div>
-
-                <div style="display:grid; grid-template-columns:60px 1fr 2fr 150px 140px; padding:12px 15px; border-bottom:1px solid rgba(0,0,0,0.1); text-align:left;">
-                    <div>9</div><div>-</div><div>-</div><div>-₺</div><div>-</div>
-                </div>
-
-                <div style="display:grid; grid-template-columns:60px 1fr 2fr 150px 140px; padding:12px 15px; text-align:left;">
-                    <div>10</div><div>-</div><div>-</div><div>-₺</div><div>-</div>
-                </div>
-
-            </div>
-        </div>
-
-        <br>
-
-         <!-- TOP 10 -->
-        <div style="max-width: 950px; margin: 0 auto; text-align: center;">
-
-            <h2 style="color: #284063; font-size: 32px;">Son 10 Bağışçı</h2>
-            <p style="color: #555; font-size: 18px; margin-bottom: 30px;">
-                Liste her pazar günü yenilenir.
-            </p>
+      <!-- TOP 10 -->
+      <div style="max-width: 950px; margin: 0 auto; text-align: center">
+        <h2 style="color: #284063; font-size: 32px">Top 10 Bağışçı</h2>
+        <p style="color: #555; font-size: 18px; margin-bottom: 30px">
+          Liste her pazar günü yenilenir.
+        </p>
 
         <div class="donation-box" id="donation-top10">
+          <!-- HEADER -->
+          <div
+            style="
+              display: grid;
+              grid-template-columns: 60px 1fr 2fr 150px 140px;
+              font-weight: bold;
+              color: #284063;
+              padding: 12px 15px;
+              border-bottom: 2px solid rgba(46, 107, 79, 0.2);
+              text-align: left;
+            "
+          >
+            <div>#</div>
+            <div>Nick</div>
+            <div>Açıklama</div>
+            <div>Miktar</div>
+            <div>Tarih</div>
+          </div>
 
+          <!-- 1 -->
+          <div
+            style="
+              display: grid;
+              grid-template-columns: 60px 1fr 2fr 150px 140px;
+              padding: 12px 15px;
+              border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+              text-align: left;
+              background: rgba(255, 215, 0, 0.15);
+            "
+          >
+            <div>1 🥇</div>
+            <div>Lexy</div>
+            <div>Lexy was here</div>
+            <div style="color: #2e6b4f; font-weight: bold">100₺</div>
+            <div>01.06.2026</div>
+          </div>
 
-                 <!-- SON 10 -->
-                <!-- HEADER -->
-                <div style="
-                    display: grid;
-                    grid-template-columns: 60px 1fr 2fr 150px 140px;
-                    font-weight: bold;
-                    color: #284063;
-                    padding: 12px 15px;
-                    border-bottom: 2px solid rgba(46, 107, 79, 0.2);
-                    text-align: left;
-                ">
-                    <div>#</div>
-                    <div>Nick</div>
-                    <div>Açıklama</div>
-                    <div>Miktar</div>
-                    <div>Tarih</div>
-                </div>
-
-                <!-- 1 -->
-                <div style="display:grid; grid-template-columns:60px 1fr 2fr 150px 140px; padding:12px 15px; border-bottom:1px solid rgba(0,0,0,0.1); text-align:left;">                    
-                    <div>1</div>
-                    <div>Lexy</div>
-                    <div>Lexy was here</div>
-                    <div>100₺</div>
-                    <div>01.06.2026</div>
-                </div>
-
-                <!-- 2 -->
-                <div style="display:grid; grid-template-columns:60px 1fr 2fr 150px 140px; padding:12px 15px; border-bottom:1px solid rgba(0,0,0,0.1); text-align:left;">                    
-                    <div>2</div>
-                    <div>Gordd</div>
-                    <div>Nazik ve  <span style="color: red;">*<u>naif</u></span> bir adam</div>
-                    <div>30₺</div>
-                    <div>01.06.2026</div>
-                </div>
-
-                <!-- 3 -->
-                <div style="display:grid; grid-template-columns:60px 1fr 2fr 150px 140px; padding:12px 15px; border-bottom:1px solid rgba(0,0,0,0.1); text-align:left;">                    
-                    <div>3</div>
-                    <div>KorsanMaid</div>
-                    <div>Zorla bağış attırılıyorum</div>
-                    <div>20₺</div>
-                    <div>03.04.2026</div>
-                </div>
-
-                <!-- 4-10 -->
-                <div style="display:grid; grid-template-columns:60px 1fr 2fr 150px 140px; padding:12px 15px; border-bottom:1px solid rgba(0,0,0,0.1); text-align:left;">
-                    <div>4</div><div>Shilller</div><div>Deneme</div><div>20₺</div><div>01.04.2026</div>
-                </div>
-
-                <div style="display:grid; grid-template-columns:60px 1fr 2fr 150px 140px; padding:12px 15px; border-bottom:1px solid rgba(0,0,0,0.1); text-align:left;">
-                    <div>5</div><div>-</div><div>-</div><div>-₺</div><div>-</div>
-                </div>
-
-                <div style="display:grid; grid-template-columns:60px 1fr 2fr 150px 140px; padding:12px 15px; border-bottom:1px solid rgba(0,0,0,0.1); text-align:left;">
-                    <div>6</div><div>-</div><div>-</div><div>-₺</div><div>-</div>
-                </div>
-
-                <div style="display:grid; grid-template-columns:60px 1fr 2fr 150px 140px; padding:12px 15px; border-bottom:1px solid rgba(0,0,0,0.1); text-align:left;">
-                    <div>7</div><div>-</div><div>-</div><div>-₺</div><div>-</div>
-                </div>
-
-                <div style="display:grid; grid-template-columns:60px 1fr 2fr 150px 140px; padding:12px 15px; border-bottom:1px solid rgba(0,0,0,0.1); text-align:left;">
-                    <div>8</div><div>-</div><div>-</div><div>-₺</div><div>-</div>
-                </div>
-
-                <div style="display:grid; grid-template-columns:60px 1fr 2fr 150px 140px; padding:12px 15px; border-bottom:1px solid rgba(0,0,0,0.1); text-align:left;">
-                    <div>9</div><div>-</div><div>-</div><div>-₺</div><div>-</div>
-                </div>
-
-                <div style="display:grid; grid-template-columns:60px 1fr 2fr 150px 140px; padding:12px 15px; text-align:left;">
-                    <div>10</div><div>-</div><div>-</div><div>-₺</div><div>-</div>
-                </div>
-
+          <!-- 2 -->
+          <div
+            style="
+              display: grid;
+              grid-template-columns: 60px 1fr 2fr 150px 140px;
+              padding: 12px 15px;
+              border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+              text-align: left;
+              background: rgba(192, 192, 192, 0.15);
+            "
+          >
+            <div>2 🥈</div>
+            <div>Gordd</div>
+            <div>
+              Nazik ve <span style="color: red">*<u>naif</u></span> bir adam
             </div>
-        </div>
+            <div style="color: #2e6b4f; font-weight: bold">30₺</div>
+            <div>01.06.2026</div>
+          </div>
 
+          <!-- 3 -->
+          <div
+            style="
+              display: grid;
+              grid-template-columns: 60px 1fr 2fr 150px 140px;
+              padding: 12px 15px;
+              border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+              text-align: left;
+              background: rgba(205, 127, 50, 0.15);
+            "
+          >
+            <div>3 🥉</div>
+            <div>Shilller</div>
+            <div>Deneme</div>
+            <div style="color: #2e6b4f; font-weight: bold">20₺</div>
+            <div>01.04.2026</div>
+          </div>
+
+          <!-- 4-10 -->
+          <div
+            style="
+              display: grid;
+              grid-template-columns: 60px 1fr 2fr 150px 140px;
+              padding: 12px 15px;
+              border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+              text-align: left;
+            "
+          >
+            <div>4</div>
+            <div>KorsanMaid</div>
+            <div>Zorla bağış attırılıyorum</div>
+            <div>20₺</div>
+            <div>03.04.2026</div>
+          </div>
+
+          <div
+            style="
+              display: grid;
+              grid-template-columns: 60px 1fr 2fr 150px 140px;
+              padding: 12px 15px;
+              border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+              text-align: left;
+            "
+          >
+            <div>5</div>
+            <div>-</div>
+            <div>-</div>
+            <div>-₺</div>
+            <div>-</div>
+          </div>
+
+          <div
+            style="
+              display: grid;
+              grid-template-columns: 60px 1fr 2fr 150px 140px;
+              padding: 12px 15px;
+              border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+              text-align: left;
+            "
+          >
+            <div>6</div>
+            <div>-</div>
+            <div>-</div>
+            <div>-₺</div>
+            <div>-</div>
+          </div>
+
+          <div
+            style="
+              display: grid;
+              grid-template-columns: 60px 1fr 2fr 150px 140px;
+              padding: 12px 15px;
+              border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+              text-align: left;
+            "
+          >
+            <div>7</div>
+            <div>-</div>
+            <div>-</div>
+            <div>-₺</div>
+            <div>-</div>
+          </div>
+
+          <div
+            style="
+              display: grid;
+              grid-template-columns: 60px 1fr 2fr 150px 140px;
+              padding: 12px 15px;
+              border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+              text-align: left;
+            "
+          >
+            <div>8</div>
+            <div>-</div>
+            <div>-</div>
+            <div>-₺</div>
+            <div>-</div>
+          </div>
+
+          <div
+            style="
+              display: grid;
+              grid-template-columns: 60px 1fr 2fr 150px 140px;
+              padding: 12px 15px;
+              border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+              text-align: left;
+            "
+          >
+            <div>9</div>
+            <div>-</div>
+            <div>-</div>
+            <div>-₺</div>
+            <div>-</div>
+          </div>
+
+          <div
+            style="
+              display: grid;
+              grid-template-columns: 60px 1fr 2fr 150px 140px;
+              padding: 12px 15px;
+              text-align: left;
+            "
+          >
+            <div>10</div>
+            <div>-</div>
+            <div>-</div>
+            <div>-₺</div>
+            <div>-</div>
+          </div>
+        </div>
+      </div>
+
+      <br />
+
+      <!-- TOP 10 -->
+      <div style="max-width: 950px; margin: 0 auto; text-align: center">
+        <h2 style="color: #284063; font-size: 32px">Son 10 Bağışçı</h2>
+        <p style="color: #555; font-size: 18px; margin-bottom: 30px">
+          Liste her pazar günü yenilenir.
+        </p>
+
+        <div class="donation-box" id="donation-top10">
+          <!-- SON 10 -->
+          <!-- HEADER -->
+          <div
+            style="
+              display: grid;
+              grid-template-columns: 60px 1fr 2fr 150px 140px;
+              font-weight: bold;
+              color: #284063;
+              padding: 12px 15px;
+              border-bottom: 2px solid rgba(46, 107, 79, 0.2);
+              text-align: left;
+            "
+          >
+            <div>#</div>
+            <div>Nick</div>
+            <div>Açıklama</div>
+            <div>Miktar</div>
+            <div>Tarih</div>
+          </div>
+
+          <!-- 1 -->
+          <div
+            style="
+              display: grid;
+              grid-template-columns: 60px 1fr 2fr 150px 140px;
+              padding: 12px 15px;
+              border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+              text-align: left;
+            "
+          >
+            <div>1</div>
+            <div>Lexy</div>
+            <div>Lexy was here</div>
+            <div>100₺</div>
+            <div>01.06.2026</div>
+          </div>
+
+          <!-- 2 -->
+          <div
+            style="
+              display: grid;
+              grid-template-columns: 60px 1fr 2fr 150px 140px;
+              padding: 12px 15px;
+              border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+              text-align: left;
+            "
+          >
+            <div>2</div>
+            <div>Gordd</div>
+            <div>
+              Nazik ve <span style="color: red">*<u>naif</u></span> bir adam
+            </div>
+            <div>30₺</div>
+            <div>01.06.2026</div>
+          </div>
+
+          <!-- 3 -->
+          <div
+            style="
+              display: grid;
+              grid-template-columns: 60px 1fr 2fr 150px 140px;
+              padding: 12px 15px;
+              border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+              text-align: left;
+            "
+          >
+            <div>3</div>
+            <div>KorsanMaid</div>
+            <div>Zorla bağış attırılıyorum</div>
+            <div>20₺</div>
+            <div>03.04.2026</div>
+          </div>
+
+          <!-- 4-10 -->
+          <div
+            style="
+              display: grid;
+              grid-template-columns: 60px 1fr 2fr 150px 140px;
+              padding: 12px 15px;
+              border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+              text-align: left;
+            "
+          >
+            <div>4</div>
+            <div>Shilller</div>
+            <div>Deneme</div>
+            <div>20₺</div>
+            <div>01.04.2026</div>
+          </div>
+
+          <div
+            style="
+              display: grid;
+              grid-template-columns: 60px 1fr 2fr 150px 140px;
+              padding: 12px 15px;
+              border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+              text-align: left;
+            "
+          >
+            <div>5</div>
+            <div>-</div>
+            <div>-</div>
+            <div>-₺</div>
+            <div>-</div>
+          </div>
+
+          <div
+            style="
+              display: grid;
+              grid-template-columns: 60px 1fr 2fr 150px 140px;
+              padding: 12px 15px;
+              border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+              text-align: left;
+            "
+          >
+            <div>6</div>
+            <div>-</div>
+            <div>-</div>
+            <div>-₺</div>
+            <div>-</div>
+          </div>
+
+          <div
+            style="
+              display: grid;
+              grid-template-columns: 60px 1fr 2fr 150px 140px;
+              padding: 12px 15px;
+              border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+              text-align: left;
+            "
+          >
+            <div>7</div>
+            <div>-</div>
+            <div>-</div>
+            <div>-₺</div>
+            <div>-</div>
+          </div>
+
+          <div
+            style="
+              display: grid;
+              grid-template-columns: 60px 1fr 2fr 150px 140px;
+              padding: 12px 15px;
+              border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+              text-align: left;
+            "
+          >
+            <div>8</div>
+            <div>-</div>
+            <div>-</div>
+            <div>-₺</div>
+            <div>-</div>
+          </div>
+
+          <div
+            style="
+              display: grid;
+              grid-template-columns: 60px 1fr 2fr 150px 140px;
+              padding: 12px 15px;
+              border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+              text-align: left;
+            "
+          >
+            <div>9</div>
+            <div>-</div>
+            <div>-</div>
+            <div>-₺</div>
+            <div>-</div>
+          </div>
+
+          <div
+            style="
+              display: grid;
+              grid-template-columns: 60px 1fr 2fr 150px 140px;
+              padding: 12px 15px;
+              text-align: left;
+            "
+          >
+            <div>10</div>
+            <div>-</div>
+            <div>-</div>
+            <div>-₺</div>
+            <div>-</div>
+          </div>
+        </div>
+      </div>
     </div>
 
-<!-- Politika ve hakkımızda -->
+    <!-- Politika ve hakkımızda -->
 
-<div class="footer-links">
-    <a href="Gizlilik-Politikasi.html" target="_blank">Gizlilik Politikası</a>
-    <Span>|</Span>
-    <a href="hakkimizda.html" target="_blank">Hakkımızda</a>
-</div>
+    <div class="footer-links">
+      <a href="Gizlilik-Politikasi.html" target="_blank">Gizlilik Politikası</a>
+      <span>|</span>
+      <a href="hakkimizda.html" target="_blank">Hakkımızda</a>
+    </div>
 
-<div style="text-align: center;"> 𝓚𝓪𝓻𝓑𝓸𝓷 𝓕𝓪𝓷𝓼𝓾𝓫</div>
+    <div style="text-align: center">𝓚𝓪𝓻𝓑𝓸𝓷 𝓕𝓪𝓷𝓼𝓾𝓫</div>
 
-<div style="text-align: center;">Çevir, Düzelt, <span style="color: red;">Yayınla</span></div>
+    <div style="text-align: center">
+      Çevir, Düzelt, <span style="color: red">Yayınla</span>
+    </div>
 
+    <br />
+
+    <div style="text-align: center">
+      Bizimle iletişime geçin / Contact us: <br />
+      <a
+        href="mailto:samakarbon@gmail.com"
+        style="color: #0066cc; text-decoration: none"
+        >samakarbon@gmail.com</a
+      >
+    </div>
 
     <div class="line"></div>
 
     <!-- ALT MENÜ -->
     <div class="bottom-menu">
+      <a href="index.html" class="btn">Ana Sayfa</a>
+      <a href="projeler.html" class="btn">Projeler</a>
 
-        <a href="index.html" class="btn">Ana Sayfa</a>
-        <a href="projeler.html" class="btn">Projeler</a>
+      <a
+        href="https://www.youtube.com/@KarBonFansub"
+        target="_blank"
+        class="social yt"
+      >
+        <i class="bi bi-youtube"></i>
+      </a>
 
-        <a href="https://www.youtube.com/@KarBonFansub" target="_blank" class="social yt">
-            <i class="bi bi-youtube"></i>
-        </a>
+      <a href="https://discord.gg/yXbsKXv8J7" target="_blank" class="social dc">
+        <i class="bi bi-discord"></i>
+      </a>
 
-        <a href="https://discord.gg/yXbsKXv8J7" target="_blank" class="social dc">
-            <i class="bi bi-discord"></i>
-        </a>
-
-        <a href="bize-katilin.html" class="btn">Bize Katılın</a>
-        <a href="ekibimiz.html" class="btn">Ekibimiz</a>
-
+      <a href="bize-katilin.html" class="btn">Bize Katılın</a>
+      <a href="ekibimiz.html" class="btn">Ekibimiz</a>
     </div>
 
     <script src="theme.js"></script>
-
-</body>
+  </body>
 </html>
