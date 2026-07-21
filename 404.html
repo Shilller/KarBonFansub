@@ -1,61 +1,98 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="tr">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>404 - Sayfa Bulunamadı</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404</title>
 
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 
-<style>
-body{
-    margin:0;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
-    background:#111827;
-    color:white;
-    font-family:Arial,sans-serif;
-    text-align:center;
-}
+    <style>
+      @font-face {
+        font-family: "ComicCustom";
+        src: url("fonts/ComicSansMS.ttf") format("truetype");
+      }
 
-.container{
-    max-width:600px;
-}
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #c4d6da;
+        color: white;
+        text-align: center;
+        font-family: "ComicCustom", sans-serif;
+      }
 
-h1{
-    font-size:100px;
-    margin:0;
-}
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+      }
 
-a{
-    display:inline-block;
-    margin-top:20px;
-    padding:12px 24px;
-    background:#3b82f6;
-    color:white;
-    text-decoration:none;
-    border-radius:10px;
-}
+      h1 {
+        font-size: 110px;
+        margin: 0;
+      }
 
-a:hover{
-    opacity:.9;
-}
-</style>
+      .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
 
-</head>
-<body>
+      .logo img {
+        width: 320px;
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
 
-<div class="container">
-    <h1>404</h1>
+      h2 {
+        margin: 0;
+      }
 
-    <h2>Sayfa Bulunamadı</h2>
+      p {
+        margin: 0;
+      }
 
-    <p>Aradığınız sayfa silinmiş, taşınmış veya hiç var olmamış olabilir.</p>
+      .btn {
+        margin-top: 10px;
+        font-size: 22px;
+        padding: 18px 36px;
+        display: inline-block;
+      }
 
-    <a href="/">Ana Sayfaya Dön</a>
-</div>
+      .error-image {
+        display: block;
+        margin: 20px auto;
+      }
 
-</body>
+      .error-image img {
+        display: block;
+        width: 650px;
+        max-width: 90%;
+        height: auto;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>404 Geçersiz sayfa</h1>
+
+      <a href="index.html" class="error-image">
+        <img src="404.png" alt="404 Fotoğrafı" />
+      </a>
+
+      <h2>Sayfa Bulunamadı</h2>
+
+      <p>Aradığınız sayfa silinmiş, taşınmış veya hiç var olmamış olabilir.</p>
+
+      <a href="index.html" class="btn"> Ana Sayfaya Dön </a>
+    </div>
+  </body>
 </html>
