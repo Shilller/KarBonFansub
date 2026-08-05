@@ -1159,3 +1159,160 @@ body.dark {
   object-position: center;
   display: block;
 }
+/* ===========================
+   KART EASTEREGG
+=========================== */
+
+html.shilller-mode {
+  --text: #ffffff;
+  --primary: #ff9d2e;
+  --card: rgba(255, 255, 255, 0.04);
+}
+
+html.shilller-mode body {
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(255, 157, 46, 0.08),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(80, 120, 255, 0.08),
+      transparent 40%
+    ),
+    linear-gradient(180deg, #152850 0%, #101c3d 35%, #0d1731 70%, #09101f 100%);
+
+  color: #fff;
+}
+
+/* Kartlar */
+
+html.shilller-mode .project-card,
+html.shilller-mode .team-card,
+html.shilller-mode .hero,
+html.shilller-mode .donation-box,
+html.shilller-mode .discord-presence-card,
+html.shilller-mode .partner-card,
+html.shilller-mode .card {
+  background: rgba(255, 255, 255, 0.05);
+
+  border: 1px solid rgba(255, 157, 46, 0.28);
+
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.35),
+    0 0 12px rgba(255, 157, 46, 0.1);
+
+  backdrop-filter: blur(6px);
+}
+
+/* Başlıklar */
+
+html.shilller-mode h1,
+html.shilller-mode h2,
+html.shilller-mode h3 {
+  color: #ffb03b;
+  text-shadow: 0 0 6px rgba(255, 176, 59, 0.18);
+}
+
+/* Yazılar */
+
+html.shilller-mode p,
+html.shilller-mode span,
+html.shilller-mode li {
+  color: #ececec;
+}
+
+/* Butonlar */
+
+html.shilller-mode .btn {
+  background: #203e77;
+  border: 1px solid rgba(255, 157, 46, 0.35);
+  color: #fff;
+}
+
+html.shilller-mode .btn:hover {
+  background: #29509b;
+}
+
+/* Çizgiler */
+
+html.shilller-mode .line {
+  background: linear-gradient(90deg, transparent, #ff9500, transparent);
+}
+
+/* Linkler */
+
+html.shilller-mode a {
+  color: #ffd27a;
+}
+
+html.shilller-mode a:hover {
+  color: white;
+}
+
+/* Hero */
+
+html.shilller-mode .hero-wrapper {
+  background: #1b2f60;
+  border: 1px solid rgba(255, 157, 46, 0.25);
+}
+
+html.shilller-mode .role-icon {
+  filter: brightness(0) invert(1) drop-shadow(0 0 6px rgba(255, 255, 255, 0.35));
+}
+
+html.shilller-mode .manager-icon {
+  filter: none;
+}
+
+html.shilller-mode .manager-icon {
+  filter: drop-shadow(0 0 6px #ffd700) drop-shadow(0 0 12px #ffb300)
+    drop-shadow(0 0 22px rgba(255, 170, 0, 0.9));
+
+  animation: scpSpin 12s linear infinite;
+  transform-origin: center center;
+}
+
+html.shilller-mode .role-icon {
+  filter: brightness(0) invert(1) drop-shadow(0 0 6px rgba(255, 255, 255, 0.4));
+
+  animation: scpSpin 12s linear infinite;
+  transform-origin: center center;
+}
+
+@keyframes managerGlow {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.08);
+  }
+}
+
+@keyframes managerSpin {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(90deg) scale(1.05);
+  }
+  50% {
+    transform: rotate(180deg) scale(1);
+  }
+  75% {
+    transform: rotate(270deg) scale(1.05);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+@keyframes scpSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

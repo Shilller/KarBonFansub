@@ -142,7 +142,7 @@ body {
     <div class="project-grid">
 
 <div class="team-card music-card" style="--glow-color1: rgba(0, 76, 255, 0.847); --glow-color2: rgb(255, 149, 0); ">
-    <div class="project-image" onclick="playMusic('Shillmusic', this)">
+    <div class="project-image" onclick="playMusic('Shillmusic', this);">
         <div class="glow"></div>
         <img src="ekip-pp/Shilll.webp" alt="Shilller">
     </div>
@@ -150,7 +150,7 @@ body {
     <h3>Shilller</h3>
 
     <p class="role">
-        <img src="ekip-pp/yonetim.png" class="role-icon">
+        <img src="ekip-pp/yonetim.png" class="role-icon manager-icon">
         Yönetici/Çevirmen
     </p>
 
@@ -182,7 +182,7 @@ body {
             </div>
             <h3><a href="javascript:void(0)"onclick="playMusic('azraMusicV2', this)">K</a>arBon Sama</h3>
             <p class="role">
-    <img src="ekip-pp/yonetim.png" class="role-icon">
+    <img src="ekip-pp/yonetim.png" class="role-icon manager-icon">
     Yönetici/Redaktör
 </p>
             <p>Azra'ya çok aşığım</p>
@@ -208,7 +208,7 @@ body {
             </div>
             <h3>Korsan Maid</h3>
             <p class="role">
-    <img src="ekip-pp/yonetim.png" class="role-icon">
+    <img src="ekip-pp/yonetim.png" class="role-icon manager-icon">
     Yönetici/Play Tester
 </p>
             <p>"Kader Mahkumu"-Shilller</p>
@@ -401,9 +401,14 @@ function playMusic(musicId, clickedElement) {
         currentMusic.pause();
         currentMusic.currentTime = 0;
         if (currentCard) currentCard.classList.remove("playing");
+        setShilllerMode(false);
     }
 
     if (music.paused) {
+
+    if (musicId === "Shillmusic") {
+        setShilllerMode(true);
+    }
         music.volume = 0;
         music.play();
 
@@ -429,6 +434,9 @@ function playMusic(musicId, clickedElement) {
 
     } else {
         music.pause();
+        if (musicId === "Shillmusic") {
+    setShilllerMode(false);
+}
         music.currentTime = 0;
         card.classList.remove("playing");
 
