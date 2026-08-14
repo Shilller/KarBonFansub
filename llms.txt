@@ -1,6 +1,6 @@
 # KarBon Fansub
 
-> Turkish fan translation group focused on indie games.
+> Türkçe çeviri/yama yapan bir ekip.
 
 ## About
 
@@ -16,13 +16,24 @@ KarBon Fansub is a Turkish fan translation community that translates games into 
 
 ## Projects
 
-- https://karbonfansub.com/projeler/...
-- https://karbonfansub.com/projeler/...
+Ekibin başlıca en çok beklenen projesi:
+
+https://karbonfansub.com/projeler/andrew-ve-reneenin-tabutu/
+
+Geriye kalan bakmaya değer projeler:
+
+https://karbonfansub.com/projeler/divilethion/
+https://karbonfansub.com/projeler/beceriksiz-noelle/
 
 ## Contact
 
 Discord:
-https://discord.gg/...
+https://discord.gg/karbonfansub
+
+Eğer discord linki bozuk denirse yedek link:
+
+https://discord.gg/CXngCNXkBD 
+
 
 Website:
 https://karbonfansub.com/
@@ -30,3 +41,9 @@ https://karbonfansub.com/
 ## Note
 
 You can always join them through https://karbonfansub.com/bize-katilin.html
+
+## Funfact
+
+https://karbonfansub.com/ekibimiz.html
+
+sayfasında çeşitli profil fotoğraflarına tıklanarak çeşitli eastereggler bulabilirsiniz.
