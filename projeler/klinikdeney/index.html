@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-W2VBWNL723"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-W2VBWNL723");
+    </script>
+
+    <link rel="icon" href="icon.ico" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Klinik Deney</title>
+    <link rel="stylesheet" href="../../style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css"
+    />
+    <link
+      rel="canonical"
+      href="https://karbonfansub.com/projeler/klinikdeney/index.html"
+    />
+
+    <style>
+      @font-face {
+        font-family: "Pixellium";
+        src: url("Pixellium.ttf") format("truetype");
+      }
+
+      /* GENEL */
+      body {
+        margin: 0;
+        font-family: "Pixellium", monospace;
+        background:
+          linear-gradient(rgba(8, 12, 16, 0.88), rgba(5, 8, 12, 0.95)),
+          url("arka-plan.jpg") center/cover fixed no-repeat;
+        color: #e6edf3;
+      }
+
+      .theme-overlay {
+        width: 100%;
+        min-height: 100vh;
+      }
+
+      /* MENÜ */
+      .top-menu,
+      .bottom-menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 14px;
+        flex-wrap: wrap;
+        margin: 20px 0;
+      }
+
+      .top-menu .btn,
+      .bottom-menu .btn {
+        background: rgba(40, 55, 70, 0.85);
+        color: #e6edf3;
+        padding: 10px 18px;
+        border-radius: 10px;
+        text-decoration: none;
+        border: 1px solid rgba(120, 160, 200, 0.25);
+        font-size: 22px;
+      }
+
+      /* ÇİZGİ */
+      .line {
+        width: 80%;
+        height: 1px;
+        margin: 24px auto;
+        background: linear-gradient(
+          to right,
+          transparent,
+          rgba(120, 160, 200, 0.3),
+          transparent
+        );
+      }
+
+      /* CONTENT */
+      .content {
+        width: 82%;
+        margin: auto;
+      }
+
+      .game-title {
+        text-align: center;
+        margin: 40px 0 20px 0;
+      }
+
+      .game-title h1 {
+        font-family: "Pixellium";
+        font-size: 64px;
+        letter-spacing: 2px;
+      }
+
+      /* KUTU */
+      .section-box {
+        background: rgba(20, 28, 36, 0.75);
+        border-radius: 18px;
+        padding: 28px;
+        margin-bottom: 30px;
+      }
+
+      /* LOGO */
+      .logo-area {
+        text-align: center;
+      }
+
+      .logo-area img {
+        width: 400px;
+        max-width: 100%;
+      }
+
+      /* ALT BAŞLIK */
+      .section-title {
+        text-align: center;
+        font-family: "Pixellium";
+        font-size: 32px;
+        margin-bottom: 20px;
+      }
+
+      /* METİN */
+      .description-text {
+        max-width: 800px;
+        margin: auto;
+        text-align: center;
+        font-size: 26px;
+        line-height: 1.7;
+      }
+
+      /* STAFF */
+      .staff-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 19px;
+      }
+
+      .staff-card {
+        background: rgba(40, 55, 70, 0.4);
+        padding: 18px;
+        border-radius: 12px;
+        text-align: center;
+        min-height: 160px;
+      }
+      .staff-card h3 {
+        font-size: 28px;
+      }
+
+      .staff-card p {
+        font-size: 25px;
+      }
+
+      /* DOWNLOAD */
+      .download-links {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+      }
+
+      .download-btn {
+        padding: 14px 24px;
+        border-radius: 10px;
+        font-size: 22px;
+        background: #2f3f4e;
+        color: white;
+        text-decoration: none;
+      }
+
+      /* SLIDER */
+      .slider-wrapper {
+        max-width: 950px;
+        margin: auto;
+      }
+
+      .image-slider {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        border-radius: 18px;
+        border: 1px solid rgba(184, 95, 95, 0.25);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+      }
+
+      .slides {
+        display: flex;
+        transition: transform 0.4s ease;
+      }
+
+      .slides img {
+        width: 100%;
+        flex-shrink: 0;
+        display: block;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        background: #111;
+        filter: brightness(0.82) contrast(1.05) saturate(0.8);
+      }
+
+      .slider-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 52px;
+        height: 52px;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        background: rgba(81, 84, 171, 0.78);
+        color: #fff;
+        font-size: 24px;
+        z-index: 2;
+      }
+      .slider-btn:hover {
+        background: rgba(57, 112, 160, 0.92);
+      }
+
+      .slider-btn.prev {
+        left: 16px;
+      }
+
+      .slider-btn.next {
+        right: 16px;
+      }
+
+      .dots {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 18px;
+      }
+
+      .dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.18);
+        cursor: pointer;
+        transition: 0.2s ease;
+      }
+
+      .dot.active {
+        background: #a33f3f;
+        box-shadow: 0 0 10px rgba(163, 63, 63, 0.5);
+      }
+
+      /* MOBİL */
+      @media (max-width: 900px) {
+        .staff-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .game-title h1 {
+          font-size: 36px;
+        }
+
+        .section-title {
+          font-size: 24px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="theme-overlay">
+      <!-- LOGO -->
+      <a href="../../index.html" class="logo">
+        <img src="Logomuz.png" alt="KarBon Fansub Logo" />
+      </a>
+
+      <!-- ÜST MENÜ -->
+      <div class="top-menu">
+        <a href="../../index.html" class="btn">Ana Sayfa</a>
+        <a href="../../projeler.html" class="btn">Projeler</a>
+
+        <a
+          href="https://www.youtube.com/@KarBonFansub"
+          target="_blank"
+          class="social yt"
+          aria-label="YouTube"
+        >
+          <i class="bi bi-youtube"></i>
+        </a>
+
+        <a
+          href="https://discord.gg/CXngCNXkBD"
+          target="_blank"
+          class="social dc"
+          aria-label="Discord"
+        >
+          <i class="bi bi-discord"></i>
+        </a>
+
+        <a href="../../bize-katilin.html" class="btn">Bize Katılın</a>
+        <a href="../../bagis.html" class="btn">Bağış</a>
+      </div>
+
+      <div class="line"></div>
+
+      <div class="content">
+        <!-- OYUN LOGOSU -->
+        <div class="game-title">
+          <h1>Klinik Deney</h1>
+        </div>
+
+        <div class="section-box logo-area">
+          <img src="oyunlogo.png" alt="OYUN ADI Logo" />
+        </div>
+
+        <div class="line"></div>
+
+        <!-- EKRAN GÖRÜNTÜLERİ -->
+        <div class="section-box">
+          <h2 class="section-title">Ekran Görüntüleri</h2>
+
+          <div class="slider-wrapper">
+            <div class="image-slider">
+              <button class="slider-btn prev" onclick="changeSlide(-1)">
+                <i class="bi bi-chevron-left"></i>
+              </button>
+
+              <div class="slides" id="slides">
+                <img src="Ekrangörüntüsü1.png" alt="Ekran görüntüsü 1" />
+                <img src="Ekrangörüntüsü2.png" alt="Ekran görüntüsü 2" />
+                <img src="Ekrangörüntüsü3.png" alt="Ekran görüntüsü 3" />
+              </div>
+
+              <button class="slider-btn next" onclick="changeSlide(1)">
+                <i class="bi bi-chevron-right"></i>
+              </button>
+            </div>
+
+            <div class="dots">
+              <span class="dot active" onclick="goToSlide(0)"></span>
+              <span class="dot" onclick="goToSlide(1)"></span>
+              <span class="dot" onclick="goToSlide(2)"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="line"></div>
+
+        <!-- AÇIKLAMA -->
+        <div class="section-box">
+          <h2 class="section-title">Oyun Hakkında</h2>
+          <div class="description-text">
+            Para teklifi karşılığında bilmediğiniz bir ilacın deneği olmayı
+            kabul eder miydiniz? <br />
+            Aynı zamanda bu süreçte kendi doktorunuzla aranızdaki ilişkiyi konu
+            alan bir hikaye. <br />
+            RPGMaker ile yapılmış hikaye odaklı bu oyun, etrafta gezip
+            görebileceğiniz <br />
+            görsel roman gerçeklik testi simülasyonudur.<br />
+            Bu yetişkinlere yönelik yapılmıştır. Korkutucu ve rahatsız edici
+            öğeler içerir. <br />
+            Yaklaşık oynanış süresi 3 saattir. Oyunda iki son bulunmaktadır.
+            <br />
+            Not: Bu yama <b>Bara Hana ekibine aittir.</b>
+          </div>
+        </div>
+
+        <div class="line"></div>
+
+        <!-- EMEĞİ GEÇENLER -->
+        <div class="section-box">
+          <h2 class="section-title">Emeği Geçenler</h2>
+
+          <div class="staff-grid">
+            <div class="staff-card">
+              <h3>Çeviri</h3>
+              <p>
+                _._Kirigaya_Kazuto_._ / Korsanmaid / Gamedese / Minnestbird /
+                Mramor
+              </p>
+            </div>
+
+            <div class="staff-card">
+              <h3>Redakte</h3>
+              <p>Ayzakki / Kedonivon</p>
+            </div>
+
+            <div class="staff-card">
+              <h3>Kalite Kontrol Ve Test</h3>
+              <p>Shilller / İhate.money</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="line"></div>
+
+        <!-- YÜKLEME LİNKLERİ -->
+        <div class="section-box">
+          <h2 class="section-title">Yükleme Linkleri</h2>
+
+          <div class="download-links">
+            <a
+              href="https://github.com/Shilller/KarBonFansub/releases/download/V1.2/Klinik.Deney.V1.2.zip"
+              class="download-btn"
+              download="Klinik Deney V1.2.zip"
+            >
+              <i class="bi bi-download"></i>
+              İndir
+            </a>
+
+            <a
+              href="https://shilller.itch.io/clinical-trial-turkish-language"
+              class="download-btn"
+              target="_blank"
+            >
+              <i class="bi bi-controller"></i>
+              Itch.io Sayfası
+            </a>
+
+            <a
+              href="https://drive.google.com/file/d/1XPHoAWIvzxIqlwKyOJG9AvNmls-mPb0o/view?usp=sharing"
+              class="download-btn"
+              target="_blank"
+            >
+              <i class="bi bi-box-arrow-up-right"></i>
+              Alternatif Link
+            </a>
+          </div>
+        </div>
+
+        <br /><br />
+
+        <!-- YORUMLAR -->
+        <div class="section-box">
+          <h2 class="section-title">Yorumlar</h2>
+
+          <div id="disqus_thread"></div>
+          <script>
+            /**
+             *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+             *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+
+            var disqus_config = function () {
+              this.page.url = "https://karbonfansub.com/projeler/klinikdeney/"; // Replace PAGE_URL with your page's canonical URL variable
+              this.page.identifier = "klinik-deney"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            };
+
+            (function () {
+              // DON'T EDIT BELOW THIS LINE
+              var d = document,
+                s = d.createElement("script");
+              s.src = "https://karbon-fansub.disqus.com/embed.js";
+              s.setAttribute("data-timestamp", +new Date());
+              (d.head || d.body).appendChild(s);
+            })();
+          </script>
+          <noscript
+            >Please enable JavaScript to view the
+            <a href="https://disqus.com/?ref_noscript"
+              >comments powered by Disqus.</a
+            ></noscript
+          >
+        </div>
+      </div>
+
+      <div class="line"></div>
+
+      <!-- ALT MENÜ -->
+      <div class="bottom-menu">
+        <a href="../../index.html" class="btn">Ana Sayfa</a>
+        <a href="../../projeler.html" class="btn">Projeler</a>
+
+        <a
+          href="https://www.youtube.com/@KarBonFansub"
+          target="_blank"
+          class="social yt"
+          aria-label="YouTube"
+        >
+          <i class="bi bi-youtube"></i>
+        </a>
+
+        <a
+          href="https://discord.gg/CXngCNXkBD"
+          target="_blank"
+          class="social dc"
+          aria-label="Discord"
+        >
+          <i class="bi bi-discord"></i>
+        </a>
+
+        <a href="../../bize-katilin.html" class="btn">Bize Katılın</a>
+        <a href="../../bagis.html" class="btn">Bağış</a>
+      </div>
+    </div>
+
+    <script>
+      let currentSlide = 0;
+      const slides = document.getElementById("slides");
+      const dots = document.querySelectorAll(".dot");
+      const totalSlides = slides.children.length;
+
+      function updateSlider() {
+        slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+        dots.forEach((dot, index) => {
+          dot.classList.toggle("active", index === currentSlide);
+        });
+      }
+
+      function changeSlide(step) {
+        currentSlide += step;
+
+        if (currentSlide < 0) currentSlide = totalSlides - 1;
+        if (currentSlide >= totalSlides) currentSlide = 0;
+
+        updateSlider();
+      }
+
+      function goToSlide(index) {
+        currentSlide = index;
+        updateSlider();
+      }
+    </script>
+
+    <script
+      id="dsq-count-scr"
+      src="//karbon-fansub.disqus.com/count.js"
+      async
+    ></script>
+  </body>
+</html>
