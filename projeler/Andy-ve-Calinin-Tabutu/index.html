@@ -38,36 +38,70 @@
       body {
         margin: 0;
         font-family: "Faustina", serif;
+
         background:
-          linear-gradient(rgba(8, 5, 5, 0.88), rgba(5, 3, 3, 0.95)),
-          url("arka-plan.jpg") center/cover fixed no-repeat;
-        color: #eee7e1;
+          radial-gradient(
+            circle at 20% 20%,
+            rgba(82, 157, 164, 0.2),
+            transparent 35%
+          ),
+          radial-gradient(
+            circle at 80% 25%,
+            rgba(145, 91, 190, 0.24),
+            transparent 38%
+          ),
+          radial-gradient(
+            circle at 50% 100%,
+            rgba(92, 72, 160, 0.18),
+            transparent 45%
+          ),
+          #09090d;
+
+        color: #eee5d8;
       }
 
       .theme-overlay {
         width: 100%;
         min-height: 100vh;
+
         background: linear-gradient(
-          to bottom,
-          rgba(20, 8, 8, 0.25),
-          rgba(8, 4, 4, 0.45)
+          115deg,
+          rgba(53, 116, 126, 0.16),
+          rgba(119, 72, 155, 0.18),
+          rgba(190, 108, 184, 0.12)
         );
       }
 
       .top-menu .btn,
       .bottom-menu .btn {
-        background: rgba(52, 18, 18, 0.88);
-        color: #f3e8e2;
-        border: 1px solid rgba(150, 70, 70, 0.22);
-        box-shadow: 0 0 12px rgba(0, 0, 0, 0.25);
+        background: linear-gradient(
+          135deg,
+          rgba(48, 70, 101, 0.95),
+          rgba(77, 49, 103, 0.95)
+        );
+
+        color: #f2e9df;
+
+        border: 1px solid rgba(174, 151, 220, 0.35);
+
+        box-shadow:
+          0 4px 15px rgba(0, 0, 0, 0.45),
+          0 0 12px rgba(111, 87, 180, 0.15);
+
         transition: 0.25s ease;
       }
 
       .top-menu .btn:hover,
       .bottom-menu .btn:hover {
-        background: rgba(78, 25, 25, 0.95);
-        color: #ffffff;
-        box-shadow: 0 0 16px rgba(90, 20, 20, 0.35);
+        background: linear-gradient(135deg, #4f87a0, #8b5bb4, #bd72b9);
+
+        color: white;
+
+        border-color: rgba(220, 190, 240, 0.65);
+
+        box-shadow: 0 0 20px rgba(145, 105, 210, 0.35);
+
+        transform: translateY(-2px);
       }
 
       .line {
@@ -101,14 +135,21 @@
       }
 
       .section-box {
-        background: rgba(18, 10, 10, 0.72);
-        border: 1px solid rgba(155, 78, 78, 0.14);
-        border-radius: 18px;
+        background: linear-gradient(
+          135deg,
+          rgba(28, 32, 39, 0.9),
+          rgba(37, 27, 48, 0.9)
+        );
+
+        border: 1px solid rgba(166, 137, 210, 0.3);
+
+        border-radius: 14px;
+
         padding: 28px;
+
         box-shadow:
-          0 10px 28px rgba(0, 0, 0, 0.4),
-          inset 0 0 0 1px rgba(255, 255, 255, 0.02);
-        backdrop-filter: blur(2px);
+          0 12px 30px rgba(0, 0, 0, 0.55),
+          0 0 25px rgba(104, 76, 150, 0.1);
       }
 
       .logo-area {
@@ -145,20 +186,42 @@
       }
 
       .staff-card {
-        background: rgba(42, 18, 18, 0.5);
-        border: 1px solid rgba(170, 88, 88, 0.12);
-        border-radius: 16px;
+        background: linear-gradient(
+          135deg,
+          rgba(38, 58, 67, 0.65),
+          rgba(57, 38, 70, 0.72)
+        );
+
+        border: 1px solid rgba(145, 181, 210, 0.22);
+
+        border-radius: 12px;
+
         padding: 20px;
+
         text-align: center;
-        box-shadow: inset 0 0 14px rgba(0, 0, 0, 0.18);
+
+        box-shadow:
+          inset 0 0 18px rgba(0, 0, 0, 0.25),
+          0 6px 18px rgba(0, 0, 0, 0.25);
+
         transition: 0.25s ease;
       }
 
       .staff-card:hover {
-        background: rgba(54, 22, 22, 0.62);
-        transform: translateY(-2px);
-      }
+        background: linear-gradient(
+          135deg,
+          rgba(56, 99, 109, 0.72),
+          rgba(105, 61, 125, 0.78)
+        );
 
+        border-color: rgba(194, 157, 232, 0.45);
+
+        transform: translateY(-3px);
+
+        box-shadow:
+          0 8px 25px rgba(0, 0, 0, 0.4),
+          0 0 18px rgba(145, 105, 200, 0.2);
+      }
       .staff-card h3 {
         margin: 0 0 10px 0;
         font-size: 24px;
@@ -295,6 +358,14 @@
           font-size: 18px;
         }
       }
+
+      /* YORUMLAR */
+      #disqus_thread {
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto;
+        box-sizing: border-box;
+      }
     </style>
   </head>
   <body>
@@ -389,8 +460,9 @@
             karantina sebebiyle resmen bir tabut<br />
             havası veren bir apartmanda sıkıştıklarını ve bu apartmanda
             yaşadıkları olaylara tanık oluyoruz. <br />
-            Evet bu doğru eğer orijinal oyundaki kan bağından dolayı rahatsızsanız
-            iki <b>oda</b> arkadaşının hikayesini oynayabilirsiniz.
+            Evet bu doğru eğer orijinal oyundaki kan bağından dolayı
+            rahatsızsanız iki <b>oda</b> arkadaşının hikayesini
+            oynayabilirsiniz.
           </div>
         </div>
 
@@ -420,13 +492,15 @@
 
         <div class="line"></div>
 
-        <!-- YÜKLEME LİNKLERİ -->
         <div class="section-box">
-          <h2 class="section-title">Yükleme Linkleri</h2>
+          <!-- YÜKLEME LİNKLERİ -->
+          <div class="section-box">
+            <h2 class="section-title">Yükleme Linkleri</h2>
 
             <p style="text-align: center">PROJE DAHA YAYINLANMADI</p>
           </div>
         </div>
+
         <br /><br />
 
         <!-- YORUMLAR -->
@@ -441,7 +515,7 @@
 
             var disqus_config = function () {
               this.page.url =
-                "https://karbonfansub.com/projeler/"; // Replace PAGE_URL with your page's canonical URL variable
+                "https://karbonfansub.com/projeler/Andy-ve-Calinin-Tabutu/"; // Replace PAGE_URL with your page's canonical URL variable
               this.page.identifier = "andy-ve-calinin-tabutu"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
             };
 
