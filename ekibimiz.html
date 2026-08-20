@@ -1,463 +1,537 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="tr">
-<head>
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-W2VBWNL723"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-W2VBWNL723"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+      gtag("config", "G-W2VBWNL723");
+    </script>
 
-  gtag('config', 'G-W2VBWNL723');
-</script>
-
-    <link rel="icon" href="icon.ico">
-    <meta charset="UTF-8">
+    <link rel="icon" href="icon.ico" />
+    <meta charset="UTF-8" />
     <title>Ekibimiz</title>
-    <link rel="stylesheet" href="style.css?v=5">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css">
-    <link rel="canonical" href="https://karbonfansub.com/ekibimiz.html">
+    <link rel="stylesheet" href="style.css?v=5" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css"
+    />
+    <link rel="canonical" href="https://karbonfansub.com/ekibimiz.html" />
 
-<script>
-if (localStorage.getItem("theme") === "dark") {
-    document.documentElement.classList.add("dark");
-}
-</script>
+    <script>
+      if (localStorage.getItem("theme") === "dark") {
+        document.documentElement.classList.add("dark");
+      }
+    </script>
 
     <style>
-        @font-face {
-    font-family: 'ComicCustom';
-    src: url('fonts/ComicSansMS.ttf') format('truetype');
-        }
+      @font-face {
+        font-family: "ComicCustom";
+        src: url("fonts/ComicSansMS.ttf") format("truetype");
+      }
 
-body {
-    font-family: 'ComicCustom';
-}
-       .music-card .project-image {
-    position: relative;
-    cursor: pointer;
-    overflow: visible;
-}
+      body {
+        font-family: "ComicCustom";
+      }
+      .music-card .project-image {
+        position: relative;
+        cursor: pointer;
+        overflow: visible;
+      }
 
-.music-card .project-image img {
-    position: relative;
-    z-index: 2;
-    border-radius: 12px;
-}
+      .music-card .project-image img {
+        position: relative;
+        z-index: 2;
+        border-radius: 12px;
+      }
 
-    .glow {
+      .glow {
         position: absolute;
         inset: -20px;
         z-index: 1;
 
-        background: radial-gradient(circle,
-        var(--glow-color1, rgba(254, 26, 80, 0.65)),
-        var(--glow-color2, rgba(120, 0, 255, 0.45)),
-        transparent 90%);
+        background: radial-gradient(
+          circle,
+          var(--glow-color1, rgba(254, 26, 80, 0.65)),
+          var(--glow-color2, rgba(120, 0, 255, 0.45)),
+          transparent 90%
+        );
 
         filter: blur(35px);
         opacity: 0;
         transition: opacity 0.4s ease;
         animation: glowMove 6s infinite linear;
         pointer-events: none;
-    }
+      }
 
-        .music-card.playing .glow {
-            opacity: 0.85;
+      .music-card.playing .glow {
+        opacity: 0.85;
+      }
+
+      @keyframes glowMove {
+        0% {
+          transform: scale(1) rotate(0deg);
         }
 
-        @keyframes glowMove {
-            0% {
-                transform: scale(1) rotate(0deg);
-            }
-
-            50% {
-                transform: scale(1.15) rotate(180deg);
-            }
-
-            100% {
-                transform: scale(1) rotate(360deg);
-            }
+        50% {
+          transform: scale(1.15) rotate(180deg);
         }
-        
-    .music-card.playing .project-image img {
-    box-shadow:
-        0 0 20px var(--glow-color1),
-        0 0 40px var(--glow-color2),
-        inset 0 0 20px var(--glow-color1);
-}
-.music-card.playing .project-image img {
-    box-shadow:
-        0 0 25px var(--glow-color1),
-        0 0 50px var(--glow-color2),
-        inset 0 0 25px var(--glow-color1);
-}
+
+        100% {
+          transform: scale(1) rotate(360deg);
+        }
+      }
+
+      .music-card.playing .project-image img {
+        box-shadow:
+          0 0 20px var(--glow-color1),
+          0 0 40px var(--glow-color2),
+          inset 0 0 20px var(--glow-color1);
+      }
+      .music-card.playing .project-image img {
+        box-shadow:
+          0 0 25px var(--glow-color1),
+          0 0 50px var(--glow-color2),
+          inset 0 0 25px var(--glow-color1);
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
+    <!-- LOGO -->
+    <a href="index.html" class="logo">
+      <img src="Logomuz.png" />
+    </a>
 
-<!-- LOGO -->
-<a href="index.html" class="logo">
-    <img src="Logomuz.png">
-</a>
+    <!-- ÜST MENÜ -->
+    <div class="top-menu">
+      <a href="index.html" class="btn">Ana Sayfa</a>
+      <a href="projeler.html" class="btn">Projeler</a>
 
-<!-- ÜST MENÜ -->
-<div class="top-menu">
-
-    <a href="index.html" class="btn">Ana Sayfa</a>
-    <a href="projeler.html" class="btn">Projeler</a>
-
-    <a href="https://www.youtube.com/@KarBonFansub" target="_blank" class="social yt">
+      <a
+        href="https://www.youtube.com/@KarBonFansub"
+        target="_blank"
+        class="social yt"
+      >
         <i class="bi bi-youtube"></i>
-    </a>
+      </a>
 
-    <a href="https://discord.gg/CXngCNXkBD" target="_blank" class="social dc">
+      <a href="https://discord.gg/CXngCNXkBD" target="_blank" class="social dc">
         <i class="bi bi-discord"></i>
-    </a>
+      </a>
 
-    <a href="bize-katilin.html" class="btn">Bize Katılın</a>
-    <a href="bagis.html" class="btn">Bağış</a>
+      <a href="bize-katilin.html" class="btn">Bize Katılın</a>
+      <a href="bagis.html" class="btn">Bağış</a>
 
-    <label class="theme-switch">
-  <input type="checkbox" onchange="toggleTheme()" id="themeToggle">
-  <span class="slider">
-    <span class="icon sun">☀️</span>
-    <span class="icon moon">🌙</span>
-  </span>
-  </label>
+      <label class="theme-switch">
+        <input type="checkbox" onchange="toggleTheme()" id="themeToggle" />
+        <span class="slider">
+          <span class="icon sun">☀️</span>
+          <span class="icon moon">🌙</span>
+        </span>
+      </label>
+    </div>
 
-</div>
+    <div class="line"></div>
 
-<div class="line"></div>
-
-<!-- CONTENT -->
-<div class="content">
-
-    <div class="page-title">
+    <!-- CONTENT -->
+    <div class="content">
+      <div class="page-title">
         <h1>Ekibimiz</h1>
-    </div>
+      </div>
 
-    <div class="project-grid">
-
-<div class="team-card music-card" style="--glow-color1: rgba(0, 76, 255, 0.847); --glow-color2: rgb(255, 149, 0); ">
-    <div class="project-image" onclick="playMusic('Shillmusic', this);">
-        <div class="glow"></div>
-        <img src="ekip-pp/Shilll.webp" alt="Shilller">
-    </div>
-
-    <h3>Shilller</h3>
-
-    <p class="role">
-        <img src="ekip-pp/yonetim.png" class="role-icon manager-icon">
-        Yönetici/Çevirmen
-    </p>
-
-    <p>Lets larp</p>
-</div>
-
-<audio id="Shillmusic" src="Shilllereasteregg.mp3"></audio>
-
-
-        <div class="team-card music-card" style="--glow-color1: rgba(255, 70, 130, 0.75); --glow-color2: rgba(106, 16, 16, 0.985);">
-            <div class="project-image" onclick="playMusic('azraMusic', this)">
+      <div class="project-grid">
+        <div
+          class="team-card music-card"
+          style="
+            --glow-color1: rgba(0, 76, 255, 0.847);
+            --glow-color2: rgb(255, 149, 0);
+          "
+        >
+          <div class="project-image" onclick="playMusic('Shillmusic', this)">
             <div class="glow"></div>
-            <img src="ekip-pp/Azra.webp" alt="Azra">
+            <img src="ekip-pp/Shilll.webp" alt="Shilller" />
+          </div>
+
+          <h3>Shilller</h3>
+
+          <p class="role">
+            <img src="ekip-pp/yonetim.png" class="role-icon manager-icon" />
+            Yönetici/Çevirmen
+          </p>
+
+          <p>Lets larp</p>
         </div>
-            <h3>Leydi Azra</h3>
-            <p class="role">
-    <img src="ekip-pp/redaktör.png" class="role-icon">
-    Redaktör
-</p>
-            <p>KarBon'a çok aşığım</p>
+
+        <audio id="Shillmusic" src="Shilllereasteregg.mp3"></audio>
+
+        <div
+          class="team-card music-card"
+          style="
+            --glow-color1: rgba(255, 70, 130, 0.75);
+            --glow-color2: rgba(106, 16, 16, 0.985);
+          "
+        >
+          <div class="project-image" onclick="playMusic('azraMusic', this)">
+            <div class="glow"></div>
+            <img src="ekip-pp/Azra.webp" alt="Azra" />
+          </div>
+          <h3>Leydi Azra</h3>
+          <p class="role">
+            <img src="ekip-pp/redaktör.png" class="role-icon" />
+            Redaktör
+          </p>
+          <p>KarBon'a çok aşığım</p>
         </div>
         <audio id="azraMusic" src="Azraeasteregg.mp3"></audio>
         <audio id="azraMusicV2" src="azraninkabaetieasteregg.mp3"></audio>
 
-        <div class="team-card music-card" style="--glow-color1: rgba(255, 0, 0, 0.75); --glow-color2: rgba(141, 0, 144, 0.985);">
-            <div class="project-image" onclick="playMusic('karbonMusic', this)">
-                <div class="glow"></div>
-                <img src="ekip-pp/KarBon.webp" alt="KarBon">
-            </div>
-            <h3><a href="javascript:void(0)"onclick="playMusic('azraMusicV2', this)">K</a>arBon Sama</h3>
-            <p class="role">
-    <img src="ekip-pp/yonetim.png" class="role-icon manager-icon">
-    Yönetici/Redaktör
-</p>
-            <p>Azra'ya çok aşığım</p>
+        <div
+          class="team-card music-card"
+          style="
+            --glow-color1: rgba(255, 0, 0, 0.75);
+            --glow-color2: rgba(141, 0, 144, 0.985);
+          "
+        >
+          <div class="project-image" onclick="playMusic('karbonMusic', this)">
+            <div class="glow"></div>
+            <img src="ekip-pp/KarBon.webp" alt="KarBon" />
+          </div>
+          <h3>
+            <a
+              href="javascript:void(0)"
+              onclick="playMusic('azraMusicV2', this)"
+              >K</a
+            >arBon Sama
+          </h3>
+          <p class="role">
+            <img src="ekip-pp/yonetim.png" class="role-icon manager-icon" />
+            Yönetici/Redaktör
+          </p>
+          <p>Azra'ya çok aşığım</p>
         </div>
-            <audio id="karbonMusic" src="Karboneasteregg.mp3"></audio>
-
-
-                <div class="team-card">
-            <div class="project-image">
-                <img src="ekip-pp/Korsanmaid.webp" alt="korsanmaid">
-            </div>
-            <h3>Korsan Maid</h3>
-            <p class="role">
-    <img src="ekip-pp/yonetim.png" class="role-icon manager-icon">
-    Yönetici/Play Tester
-</p>
-            <p>"Kader Mahkumu"-Shilller</p>
-        </div>
-
-
-
-        <div class="team-card music-card" style="--glow-color1: rgb(217, 0, 255); --glow-color2: rgb(0, 0, 0);">
-            <div class="project-image" onclick="playMusic('toprakMusic', this)">
-                <div class="glow"></div>
-                    <img src="ekip-pp/Toprağammm.webp" alt="Redpandapp">
-                </div>
-            <h3>RedPandaa</h3>
-            <p class="role">
-    <img src="ekip-pp/Çevirmen.png" class="role-icon">
-    Çevirmen
-</p>
-            <p>Sabah Tornacı Akşam Purnacı</p>
-        </div>
-             <audio id="toprakMusic" src="Toprakeasteregg.mp3"></audio>
-
-                                <div class="team-card">
-            <div class="project-image">
-                <img src="ekip-pp/Nortwind.webp" alt="Northwind">
-            </div>
-            <h3>NorthWind</h3>
-            <p class="role">
-    <img src="ekip-pp/Çevirmen.png" class="role-icon">
-    Çevirmen
-</p>
-            <p>Sadece kuzey rüzgarı</p>
-        </div>
-
-                    <div class="team-card">
-            <div class="project-image">
-                    <img src="ekip-pp/uttuki.webp" alt="utku">
-                </a>
-            </div>
-            <h3>Uttuk<a href="Secret.html" target="_blank">i</a>ş</h3>
-            <p class="role">
-    <img src="ekip-pp/Çevirmen.png" class="role-icon">
-    Çevirmen
-</p>
-            <p>Soytarı Loli</p>
-        </div>
-
-            <div class="team-card">
-            <div class="project-image">
-            <a href="https://youtu.be/UIlPjKb_BSA?si=31jq0j-TWczJWWSS" target="_blank">  
-            <img src="ekip-pp/İzban.webp" alt="İzban">
-            </div></a>
-            <h3>Izban</h3>
-            <p class="role">
-            <img src="ekip-pp/çizer.png" class="role-icon">
-            Tasarımcı
-            </p>
-            <p>Sözde çizer</p>
-        </div>
-
+        <audio id="karbonMusic" src="Karboneasteregg.mp3"></audio>
 
         <div class="team-card">
-            <div class="project-image">
-                <img src="ekip-pp/Es07.webp" alt="Etrickster">
-            </div>
-            <h3>ES07</h3>
-            <p class="role">
-            <img src="ekip-pp/Çevirmen.png" class="role-icon">
-            Çevirmen
-            </p>
-            <p>He regrets nothing</p>
+          <div class="project-image">
+            <img src="ekip-pp/Korsanmaid.webp" alt="korsanmaid" />
+          </div>
+          <h3>Korsan Maid</h3>
+          <p class="role">
+            <img src="ekip-pp/yonetim.png" class="role-icon manager-icon" />
+            Yönetici/Play Tester
+          </p>
+          <p>"Kader Mahkumu"-Shilller</p>
         </div>
 
-                <div class="team-card">
-            <div class="project-image">
-                <img src="ekip-pp/Relaxant.webp" alt="Relaxant">
-            </div>
-            <h3>Eren</h3>
-            <p class="role">
-            <img src="ekip-pp/Çevirmen.png" class="role-icon">
+        <div
+          class="team-card music-card"
+          style="--glow-color1: rgb(217, 0, 255); --glow-color2: rgb(0, 0, 0)"
+        >
+          <div class="project-image" onclick="playMusic('toprakMusic', this)">
+            <div class="glow"></div>
+            <img src="ekip-pp/Toprağammm.webp" alt="Redpandapp" />
+          </div>
+          <h3>RedPandaa</h3>
+          <p class="role">
+            <img src="ekip-pp/Çevirmen.png" class="role-icon" />
             Çevirmen
-            </p>
-            <p>Adam sandık eşşeği alnımıza değdi daşşağı</p>
+          </p>
+          <p>Sabah Tornacı Akşam Purnacı</p>
+        </div>
+        <audio id="toprakMusic" src="Toprakeasteregg.mp3"></audio>
+
+        <div class="team-card">
+          <div class="project-image">
+            <img src="ekip-pp/Nortwind.webp" alt="Northwind" />
+          </div>
+          <h3>NorthWind</h3>
+          <p class="role">
+            <img src="ekip-pp/Çevirmen.png" class="role-icon" />
+            Çevirmen
+          </p>
+          <p>Sadece kuzey rüzgarı</p>
         </div>
 
-                <div class="team-card">
-            <div class="project-image">
-                <img src="ekip-pp/Wlayting.webp" alt="Relaxant">
-            </div>
-            <h3>Wlayting</h3>
-            <p class="role">
-            <img src="ekip-pp/redaktör.png" class="role-icon">
+        <div class="team-card">
+          <div class="project-image">
+            <img src="ekip-pp/uttuki.webp" alt="utku" />
+          </div>
+          <h3>Uttuk<a href="Secret.html" target="_blank">i</a>ş</h3>
+          <p class="role">
+            <img src="ekip-pp/Çevirmen.png" class="role-icon" />
+            Çevirmen
+          </p>
+          <p>Soytarı Loli</p>
+        </div>
+
+        <div class="team-card">
+          <div class="project-image">
+            <img src="ekip-pp/Es07.webp" alt="Etrickster" />
+          </div>
+          <h3>ES07</h3>
+          <p class="role">
+            <img src="ekip-pp/Çevirmen.png" class="role-icon" />
+            Çevirmen
+          </p>
+          <p>He regrets nothing</p>
+        </div>
+
+        <div class="team-card">
+          <div class="project-image">
+            <img src="ekip-pp/Relaxant.webp" alt="Relaxant" />
+          </div>
+          <h3>Eren</h3>
+          <p class="role">
+            <img src="ekip-pp/Çevirmen.png" class="role-icon" />
+            Çevirmen
+          </p>
+          <p>Adam sandık eşşeği alnımıza değdi daşşağı</p>
+        </div>
+
+        <div class="team-card">
+          <div class="project-image">
+            <img src="ekip-pp/raylox.webp" alt="Relaxant" />
+          </div>
+          <h3>Raylox</h3>
+          <p class="role">
+            <img src="ekip-pp/redaktör.png" class="role-icon" />
             Redaktör
-            </p>
-            <p>Only renee (Elif hanım için)</p>
-        </div>
-
-
-                <div class="team-card">
-            <div class="project-image">
-                <img src="ekip-pp/..." alt="Fotoğraf bekleniyor">
-            </div>
-            <h3>Luz</h3>
-            <p class="role">
-            <img src="ekip-pp/Çevirmen.png" class="role-icon">
-            Çevirmen
-            </p>
-            <p>Açıklama bekleniyor...</p>
-        </div>
-
-    </div>
-    
-        <div class="page-title">
-        <h1>Şeref Duvarı</h1>
-    </div>
-
-                <p style="font-size: 20px; line-height: 1.7; color: #333; margin-bottom: 20px; text-align: center;">
-                Bir dönem aramızda bulunan ekip arkadaşlarımız veya bize yardımcı olmuş olan dostlarımızın anısına... <br>
-                Buradaki insanlar ekip içinde aktif rol almayan ekibin üyesi olmayan ama yinede bizde iz bırakmış kişilerdir.
-            </p>
-
-<div class="project-grid">
-
-                <div class="team-card">
-            <div class="project-image">
-                <img src="ekip-pp/hasmetlikesi.webp" alt="Nisa">
-            </div>
-            <h3>Haşmetli Kedi</h3>
-            <p class="role">
-    <img src="ekip-pp/redaktör.png" class="role-icon">
-    Redaktör
-</p>
-            <p>"Kaplumbağa"-KorsanMaid</p>
+          </p>
+          <p>Tomboy lover</p>
         </div>
 
         <div class="team-card">
-            <div class="project-image">
-                <img src="ekip-pp/ettirikster.webp" alt="Etrickster">
-            </div>
-            <h3>Etrickster</h3>
-            <p class="role">
-            <img src="ekip-pp/Çevirmen.png" class="role-icon">
+          <div class="project-image">
+            <img src="ekip-pp/Wlayting.webp" alt="Relaxant" />
+          </div>
+          <h3>Wlayting</h3>
+          <p class="role">
+            <img src="ekip-pp/Çevirmen.png" class="role-icon" />
             Çevirmen
-            </p>
-            <p>Hacker değil</p>
+          </p>
+          <p>Only renee (Elif hanım için)</p>
         </div>
 
-                <!-- BOŞ -->
+        <div class="team-card">
+          <div class="project-image">
+            <img src="ekip-pp/angel.webp" alt="Fotoğraf bekleniyor" />
+          </div>
+          <h3>☨ Angel</h3>
+          <p class="role">
+            <img src="ekip-pp/Çevirmen.png" class="role-icon" />
+            Çevirmen
+          </p>
+          <p>Now this where i meant to be</p>
+        </div>
+
+        <div class="team-card">
+          <div class="project-image">
+            <a
+              href="https://youtu.be/UIlPjKb_BSA?si=31jq0j-TWczJWWSS"
+              target="_blank"
+            >
+              <img src="ekip-pp/İzban.webp" alt="İzban" />
+            </a>
+          </div>
+          <h3>Izban</h3>
+          <p class="role">
+            <img src="ekip-pp/çizer.png" class="role-icon" />
+            Tasarımcı
+          </p>
+          <p>Sözde çizer</p>
+        </div>
+
+        <!-- BOŞ -->
         <div class="team-card empty">
-            <div class="project-image"></div>
-            <h3>???</h3>
+          <div class="project-image"></div>
+          <h3>???</h3>
         </div>
 
-                  <!-- BOŞ -->
+        <!-- BOŞ -->
         <div class="team-card empty">
-            <div class="project-image"></div>
-            <h3>???</h3>
+          <div class="project-image"></div>
+          <h3>???</h3>
+        </div>
+        <!-- BOŞ -->
+        <div class="team-card empty">
+          <div class="project-image"></div>
+          <h3>???</h3>
+        </div>
+      </div>
+
+      <div class="page-title">
+        <h1>Şeref Duvarı</h1>
+      </div>
+
+      <p
+        style="
+          font-size: 20px;
+          line-height: 1.7;
+          color: #333;
+          margin-bottom: 20px;
+          text-align: center;
+        "
+      >
+        Bir dönem aramızda bulunan ekip arkadaşlarımız veya bize yardımcı olmuş
+        olan dostlarımızın anısına... <br />
+        Buradaki insanlar ekip içinde aktif rol almayan ekibin üyesi olmayan ama
+        yinede bizde iz bırakmış kişilerdir.
+      </p>
+
+      <div class="project-grid">
+        <div class="team-card">
+          <div class="project-image">
+            <img src="ekip-pp/hasmetlikesi.webp" alt="Nisa" />
+          </div>
+          <h3>Haşmetli Kedi</h3>
+          <p class="role">
+            <img src="ekip-pp/redaktör.png" class="role-icon" />
+            Redaktör
+          </p>
+          <p>"Kaplumbağa"-KorsanMaid</p>
         </div>
 
-</div>
+        <div class="team-card">
+          <div class="project-image">
+            <img src="ekip-pp/ettirikster.webp" alt="Etrickster" />
+          </div>
+          <h3>Etrickster</h3>
+          <p class="role">
+            <img src="ekip-pp/Çevirmen.png" class="role-icon" />
+            Çevirmen
+          </p>
+          <p>Hacker değil</p>
+        </div>
 
-</div>
+        <!-- BOŞ -->
+        <div class="team-card empty">
+          <div class="project-image"></div>
+          <h3>???</h3>
+        </div>
 
-<!-- Politika ve hakkımızda -->
+        <!-- BOŞ -->
+        <div class="team-card empty">
+          <div class="project-image"></div>
+          <h3>???</h3>
+        </div>
+      </div>
+    </div>
 
-<div class="footer-links">
-    <a href="Gizlilik-Politikasi.html" target="_blank">Gizlilik Politikası</a>
-    <Span>|</Span>
-    <a href="hakkimizda.html" target="_blank">Hakkımızda</a>
-</div>
+    <!-- Politika ve hakkımızda -->
 
-<div style="text-align: center;"> 𝓚𝓪𝓻𝓑𝓸𝓷 𝓕𝓪𝓷𝓼𝓾𝓫</div>
+    <div class="footer-links">
+      <a href="Gizlilik-Politikasi.html" target="_blank">Gizlilik Politikası</a>
+      <span>|</span>
+      <a href="hakkimizda.html" target="_blank">Hakkımızda</a>
+    </div>
 
-<div style="text-align: center;">Çevir, Düzelt, <span style="color: red;">Yayınla</span></div>
+    <div style="text-align: center">𝓚𝓪𝓻𝓑𝓸𝓷 𝓕𝓪𝓷𝓼𝓾𝓫</div>
 
-<br>
+    <div style="text-align: center">
+      Çevir, Düzelt, <span style="color: red">Yayınla</span>
+    </div>
 
-<div style="text-align: center;">
-    Bizimle iletişime geçin / Contact us: <br>
-    <a href="mailto:samakarbon@gmail.com" style="color: #0066cc; text-decoration: none;">samakarbon@gmail.com</a>
-</div>
+    <br />
 
-<div class="line"></div>
+    <div style="text-align: center">
+      Bizimle iletişime geçin / Contact us: <br />
+      <a
+        href="mailto:samakarbon@gmail.com"
+        style="color: #0066cc; text-decoration: none"
+        >samakarbon@gmail.com</a
+      >
+    </div>
 
-<!-- ALT MENÜ -->
-<div class="bottom-menu">
+    <div class="line"></div>
 
-    <a href="index.html" class="btn">Ana Sayfa</a>
-    <a href="projeler.html" class="btn">Projeler</a>
+    <!-- ALT MENÜ -->
+    <div class="bottom-menu">
+      <a href="index.html" class="btn">Ana Sayfa</a>
+      <a href="projeler.html" class="btn">Projeler</a>
 
-    <a href="https://www.youtube.com/@KarBonFansub" target="_blank" class="social yt">
+      <a
+        href="https://www.youtube.com/@KarBonFansub"
+        target="_blank"
+        class="social yt"
+      >
         <i class="bi bi-youtube"></i>
-    </a>
+      </a>
 
-    <a href="https://discord.gg/CXngCNXkBD" target="_blank" class="social dc">
+      <a href="https://discord.gg/CXngCNXkBD" target="_blank" class="social dc">
         <i class="bi bi-discord"></i>
-    </a>
+      </a>
 
-    <a href="bize-katilin.html" class="btn">Bize Katılın</a>
-    <a href="bagis.html" class="btn">Bağış</a>
+      <a href="bize-katilin.html" class="btn">Bize Katılın</a>
+      <a href="bagis.html" class="btn">Bağış</a>
+    </div>
 
-</div>
+    <script src="theme.js"></script>
 
-<script src="theme.js"></script>
+    <script>
+      let fadeInterval;
+      let currentMusic = null;
+      let currentCard = null;
 
-<script>
-let fadeInterval;
-let currentMusic = null;
-let currentCard = null;
+      function playMusic(musicId, clickedElement) {
+        const music = document.getElementById(musicId);
+        const card =
+          clickedElement.closest(".music-card") ||
+          clickedElement.parentElement.closest(".music-card");
+        clearInterval(fadeInterval);
 
-function playMusic(musicId, clickedElement) {
-    const music = document.getElementById(musicId);
-    const card = clickedElement.closest(".music-card") ||
-             clickedElement.parentElement.closest(".music-card");
-    clearInterval(fadeInterval);
+        if (currentMusic && currentMusic !== music) {
+          currentMusic.pause();
+          currentMusic.currentTime = 0;
+          if (currentCard) currentCard.classList.remove("playing");
+          setShilllerMode(false);
+        }
 
-    if (currentMusic && currentMusic !== music) {
-        currentMusic.pause();
-        currentMusic.currentTime = 0;
-        if (currentCard) currentCard.classList.remove("playing");
-        setShilllerMode(false);
-    }
+        if (music.paused) {
+          if (musicId === "Shillmusic") {
+            setShilllerMode(true);
+          }
+          music.volume = 0;
+          music.play();
 
-    if (music.paused) {
+          card.classList.add("playing");
 
-    if (musicId === "Shillmusic") {
-        setShilllerMode(true);
-    }
-        music.volume = 0;
-        music.play();
+          currentMusic = music;
+          currentCard = card;
 
-        card.classList.add("playing");
+          let volume = 0;
+          const target = 0.25;
+          const step = 0.01;
 
-        currentMusic = music;
-        currentCard = card;
-
-        let volume = 0;
-        const target = 0.25;
-        const step = 0.01;
-
-        fadeInterval = setInterval(() => {
+          fadeInterval = setInterval(() => {
             volume += step;
 
             if (volume >= target) {
-                volume = target;
-                clearInterval(fadeInterval);
+              volume = target;
+              clearInterval(fadeInterval);
             }
 
             music.volume = volume;
-        }, 150);
+          }, 150);
+        } else {
+          music.pause();
+          if (musicId === "Shillmusic") {
+            setShilllerMode(false);
+          }
+          music.currentTime = 0;
+          card.classList.remove("playing");
 
-    } else {
-        music.pause();
-        if (musicId === "Shillmusic") {
-    setShilllerMode(false);
-}
-        music.currentTime = 0;
-        card.classList.remove("playing");
-
-        currentMusic = null;
-        currentCard = null;
-    }
-}
-</script>
-</body>
+          currentMusic = null;
+          currentCard = null;
+        }
+      }
+    </script>
+  </body>
 </html>
