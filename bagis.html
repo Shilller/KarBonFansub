@@ -20,7 +20,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bağış</title>
-    <link rel="stylesheet" href="style.css?v=4" />
+    <link rel="stylesheet" href="style.css?v=5" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css"
@@ -78,6 +78,60 @@
         height: 100%;
         background: #3b82f6; /* Sitenin mavi tonu */
         box-shadow: 0 0 8px #3b82f6;
+      }
+
+      /* BAĞIŞ MODALI */
+      .bagis-modal {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.6);
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      .bagis-modal-icerik {
+        position: relative;
+        width: min(750px, 100%);
+        max-height: 90vh;
+        overflow-y: auto;
+        background: var(--bg);
+        color: var(--text);
+        border-radius: 12px;
+        padding: 30px;
+        box-sizing: border-box;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+      }
+
+      .bagis-modal-icerik h2 {
+        margin-top: 0;
+        text-align: center;
+        color: var(--text);
+      }
+
+      .bagis-kapat {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        border: none;
+        background: transparent;
+        font-size: 32px;
+        cursor: pointer;
+        color: var(--text);
+        line-height: 1;
+      }
+
+      .bagis-kapat:hover {
+        opacity: 0.7;
+      }
+      .kreosus-powered {
+        text-align: center;
+        margin-top: 15px;
+        font-size: 12px;
+        color: var(--text);
+        opacity: 0.45;
       }
     </style>
   </head>
@@ -140,12 +194,12 @@
         </p>
 
         <a
-          href="https://kreosus.com/karbonfansub/ "
-          target="_blank"
+          href="#"
           class="btn"
+          id="bagis-ac"
           style="font-size: 22px; padding: 18px 36px; display: inline-block"
         >
-          Kreosus Üzerinden Bağış Yap
+          BAĞIŞ YAPMAK İÇİN TIKLA
         </a>
       </div>
 
@@ -182,7 +236,7 @@
             <div>Miktar</div>
             <div>Tarih</div>
           </div>
-          <!-- Boş Şablon Satırı (JS Burayı Otomatik Dolduracak) -->
+
           <div
             style="
               display: grid;
@@ -233,7 +287,7 @@
             <div>Miktar</div>
             <div>Tarih</div>
           </div>
-          <!-- Boş Şablon Satırı (JS Burayı Otomatik Dolduracak) -->
+
           <div
             style="
               display: grid;
@@ -302,7 +356,65 @@
     </div>
 
     <script src="theme.js"></script>
+
+    <script>
+      (function (d, s, id) {
+        let js,
+          kjs = d.getElementsByTagName(s)[0];
+
+        if (d.getElementById(id)) {
+          return;
+        }
+
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://kreosus.com/public/kreosus/iframe/js/iframe-api.js";
+
+        kjs.parentNode.insertBefore(js, kjs);
+      })(document, "script", "kreosus-iframe-api");
+    </script>
+
+    <div id="bagis-modal" class="bagis-modal">
+      <div class="bagis-modal-icerik">
+        <button type="button" id="bagis-kapat" class="bagis-kapat">×</button>
+
+        <h2>Bağış Yap</h2>
+
+        <div id="kreosus-alani">
+          <div
+            id="kreosus"
+            data-id="6248"
+            data-start-page="0"
+            data-bg-color="D5D9DE"
+            data-iframe-api="true"
+          ></div>
+          <div class="kreosus-powered">Banka/Kredi Kartı geçerlidir</div>
+          <div class="kreosus-powered">Powered by Kreosus</div>
+        </div>
+      </div>
+    </div>
   </body>
+
+  <script>
+    const bagisAc = document.getElementById("bagis-ac");
+    const bagisModal = document.getElementById("bagis-modal");
+    const bagisKapat = document.getElementById("bagis-kapat");
+
+    bagisAc.addEventListener("click", function (e) {
+      e.preventDefault();
+      bagisModal.style.display = "flex";
+    });
+
+    bagisKapat.addEventListener("click", function () {
+      bagisModal.style.display = "none";
+    });
+
+    bagisModal.addEventListener("click", function (e) {
+      if (e.target === bagisModal) {
+        bagisModal.style.display = "none";
+      }
+    });
+  </script>
 
   <script>
     const GOOGLE_CSV_PATH =
