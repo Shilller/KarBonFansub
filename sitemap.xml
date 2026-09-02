@@ -1,12 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
     <loc>https://karbonfansub.com/</loc>
   </url>
 
+<!-- Proje sayfaları -->
+
   <url>
     <loc>https://karbonfansub.com/projeler.html</loc>
+  </url>
+
+  <url>
+    <loc>https://karbonfansub.com/projeler/andrew-ve-reneenin-tabutu/</loc>
+  </url>
+
+    <url>
+    <loc>https://karbonfansub.com/projeler/Andy-ve-Calinin-Tabutu/</loc>
   </url>
 
   <url>
@@ -18,10 +29,6 @@
   </url>
 
   <url>
-    <loc>https://karbonfansub.com/projeler/andrew-ve-reneenin-tabutu/</loc>
-  </url>
-
-  <url>
     <loc>https://karbonfansub.com/projeler/beceriksiz-noelle/</loc>
   </url>
 
@@ -30,11 +37,26 @@
   </url>
 
   <url>
+    <loc>https://karbonfansub.com/projeler/better-half/</loc>
+  </url>
+
+
+  <!-- PROJE URL'LER BURAYA -->
+
+  <url>
     <loc>https://karbonfansub.com/ekibimiz.html</loc>
   </url>
 
   <url>
     <loc>https://karbonfansub.com/bize-katilin.html</loc>
+  </url>
+
+  <url>
+    <loc>https://karbonfansub.com/cevirmen.html</loc>
+  </url>
+
+  <url>
+    <loc>https://karbonfansub.com/redaktor.html</loc>
   </url>
 
   <url>
@@ -47,6 +69,6 @@
 
   <url>
     <loc>https://karbonfansub.com/hakkimizda.html</loc>
-  </url>  
+  </url>
 
 </urlset>
