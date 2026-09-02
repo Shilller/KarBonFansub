@@ -27,6 +27,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css"
     />
+
     <link rel="canonical" href="https://karbonfansub.com/hakkimizda.html" />
 
     <script>
@@ -36,12 +37,16 @@
     </script>
 
     <style>
+      @font-face {
+        font-family: "TimesCustom";
+        src: url("fonts/times.ttf") format("truetype");
+      }
+
       body {
-        font-family: "TimesNewRoman", serif;
+        font-family: "TimesCustom", serif;
       }
-      h1 {
-        color: #284063;
-      }
+
+      h1,
       h2 {
         color: #284063;
       }
@@ -57,27 +62,52 @@
         margin-bottom: 10px;
       }
 
-      .privacy-content h2 {
-        margin-top: 25px;
-        border-left: 4px solid #000;
+      .privacy-section {
+        background: var(--card);
+        border: 1px solid rgba(46, 107, 79, 0.2);
+        border-radius: 18px;
+        padding: 25px;
+        margin-bottom: 20px;
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+        backdrop-filter: blur(6px);
+      }
+
+      .privacy-section h2 {
+        margin-top: 0;
+        border-left: 4px solid var(--primary);
         padding-left: 10px;
       }
 
-      .privacy-content p {
+      .privacy-section p {
         text-align: justify;
         line-height: 1.7;
         margin: 10px 0;
       }
 
-      .privacy-content ul {
+      .privacy-section ul {
         margin: 10px 0 10px 20px;
         padding-left: 20px;
         text-align: left;
       }
 
-      .privacy-content li {
+      .privacy-section li {
         margin-bottom: 5px;
         text-align: left;
+      }
+
+      .privacy-section img {
+        max-width: 80%;
+        height: auto;
+      }
+
+      .privacy-title {
+        text-align: center;
+        font-size: 40px;
+      }
+
+      .founder-title {
+        text-align: center;
+        font-size: 30px;
       }
     </style>
   </head>
@@ -122,129 +152,132 @@
 
     <!-- İÇERİK -->
     <div class="privacy-content">
-      <h1 style="font-size: 40px">Hakkımızda</h1>
+      <h1 class="privacy-title">Hakkımızda</h1>
 
-      <h2 style="font-size: 30px">Biz Kimiz</h2>
+      <section class="privacy-section">
+        <h2 style="font-size: 30px">Biz Kimiz</h2>
 
-      <p>
-        Biz gönüllük esasıyla çeşitli oyunlara çeviri ve yama yapan bir ekibiz
-        bütün çalışmalarımız toplum içindir.
-      </p>
+        <p>
+          Biz gönüllülük esasıyla çeşitli oyunlara çeviri ve yama yapan bir
+          ekibiz bütün çalışmalarımız toplum içindir.
+        </p>
 
-      <p>
-        KarBon Fansub herhangi bir kişi, kuruluş veya benzeri bir firmaya bağlı
-        değildir içeriklerinde Türkçeye çevirilen fotoğraflar ve diyaloglar
-        dışında söz konusu eserlerde herhangi bir hak iddia etmemektedir.
-      </p>
+        <p>
+          KarBon Fansub herhangi bir kişi, kuruluş veya benzeri bir firmaya
+          bağlı değildir içeriklerinde Türkçeye çevrilen fotoğraflar ve
+          diyaloglar dışında söz konusu eserlerde herhangi bir hak iddia
+          etmemektedir.
+        </p>
 
-      <p>
-        Din, kültür, ırk, yaş, cinsiyet, siyasi görüş farketmeksizin(Atatürk
-        düşmanları hariç) herkesi sunucumuzda ve aramızda görmekten mutluluk
-        duyarız.
-      </p>
+        <p>
+          Din, kültür, ırk, yaş, cinsiyet, siyasi görüş fark etmeksizin(Atatürk
+          düşmanları hariç) herkesi sunucumuzda ve aramızda görmekten mutluluk
+          duyarız.
+        </p>
+      </section>
 
-      <h2 style="font-size: 30px">Amacımız</h2>
+      <section class="privacy-section">
+        <h2 style="font-size: 30px">Amacımız</h2>
 
-      <p>
-        İçeriklerimizin tamamı sadece başka yapımcıların eserlerinin ülkemizde
-        de oynanabilmesi için yapılmaktadır.
-      </p>
+        <p>
+          İçeriklerimizin tamamı sadece başka yapımcıların eserlerinin ülkemizde
+          de oynanabilmesi için yapılmaktadır.
+        </p>
 
-      <p>
-        Ekip üyelerimiz bizim dostumuzdur ekibin eğer bir gün ekibin parçası
-        olursanız amacımız sizin de kendinizi geliştirmeniz ve çalışkan
-        olmanızdır.
-      </p>
+        <p>
+          Ekip üyelerimiz bizim dostumuzdur ekibin eğer bir gün ekibin parçası
+          olursanız amacımız sizin de kendinizi geliştirmeniz ve çalışkan
+          olmanızdır.
+        </p>
+      </section>
 
-      <h2 style="font-size: 30px">İçeriklerimizin Kullanımı</h2>
+      <section class="privacy-section">
+        <h2 style="font-size: 30px">İçeriklerimizin Kullanımı</h2>
 
-      <p>
-        KarBon Fansub tarafından yapılan çevirileri ve fotoğrafları gönlünüzce
-        <u>üstüne hak iddia etmeden</u> kullanma özgürlüğüne sahipsiniz.
-      </p>
+        <p>
+          KarBon Fansub tarafından yapılan çevirileri ve fotoğrafları gönlünüzce
+          <u>üstüne hak iddia etmeden</u> kullanma özgürlüğüne sahipsiniz.
+        </p>
 
-      <p>
-        Fansub'umuz tarafından üretilen özgün çeviri ve düzenleme içerikleri
-        <u
-          ><a
-            href="https://creativecommons.org/licenses/by-nc/4.0/deed.tr"
-            target="_blank"
-            style="color: blue"
-            >Creative Commons Attribution-NonCommercial 4.0 (CC BY-NC 4.0)</a
-          ></u
-        >
-        lisansı kapsamında paylaşılmaktadır.
-      </p>
+        <p>
+          Fansub'umuz tarafından üretilen özgün çeviri ve düzenleme içerikleri
+          <u>
+            <a
+              href="https://creativecommons.org/licenses/by-nc/4.0/deed.tr"
+              target="_blank"
+              style="color: blue"
+              >Creative Commons Attribution-NonCommercial 4.0 (CC BY-NC 4.0)</a
+            >
+          </u>
+          lisansı kapsamında paylaşılmaktadır.
+        </p>
+      </section>
 
-      <h2 style="font-size: 30px">Shiller'dan Son Sözler</h2>
+      <section class="privacy-section">
+        <h2 style="font-size: 30px">Shiller'dan Son Sözler</h2>
 
-      <p>
-        Sitenin ve projelerin yöneticisi olarak hakkımızda yazısını şu sözlerle
-        kapatmak istedim...
-      </p>
+        <p>
+          Sitenin ve projelerin yöneticisi olarak hakkımızda yazısını şu
+          sözlerle kapatmak istedim...
+        </p>
 
-      <p>Alttaki KarBon'un yazdığı yazının amk.</p>
+        <p>Alttaki KarBon'un yazdığı yazının amk.</p>
+      </section>
 
-      <div class="line"></div>
+      <section class="privacy-section">
+        <h1 class="founder-title">Kurucumuz KarBon'un kaleminden</h1>
 
-      <!-- Karbonun hakkımızda kısmı -->
+        <p>
+          Amatör bir şekilde götümüzü yırtarak çeviri yapıyoruz ve çok sıcak bir
+          ortamımız var. Herkesi ortamımızda görmeyi çok istiyoruz. Büyük küçük
+          yaş dil ırk ayrımı yapmadan birbirimizi kucaklıyoruz.
+        </p>
 
-      <h1 style="font-size: 30px">Kurucumuz KarBon'un kaleminden</h1>
+        <p>
+          Aynı zamanda seslendirme, dublaj, YouTube vb. işlerle de uğraşıyoruz.
+          Her zaman Discord’umuzda geceleri toplanıp sohbet ediyor, muhabbet
+          ediyor ve oyunlar oynuyoruz.
+        </p>
 
-      <p>
-        Amatör bir şekilde götümüzü yırtarak çeviri yapıyoruz ve çok sıcak bir
-        ortamımız var. Herkesi ortamımızda görmeyi çok istiyoruz. Büyük küçük
-        yaş dil ırk ayrımı yapmadan birbirimizi kucaklıyoruz.
-      </p>
+        <p>
+          Abi daha ne diyim, bizim hakkımızda bir şey yok (boş kalmasın diye
+          Shilller beni zorladı). Çeviri yapsanız da yapmasanız da Discord’umuza
+          gelin, takılalım.
+        </p>
 
-      <p>
-        Aynı zamanda seslendirme, dublaj, YouTube vb. işlerle de uğraşıyoruz.
-        Her zaman Discord’umuzda geceleri toplanıp sohbet ediyor, muhabbet
-        ediyor ve oyunlar oynuyoruz.
-      </p>
+        <p>
+          Azra’ya çok aşığım - By KarBon. Ekibe gelirseniz Shilller beye tapmak
+          zorunda değilsiniz, onu aşağılayın (Shiller'ın amk). Hepinizi çok
+          seviyoruz. Oyunlarımızı oynayın.
+        </p>
 
-      <p>
-        Abi daha ne diyim, bizim hakkımızda bir şey yok (boş kalmasın diye
-        Shilller beni zorladı). Çeviri yapsanız da yapmasanız da Discord’umuza
-        gelin, takılalım.
-      </p>
+        <p>
+          Azra sevmiyomuş oyunlarımızı… pardon seviyomuş. Hepinizi hâlâ çok
+          seviyoruz, Discord’a falan gelin işte. Ne diyeceğimi valla bilmiyorum,
+          gelin işte aq.
+        </p>
 
-      <p>
-        Azra’ya çok aşığım - By KarBon. Ekibe gelirseniz Shilller beye tapmak
-        zorunda değilsiniz, onu aşağılayın (Shiller'ın amk). Hepinizi çok
-        seviyoruz. Oyunlarımızı oynayın.
-      </p>
+        <p>
+          Divilethion oynayın, Uttuki çok çalıştı. Tcoaar oynamayın sevmiyom
+          valla. Klinik Deney oynayın, Shilller yapmış. No Good Noelle oynayın,
+          ben yaptım (KarBon).
+        </p>
 
-      <p>
-        Azra sevmiyomuş oyunlarımızı… pardon seviyomuş. Hepinizi hâlâ çok
-        seviyoruz, Discord’a falan gelin işte. Ne diyeceğimi valla bilmiyorum,
-        gelin işte aq.
-      </p>
+        <p>
+          Azra bi sikim yapmadı. Korsanmaid'in burdan amınakoyim. Hakkımızda
+          kısmı bu kadardı. Hakkımız varsa helal olsun.
+        </p>
 
-      <p>
-        Divilethion oynayın, Uttuki çok çalıştı. Tcoaar oynamayın sevmiyom
-        valla. Klinik Deney oynayın, Shilller yapmış. No Good Noelle oynayın,
-        ben yaptım (KarBon).
-      </p>
+        <p>-KarBon Sama</p>
 
-      <p>
-        Azra bi sikim yapmadı. Korsanmaid'in burdan amınakoyim. Hakkımızda kısmı
-        bu kadardı. Hakkımız varsa helal olsun.
-      </p>
-
-      <p>-KarBon Sama</p>
-      <div style="text-align: center">
-        <a href="bize-katilin.html">
-          <img
-            src="dcbanner.png"
-            alt="ekibe alım resmi"
-            style="max-width: 80%; height: auto"
-          />
-        </a>
-      </div>
+        <div style="text-align: center">
+          <a href="bize-katilin.html">
+            <img src="dcbanner.png" alt="ekibe alım resmi" />
+          </a>
+        </div>
+      </section>
 
       <!-- Politika ve hakkımızda -->
-
       <div class="footer-links">
         <a href="Gizlilik-Politikasi.html" target="_blank"
           >Gizlilik Politikası</a
@@ -270,6 +303,7 @@
         >
       </div>
     </div>
+
     <!-- ALT ÇİZGİ -->
     <div class="line"></div>
 

@@ -838,12 +838,6 @@ a {
     width: 92%;
   }
 }
-.privacy-content {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-  padding: 20px;
-}
 .footer-links {
   text-align: center;
   margin: 20px 0;
@@ -1372,4 +1366,30 @@ body.dark .page-title h1 {
   display: block;
   margin-top: 15px;
   border-radius: 12px;
+}
+.privacy-content {
+  max-width: 850px;
+  margin: 50px auto;
+  padding: 35px;
+  background: var(--card);
+  border: 1px solid rgba(46, 107, 79, 0.2);
+  border-radius: 18px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(6px);
+  text-align: center;
+  padding: 20px;
+}
+.privacy-content h2 {
+  margin-top: 30px;
+  border-left: 4px solid var(--primary);
+  padding-left: 10px;
+}
+.privacy-section {
+  background: var(--card);
+  border: 1px solid rgba(46, 107, 79, 0.2);
+  border-radius: 18px;
+  padding: 25px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(6px);
 }

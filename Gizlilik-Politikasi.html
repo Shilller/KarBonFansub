@@ -40,8 +40,13 @@
     </script>
 
     <style>
+      @font-face {
+        font-family: "TimesCustom";
+        src: url("fonts/times.ttf") format("truetype");
+      }
+
       body {
-        font-family: "TimesNewRoman", serif;
+        font-family: "TimesCustom", serif;
       }
 
       .privacy-content {
@@ -55,25 +60,35 @@
         margin-bottom: 10px;
       }
 
-      .privacy-content h2 {
-        margin-top: 25px;
-        border-left: 4px solid #000;
+      .privacy-section {
+        background: var(--card);
+        border: 1px solid rgba(46, 107, 79, 0.2);
+        border-radius: 18px;
+        padding: 25px;
+        margin-bottom: 20px;
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+        backdrop-filter: blur(6px);
+      }
+
+      .privacy-section h2 {
+        margin-top: 0;
+        border-left: 4px solid var(--primary);
         padding-left: 10px;
       }
 
-      .privacy-content p {
+      .privacy-section p {
         text-align: justify;
         line-height: 1.7;
         margin: 10px 0;
       }
 
-      .privacy-content ul {
+      .privacy-section ul {
         margin: 10px 0 10px 20px;
         padding-left: 20px;
         text-align: left;
       }
 
-      .privacy-content li {
+      .privacy-section li {
         margin-bottom: 5px;
         text-align: left;
       }
@@ -121,93 +136,114 @@
     <div class="privacy-content">
       <h1>Gizlilik Politikası</h1>
 
-      <p>Son güncelleme: 05 Ağustos 2026</p>
+      <p style="text-align: center">Son güncelleme: 05 Ağustos 2026</p>
 
-      <h2>1. Genel Bilgilendirme</h2>
-      <p>
-        karbonfansub.com, statik bir web sitesidir. Kullanıcı gizliliği
-        önemlidir ve bu sayfa bilgilendirme amacıyla hazırlanmıştır.
-      </p>
+      <section class="privacy-section">
+        <h2>1. Genel Bilgilendirme</h2>
+        <p>
+          karbonfansub.com, statik bir web sitesidir. Kullanıcı gizliliği
+          önemlidir ve bu sayfa bilgilendirme amacıyla hazırlanmıştır.
+        </p>
+      </section>
 
-      <h2>2. Veri Toplanması</h2>
-      <p>
-        Sizden toplanan veriler tamamen anonimdir ve web sitesinin performans
-        ölçümü için kullanılmaktadır. Toplanılan veriler ise:
-      </p>
+      <section class="privacy-section">
+        <h2>2. Veri Toplanması</h2>
+        <p>
+          Sizden toplanan veriler tamamen anonimdir ve web sitesinin performans
+          ölçümü için kullanılmaktadır. Toplanan veriler ise:
+        </p>
 
-      <ul>
-        <li>Bulunduğunuz ülke/şehir</li>
-        <li>Web sitesinde girdiğiniz sayfalar</li>
-        <li>Sitede geçirilen süre</li>
-        <li>Kullanılan cihaz ve tarayıcı türü</li>
-      </ul>
+        <ul>
+          <li>Bulunduğunuz ülke/şehir</li>
+          <li>Web sitesinde girdiğiniz sayfalar</li>
+          <li>Sitede geçirilen süre</li>
+          <li>Kullanılan cihaz ve tarayıcı türü</li>
+        </ul>
 
-      <p>
-        Bu veriler yalnızca istatistiksel analiz amacıyla kullanılmakta olup,
-        ziyaretçileri doğrudan tanımlayacak kişisel bilgiler içermez.
-      </p>
+        <p>
+          Bu veriler yalnızca istatistiksel analiz amacıyla kullanılmakta olup,
+          ziyaretçileri doğrudan tanımlayacak kişisel bilgiler içermez.
+        </p>
+      </section>
 
-      <h2>3. Yorum Sistemi</h2>
-      <p>
-        Sitede yorum sistemi olarak Disqus kullanılmaktadır. Disqus, kendi
-        gizlilik politikası kapsamında kullanıcı bilgilerini (isim, e-posta ve
-        teknik veriler gibi) işleyebilir. Bu veriler Disqus tarafından yönetilir
-        sitemizin bu konuda herhangi bir sorumluluğu yoktur.
-      </p>
+      <section class="privacy-section">
+        <h2>3. Yorum Sistemi</h2>
+        <p>
+          Sitede yorum sistemi olarak Disqus kullanılmaktadır. Disqus, kendi
+          gizlilik politikası kapsamında kullanıcı bilgilerini (isim, e-posta ve
+          teknik veriler gibi) işleyebilir. Bu veriler Disqus tarafından
+          yönetilir, sitemizin bu konuda herhangi bir sorumluluğu yoktur.
+        </p>
+      </section>
 
-      <h2>4. Çerezler (Cookies)</h2>
-      <p>
-        Web sitemizde kullanılan çerezler kişinin bilgilerini takip etmez.
-        Disqus sisteminin topladığı verilerden sorumlu kişi KarBon Fansub
-        değildir.
-      </p>
+      <section class="privacy-section">
+        <h2>4. Çerezler (Cookies)</h2>
+        <p>
+          Web sitemizde kullanılan çerezler kişinin bilgilerini takip etmez.
+          Disqus sisteminin topladığı verilerden sorumlu kişi KarBon Fansub
+          değildir.
+        </p>
+      </section>
 
-      <h2>5. Üçüncü Taraf Servisler</h2>
-      <p>
-        Site içerisinde Disqus gibi üçüncü taraf hizmetler kullanılabilir. Bu
-        hizmetlerin veri kullanımı kendi gizlilik politikalarına tabidir.
-      </p>
+      <section class="privacy-section">
+        <h2>5. Üçüncü Taraf Servisler</h2>
+        <p>
+          Site içerisinde Disqus gibi üçüncü taraf hizmetler kullanılabilir. Bu
+          hizmetlerin veri kullanımı kendi gizlilik politikalarına tabidir.
+        </p>
+      </section>
 
-      <h2>6. Log Kayıtları</h2>
-      <p>
-        Site GitHub Pages üzerinde barındırıldığı için GitHub tarafından
-        sistemsel erişim logları tutulabilir. Bu veriler site sahibi tarafından
-        kişisel olarak analiz edilmez.
-      </p>
+      <section class="privacy-section">
+        <h2>6. Log Kayıtları</h2>
+        <p>
+          Site GitHub Pages üzerinde barındırıldığı için GitHub tarafından
+          sistemsel erişim logları tutulabilir. Bu veriler site sahibi
+          tarafından kişisel olarak analiz edilmez.
+        </p>
 
-      <p>
-        Yeni güncellemeyle yukarıdada belirtildiği gibi kullanıcan ekstra sadece
-        konum ve saat verisi alınmaktadır.
-      </p>
+        <p>
+          Yeni güncellemeyle yukarıda da belirtildiği gibi kullanıcıdan ekstra
+          sadece konum ve saat verisi alınmaktadır.
+        </p>
+      </section>
 
-      <h2>7. Güvenlik</h2>
-      <p>Site statik yapıda olduğu için sunucu taraflı veri işleme yapılmaz.</p>
+      <section class="privacy-section">
+        <h2>7. Güvenlik</h2>
+        <p>
+          Site statik yapıda olduğu için sunucu taraflı veri işleme yapılmaz.
+        </p>
+      </section>
 
-      <h2>8. KVKK Bilgilendirmesi</h2>
-      <p>
-        Bu site kapsamında KVKK (Kişisel Verilerin Korunması Kanunu)
-        çerçevesinde doğrudan kullanıcı verisi işlenmez.
-      </p>
+      <section class="privacy-section">
+        <h2>8. KVKK Bilgilendirmesi</h2>
+        <p>
+          Bu site kapsamında KVKK (Kişisel Verilerin Korunması Kanunu)
+          çerçevesinde doğrudan kullanıcı verisi işlenmez.
+        </p>
+      </section>
 
-      <h2>9. Bağlantılar</h2>
-      <p>
-        Sitede yer alan dış bağlantılar farklı web sitelerine yönlendirebilir.
-        Bu sitelerin içeriklerinden, güvenliğinden veya gizlilik
-        uygulamalarından KarBon Fansub sorumlu değildir.
-      </p>
+      <section class="privacy-section">
+        <h2>9. Bağlantılar</h2>
+        <p>
+          Sitede yer alan dış bağlantılar farklı web sitelerine yönlendirebilir.
+          Bu sitelerin içeriklerinden, güvenliğinden veya gizlilik
+          uygulamalarından KarBon Fansub sorumlu değildir.
+        </p>
+      </section>
 
-      <h2>10. İletişim</h2>
-      <p>
-        Gizlilik politikası ile ilgili sorular için discord üzerinden bizimle
-        iletişime geçebilirsiniz.
-      </p>
+      <section class="privacy-section">
+        <h2>10. İletişim</h2>
+        <p>
+          Gizlilik politikası ile ilgili sorular için discord üzerinden bizimle
+          iletişime geçebilirsiniz.
+        </p>
+      </section>
 
       <!-- Politika ve hakkımızda -->
-
       <div class="footer-links">
-        <a href="Gizlilik-Politikasi.html" style="color: purple"
-          >Gizlilik Politikası</a
-        >
+        <a href="Gizlilik-Politikasi.html" style="color: purple">
+          Gizlilik Politikası
+        </a>
         <span>|</span>
         <a href="hakkimizda.html" target="_blank">Hakkımızda</a>
       </div>
@@ -225,8 +261,9 @@
         <a
           href="mailto:samakarbon@gmail.com"
           style="color: #0066cc; text-decoration: none"
-          >samakarbon@gmail.com</a
         >
+          samakarbon@gmail.com
+        </a>
       </div>
     </div>
 
