@@ -37,6 +37,12 @@
             height: fit-content;
           }
 
+          .logo img {
+            width: 120px;
+            height: auto;
+            display: block;
+          }
+
           @media (prefers-color-scheme: dark) {
             :root {
               --bg: #121212;
