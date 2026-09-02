@@ -55,7 +55,6 @@ body {
   left: 5px;
   width: fit-content;
   display: inline-block;
-  width: fit-content;
   height: fit-content;
 }
 
@@ -132,6 +131,7 @@ body {
 /* CONTENT */
 .content {
   width: 80%;
+  max-width: 1500px;
   margin: auto;
 }
 
@@ -196,7 +196,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
 }
 
 .big-box img {
@@ -1315,4 +1314,62 @@ html.shilller-mode .role-icon {
   to {
     transform: rotate(360deg);
   }
+}
+/* ÇEVİRMEN FORMU DÜZENİ */
+
+.form-layout {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 30px;
+  margin: 40px auto;
+  max-width: 1400px;
+}
+
+.form-layout iframe {
+  flex-shrink: 0;
+}
+
+.info-card {
+  width: 220px;
+  padding: 20px;
+  background: var(--card);
+  color: var(--text);
+  border: 1px solid rgba(46, 107, 79, 0.2);
+  border-radius: 18px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(6px);
+
+  position: sticky;
+  top: 30px;
+  align-self: flex-start;
+}
+
+.info-card h2 {
+  margin-top: 0;
+  color: #284063;
+  font-size: 22px;
+}
+
+.info-card p {
+  line-height: 1.6;
+}
+body.dark .info-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+body.dark .info-card h2 {
+  color: #81a9e3;
+}
+
+body.dark .page-title h1 {
+  color: #81a9e3;
+}
+.info-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 15px;
+  border-radius: 12px;
 }

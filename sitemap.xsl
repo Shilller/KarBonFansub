@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <xsl:stylesheet
   version="1.0"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
@@ -10,7 +11,10 @@
     <html lang="tr">
       <head>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0"
+        />
 
         <title>KarBon Fansub - Sitemap</title>
 
@@ -22,6 +26,15 @@
             --primary: #3b82f6;
             --secondary: #284063;
             --border: rgba(46, 107, 79, 0.2);
+          }
+
+          .logo {
+            position: absolute;
+            top: 2px;
+            left: 5px;
+            width: fit-content;
+            display: inline-block;
+            height: fit-content;
           }
 
           @media (prefers-color-scheme: dark) {
@@ -119,7 +132,6 @@
 
           .footer {
             text-align: center;
-            opacity: 0.6;
             font-size: 14px;
           }
 
@@ -151,9 +163,17 @@
       <body>
         <div class="container">
 
+          <a href="/" class="logo">
+            <img src="Logomuz.png" />
+          </a>
+
           <div class="header">
             <h1>KarBon Fansub</h1>
             <p>Site Haritası</p>
+
+            <br />
+
+            <p>Şu anda mevcut: 15 Sayfamız var</p>
           </div>
 
           <div class="sitemap-card">
@@ -173,11 +193,14 @@
           </div>
 
           <div class="footer">
-            KarBon Fansub © 2026
             <br />
-            𝓚𝓪𝓻𝓑𝓸𝓷 𝓕𝓪𝓷𝓼𝓾𝓫
+
+            𝓚𝓪𝓻𝓑𝓸𝓷 𝓕𝓪𝓷𝓼𝓾𝓫 © 2025-2026
+
             <br />
-            Çevir, Düzelt, <span style="color: red">Yayınla</span>
+
+            Çevir, Düzelt,
+            <span style="color: red">Yayınla</span>
           </div>
 
         </div>

@@ -51,13 +51,17 @@
     <loc>https://karbonfansub.com/bize-katilin.html</loc>
   </url>
 
+  <!-- FORM URL'LERİ -->
+
   <url>
-    <loc>https://karbonfansub.com/cevirmen.html</loc>
+    <loc>https://karbonfansub.com/bize-katilin/cevirmen.html</loc>
   </url>
 
   <url>
-    <loc>https://karbonfansub.com/redaktor.html</loc>
+    <loc>https://karbonfansub.com/bize-katilin/redaktor.html</loc>
   </url>
+
+  <!-- FORM URL'LERİ -->
 
   <url>
     <loc>https://karbonfansub.com/bagis.html</loc>
