@@ -38,7 +38,7 @@
           }
 
           .logo img {
-            width: 120px;
+            width: 160px;
             height: auto;
             display: block;
           }
