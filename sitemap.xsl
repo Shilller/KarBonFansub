@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <xsl:stylesheet
   version="1.0"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
@@ -10,208 +9,192 @@
   <xsl:template match="/">
     <html lang="tr">
       <head>
-        <meta charset="UTF-8" />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1.0"
-        />
+        <!-- Google tag (gtag.js) -->
+        <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-W2VBWNL723"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-W2VBWNL723');
+        </script>
 
-        <title>KarBon Fansub - Sitemap</title>
+        <link rel="icon" href="icon.ico" />
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Site Haritası - KarBon Fansub</title>
+
+        <!-- Ana CSS ve İkon Kütüphaneleri -->
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css" />
+
+        <script>
+          if (localStorage.getItem("theme") === "dark") {
+            document.documentElement.classList.add("dark");
+          }
+        </script>
 
         <style>
-          :root {
-            --bg: #e3e5e8;
-            --text: #000;
-            --card: rgba(255, 255, 255, 0.18);
-            --primary: #3b82f6;
-            --secondary: #284063;
-            --border: rgba(46, 107, 79, 0.2);
+          @font-face {
+            font-family: "ComicCustom";
+            src: url("fonts/ComicSansMS.ttf") format("truetype");
           }
 
-          .logo {
-            position: absolute;
-            top: 2px;
-            left: 5px;
-            width: fit-content;
-            display: inline-block;
-            height: fit-content;
-          }
-
-          .logo img {
-            width: 160px;
-            height: auto;
-            display: block;
-          }
-
-          @media (prefers-color-scheme: dark) {
-            :root {
-              --bg: #121212;
-              --text: #f1f1f1;
-              --card: rgba(255, 255, 255, 0.08);
-              --primary: #4699ef;
-              --secondary: #81a9e3;
-              --border: rgba(255, 255, 255, 0.08);
-            }
-          }
-
-          * {
-            box-sizing: border-box;
-          }
-
-          body {
-            margin: 0;
-            min-height: 100vh;
-            background: var(--bg);
-            color: var(--text);
-            font-family: "Comic Sans MS", sans-serif;
-            padding: 40px 20px;
-          }
-
-          .container {
-            width: 100%;
-            max-width: 900px;
+          /* Sitemap'e özel hafif dokunuşlar (iskelet stilini bozmadan) */
+          .sitemap-container {
+            max-width: 800px;
             margin: 0 auto;
-          }
-
-          .header {
-            text-align: center;
-            margin-bottom: 35px;
-          }
-
-          .header h1 {
-            margin: 0 0 10px;
-            color: var(--secondary);
-            font-size: 38px;
-          }
-
-          .header p {
-            margin: 0;
-            opacity: 0.7;
-            font-size: 16px;
-          }
-
-          .sitemap-card {
-            background: var(--card);
-            border: 1px solid var(--border);
-            border-radius: 18px;
-            padding: 25px;
-            margin-bottom: 30px;
-            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
-            backdrop-filter: blur(6px);
-          }
-
-          .sitemap-card h2 {
-            margin: 0 0 20px;
-            color: var(--secondary);
-            font-size: 24px;
+            padding: 10px;
           }
 
           .url-list {
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 12px;
+            margin-top: 20px;
           }
 
-          .url {
-            display: block;
-            padding: 13px 16px;
-            background: rgba(255, 255, 255, 0.12);
-            border-radius: 12px;
-            color: var(--text);
+          .url-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 18px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(128, 128, 128, 0.2);
+            border-radius: 10px;
+            color: inherit;
             text-decoration: none;
-            word-break: break-word;
-            transition:
-              transform 0.2s ease,
-              background 0.2s ease;
+            transition: all 0.2s ease;
+            word-break: break-all;
           }
 
-          .url:hover {
-            transform: translateX(5px);
-            background: rgba(59, 130, 246, 0.12);
+          .url-card:hover {
+            transform: translateX(6px);
+            border-color: #3b82f6;
+            background: rgba(59, 130, 246, 0.08);
           }
 
-          .url::before {
-            content: "↗ ";
-            color: var(--primary);
-            font-weight: bold;
+          .url-link {
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
           }
 
-          .footer {
-            text-align: center;
-            font-size: 14px;
+          .url-link i {
+            color: #3b82f6;
           }
 
-          @media (max-width: 600px) {
-            body {
-              padding: 25px 12px;
-            }
-
-            .header h1 {
-              font-size: 30px;
-            }
-
-            .sitemap-card {
-              padding: 18px;
-            }
-
-            .sitemap-card h2 {
-              font-size: 21px;
-            }
-
-            .url {
-              font-size: 14px;
-              padding: 12px;
-            }
+          .page-count {
+            opacity: 0.8;
+            font-size: 15px;
+            margin-top: 8px;
           }
         </style>
       </head>
 
       <body>
-        <div class="container">
+        <!-- LOGO -->
+        <a href="index.html" class="logo">
+          <img src="Logomuz.png" alt="KarBon Fansub Logo" />
+        </a>
 
-          <a href="/" class="logo">
-            <img src="Logomuz.png" />
+        <!-- ÜST MENÜ -->
+        <div class="top-menu">
+          <a href="index.html" class="btn">Ana Sayfa</a>
+          <a href="projeler.html" class="btn">Projeler</a>
+
+          <a href="https://www.youtube.com/@KarBonFansub" target="_blank" class="social yt" aria-label="YouTube">
+            <i class="bi bi-youtube"></i>
           </a>
 
-          <div class="header">
-            <h1>KarBon Fansub</h1>
-            <p>Site Haritası</p>
+          <a href="https://discord.gg/CXngCNXkBD" target="_blank" class="social dc" aria-label="Discord">
+            <i class="bi bi-discord"></i>
+          </a>
 
-            <br />
+          <a href="ekibimiz.html" class="btn">Ekibimiz</a>
+          <a href="bagis.html" class="btn">Bağış</a>
 
-            <p>Şu anda mevcut: 15 Sayfamız var</p>
+          <label class="theme-switch">
+            <input type="checkbox" onchange="toggleTheme()" id="themeToggle" />
+            <span class="slider">
+              <span class="icon sun">☀️</span>
+              <span class="icon moon">🌙</span>
+            </span>
+          </label>
+        </div>
+
+        <div class="line"></div>
+
+        <!-- İÇERİK -->
+        <div class="content">
+          <div class="page-title">
+            <h1>Site Haritası</h1>
+            <p class="page-count">
+              Şu anda indekslenmiş <strong><xsl:value-of select="count(s:urlset/s:url)"/></strong> sayfamız var.
+            </p>
           </div>
 
-          <div class="sitemap-card">
-            <h2>Site Sayfaları</h2>
-
+          <div class="sitemap-container">
             <div class="url-list">
               <xsl:for-each select="s:urlset/s:url">
-                <a class="url">
+                <a class="url-card">
                   <xsl:attribute name="href">
                     <xsl:value-of select="s:loc" />
                   </xsl:attribute>
-
-                  <xsl:value-of select="s:loc" />
+                  
+                  <span class="url-link">
+                    <i class="bi bi-box-arrow-up-right"></i>
+                    <xsl:value-of select="s:loc" />
+                  </span>
                 </a>
               </xsl:for-each>
             </div>
           </div>
-
-          <div class="footer">
-            <br />
-
-            𝓚𝓪𝓻𝓑𝓸𝓷 𝓕𝓪𝓷𝓼𝓾𝓫 © 2025-2026
-
-            <br />
-
-            Çevir, Düzelt,
-            <span style="color: red">Yayınla</span>
-          </div>
-
         </div>
+
+        <div class="line"></div>
+
+        <!-- FOOTER BİLGİ VE BANT -->
+        <div class="footer-links">
+          <a href="Gizlilik-Politikasi.html" target="_blank">Gizlilik Politikası</a>
+          <span>|</span>
+          <a href="hakkimizda.html" target="_blank">Hakkımızda</a>
+        </div>
+
+        <div style="text-align: center">𝓚𝓪𝓻𝓑𝓸𝓷 𝓕𝓪𝓷𝓼𝓾𝓫</div>
+
+        <div style="text-align: center">
+          Çevir, Düzelt, <span style="color: red">Yayınla</span>
+        </div>
+
+        <br />
+
+        <div style="text-align: center">
+          Bizimle iletişime geçin / Contact us: <br />
+          <a href="mailto:samakarbon@gmail.com" style="color: #0066cc; text-decoration: none">samakarbon@gmail.com</a>
+        </div>
+
+        <div class="line"></div>
+
+        <!-- ALT MENÜ -->
+        <div class="bottom-menu">
+          <a href="index.html" class="btn">Ana Sayfa</a>
+          <a href="projeler.html" class="btn">Projeler</a>
+
+          <a href="https://www.youtube.com/@KarBonFansub" target="_blank" class="social yt" aria-label="YouTube">
+            <i class="bi bi-youtube"></i>
+          </a>
+
+          <a href="https://discord.gg/CXngCNXkBD" target="_blank" class="social dc" aria-label="Discord">
+            <i class="bi bi-discord"></i>
+          </a>
+
+          <a href="ekibimiz.html" class="btn">Ekibimiz</a>
+          <a href="bagis.html" class="btn">Bağış</a>
+        </div>
+
+        <script src="/theme.js"></script>
       </body>
     </html>
   </xsl:template>
-
 </xsl:stylesheet>

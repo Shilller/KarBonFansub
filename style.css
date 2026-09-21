@@ -5,30 +5,12 @@
   --primary: #3b82f6;
 }
 
-/* DARK THEME */
-body.dark {
-  --bg: #121212;
-  --text: #f1f1f1;
-  --card: rgba(255, 255, 255, 0.08);
-  --primary: #4699ef;
-}
-body.dark .presence-row {
-  background: rgba(255, 255, 255, 0.05);
-}
-body.dark .discord-presence-card {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-
-  box-shadow:
-    0 14px 35px rgba(0, 0, 0, 0.45),
-    inset 0 1px 0 rgba(255, 255, 255, 0.08),
-    inset 0 -2px 8px rgba(0, 0, 0, 0.35);
-}
-
+/* FONTLAR VE GENEL TEMEL */
 @font-face {
   font-family: "ComicCustom";
   src: url("fonts/ComicSansMS.ttf") format("truetype");
 }
+
 body {
   margin: 0;
   background: var(--bg);
@@ -36,19 +18,80 @@ body {
   color: var(--text);
 }
 
-/* SADECE ANA SAYFA */
-.home-page .logo {
-  position: static;
-  display: block;
-  width: fit-content;
-  margin: 20px auto;
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-.home-page .logo img {
-  height: 220px;
+.content {
+  width: 80%;
+  max-width: 1500px;
+  margin: auto;
 }
 
-/* LOGO */
+/* DARK THEME */
+html.dark,
+body.dark {
+  --bg: #121212;
+  --text: #f1f1f1;
+  --card: rgba(255, 255, 255, 0.08);
+  --primary: #4699ef;
+}
+
+body.dark .presence-row {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+body.dark .discord-presence-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow:
+    0 14px 35px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    inset 0 -2px 8px rgba(0, 0, 0, 0.35);
+}
+
+body.dark .project-card p,
+body.dark .team-card p,
+body.dark .project-meta,
+body.dark .partner-card p,
+body.dark .partner-card .project-meta {
+  color: #ddd;
+}
+
+body.dark .project-card h3,
+body.dark .team-card h3,
+body.dark .info-card h2,
+body.dark .page-title h1 {
+  color: #81a9e3;
+}
+
+body.dark .partner-card h3 {
+  color: #4699ef;
+}
+
+body.dark .project-card,
+body.dark .team-card,
+body.dark .partner-card,
+body.dark .donation-box,
+body.dark .info-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+body.dark p {
+  color: #ddd !important;
+}
+
+body.dark .donation-box div {
+  color: #eee;
+}
+
+body.dark .role-icon {
+  filter: brightness(0) invert(1) drop-shadow(0 0 4px rgba(255, 255, 255, 0.25));
+}
+
+/* LOGO VE MENÜLER */
 .logo {
   position: absolute;
   top: 2px;
@@ -62,7 +105,17 @@ body {
   height: 110px;
 }
 
-/* MENÜ */
+.home-page .logo {
+  position: static;
+  display: block;
+  width: fit-content;
+  margin: 20px auto;
+}
+
+.home-page .logo img {
+  height: 220px;
+}
+
 .top-menu,
 .bottom-menu {
   display: flex;
@@ -72,14 +125,25 @@ body {
   margin: 20px 0;
 }
 
-/* BUTON */
+.top-menu {
+  width: 100%;
+  padding: 10px 30px;
+  box-sizing: border-box;
+}
+
+.menu-left {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+/* BUTONLAR */
 .btn {
   background: #284063;
   color: white;
   padding: 12px 22px;
   border-radius: 10px;
   text-decoration: none;
-
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease,
@@ -88,11 +152,9 @@ body {
 
 .btn:hover {
   transform: translateY(-2px);
-
   box-shadow:
     0 0 12px rgba(70, 153, 239, 0.45),
     0 0 24px rgba(70, 153, 239, 0.25);
-
   background: #345381;
 }
 
@@ -100,7 +162,6 @@ body {
   transform: translateY(0);
 }
 
-/* SOSYAL */
 .social {
   width: 40px;
   height: 40px;
@@ -115,12 +176,10 @@ body {
 .yt {
   background: red;
 }
-
 .dc {
   background: #5865f2;
 }
 
-/* ÇİZGİ */
 .line {
   width: 80%;
   height: 1px;
@@ -128,25 +187,24 @@ body {
   margin: 20px auto;
 }
 
-/* CONTENT */
-.content {
-  width: 80%;
-  max-width: 1500px;
-  margin: auto;
+/* HERO SECTION */
+.hero-wrapper {
+  background-color: #999;
+  max-width: 1100px;
+  margin: 20px auto 30px auto;
+  padding: 20px;
+  border-radius: 22px;
 }
 
-/* HERO KARTININ KENDİSİ */
 .hero {
   background-color: #999;
   display: flex;
-  gap: 30px; /* Resim ve yazı arasındaki boşluğu biraz açtık */
-  align-items: center; /* İçindekileri dikeyde ortalar */
+  gap: 30px;
+  align-items: center;
   justify-content: center;
-
   max-width: 1100px;
-  padding: 30px; /* Kartın iç nefes alma payını her yönden eşitledik */
-  margin: 20px auto 30px auto; /* Alttaki başlıkla arayı açmamak için alt boşluğu 30px yaptık */
-
+  padding: 30px;
+  margin: 20px auto 30px auto;
   backdrop-filter: blur(2px);
   border-radius: 18px;
   text-decoration: none;
@@ -159,55 +217,63 @@ body {
     background 0.18s ease;
 }
 
-/* HOVER */
 .hero:hover {
   transform: translateY(-8px);
   box-shadow: 0 16px 28px rgba(0, 0, 0, 0.15);
 }
 
-/* 🛠️ YAZILARI SIĞDIRAN VE DÜZENLEYEN KISIM: */
 .hero-text {
-  flex: 1; /* Yazı alanının kalan tüm boşluğu kaplamasını sağlar (Sığma problemini çözer) */
-  text-align: left; /* Uzun paragraflarda 'center' kötü durur, sola hizaladık */
+  flex: 1;
+  text-align: left;
   font-size: 15px;
-  line-height: 1.6; /* Satır aralarını açarak okunabilirliği artırdık */
+  line-height: 1.6;
 }
 
 .hero-text h1 {
   color: #284063;
-  margin-top: 0; /* Başlığın tepesindeki gereksiz boşluğu sıfırladık */
+  margin-top: 0;
   margin-bottom: 15px;
 }
 
 .hero-text p {
-  margin-bottom: 12px; /* Paragrafların altına tatlı birer boşluk verdik */
-}
-.hero-text p:last-child {
-  margin-bottom: 0; /* Son paragrafın alt boşluğunu sıfırladık */
+  margin-bottom: 12px;
 }
 
-/* 🛠️ RESİM KUTUSU DÜZENLEMESİ */
+.hero-text p:last-child {
+  margin-bottom: 0;
+}
+
+.hero-text img {
+  width: 100%;
+  max-width: 620px;
+  height: auto;
+  border-radius: 14px;
+  display: block;
+  margin-bottom: 20px;
+}
+
 .big-box {
-  width: 450px; /* Yazılara daha çok yer kalsın diye genişliği ideal boyuta çektik */
-  height: 400px; /* Sabit 600px çok büyüktü, 350px yaparak kartı kibarlaştırdık */
-  flex-shrink: 0; /* Kart daralınca resmin büzüşmesini engeller */
-  border-radius: 12px; /* Resim kutusunun köşelerini hafifçe yuvarlattık */
+  width: 450px;
+  height: 400px;
+  flex-shrink: 0;
+  border-radius: 12px;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.big-box img {
+.big-box img,
+.box img,
+#hero-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-.hero-text h1 {
-  color: #284063;
+  object-position: center;
+  display: block;
 }
 
-/* KARTLAR */
+/* KARTLAR & GRİDLER */
 .cards {
   display: flex;
   gap: 20px;
@@ -218,10 +284,33 @@ body {
   text-align: center;
 }
 
+.cards .box {
+  aspect-ratio: 1 / 1;
+  height: auto;
+}
+
+.cards .box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.cards .card:nth-child(2) .box img {
+  object-fit: contain;
+  background: #111;
+}
+
 .box {
-  height: 150px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 10px;
   border: 1px dotted #585555;
   margin-bottom: 10px;
+}
+
+.box img {
+  object-position: top;
 }
 
 .page-title {
@@ -252,7 +341,8 @@ body {
   gap: 25px;
 }
 
-.project-card {
+.project-card,
+.team-card {
   display: block;
   background: rgba(255, 255, 255, 0.18);
   backdrop-filter: blur(2px);
@@ -269,6 +359,12 @@ body {
     background 0.18s ease;
 }
 
+.project-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.28);
+  box-shadow: 0 14px 24px rgba(0, 0, 0, 0.12);
+}
+
 .project-image {
   width: 100%;
   aspect-ratio: 1 / 1;
@@ -283,19 +379,15 @@ body {
   object-fit: cover;
 }
 
-.project-card:hover {
-  transform: translateY(-5px);
-  background: rgba(255, 255, 255, 0.28);
-  box-shadow: 0 14px 24px rgba(0, 0, 0, 0.12);
-}
-
-.project-card h3 {
+.project-card h3,
+.team-card h3 {
   margin: 10px 0 8px 0;
   color: #284063;
   font-size: 24px;
 }
 
-.project-card p {
+.project-card p,
+.team-card p {
   margin: 0 0 10px 0;
   color: #333;
   font-size: 18px;
@@ -308,8 +400,9 @@ body {
   font-size: 16px;
 }
 
-/* BOŞ KARTLAR */
-.project-card.empty {
+/* BOŞ / KİLİTLİ KARTLAR */
+.project-card.empty,
+.team-card.empty {
   position: relative;
   background: linear-gradient(
     145deg,
@@ -320,6 +413,7 @@ body {
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
   opacity: 0.85;
   pointer-events: none;
+  user-select: none;
 }
 
 .project-card.empty:hover {
@@ -360,13 +454,10 @@ body {
 }
 
 .project-card.empty p,
-.project-card.empty .project-meta {
+.project-card.empty .project-meta,
+.team-card.empty h3,
+.team-card.empty p {
   color: #777;
-}
-
-.project-card.empty {
-  pointer-events: none;
-  user-select: none;
 }
 
 .locked-image {
@@ -378,25 +469,20 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-
-  filter: blur(5px) brightness(0.45); /*blur seviyesi ayarla*/
-  transform: scale(1.08); /* blur kenarlarda boşluk bırakmasın */
+  filter: blur(5px) brightness(0.45);
+  transform: scale(1.08);
 }
 
 .question-mark {
   position: absolute;
   inset: 0;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   font-size: 90px;
   color: white;
   font-weight: bold;
-
   text-shadow: 0 0 18px rgba(0, 0, 0, 0.8);
-
   z-index: 2;
 }
 
@@ -404,7 +490,6 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-
   background:
     linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
     repeating-linear-gradient(
@@ -414,96 +499,70 @@ body {
     );
 }
 
-@media (max-width: 1100px) {
-  .project-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+/* PARTNER GRID & CARDS */
+.partner-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
+  width: 90%;
+  margin: auto;
 }
 
-@media (max-width: 650px) {
-  .project-grid {
-    grid-template-columns: 1fr;
-  }
-}
-/* EKİBİMİZ KARTLARI */
-.team-card {
+.partner-card {
   display: block;
   background: rgba(255, 255, 255, 0.18);
   backdrop-filter: blur(2px);
-  padding: 16px;
+  padding: 12px;
   border-radius: 18px;
   text-align: center;
+  text-decoration: none;
   color: inherit;
   border: 2px solid rgba(46, 107, 79, 0.2);
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+  transition:
+    transform 0.18s ease,
+    background 0.18s ease;
 }
 
-.team-card h3 {
+.partner-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.28);
+  box-shadow: 0 14px 24px rgba(0, 0, 0, 0.12);
+}
+
+.partner-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.partner-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.partner-card h3 {
   margin: 10px 0 8px 0;
   color: #284063;
-  font-size: 24px;
+  font-size: 18px;
 }
 
-.team-card p {
+.partner-card p {
   margin: 0 0 10px 0;
   color: #333;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 1.4;
 }
 
-.team-card.empty {
-  position: relative;
-  background: linear-gradient(
-    145deg,
-    rgba(255, 255, 255, 0.08),
-    rgba(255, 255, 255, 0.02)
-  );
-  border: 2px dashed rgba(70, 70, 70, 0.35);
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
-  opacity: 0.85;
-  pointer-events: none;
-}
-
-.team-card.empty h3,
-.team-card.empty p {
-  color: #777;
-}
-.hero-text img {
-  width: 100%;
-  max-width: 620px;
-  height: auto;
-  border-radius: 14px;
-  display: block;
-  margin-bottom: 20px;
-}
-.big-box,
-.box {
-  overflow: hidden;
-  border-radius: 10px;
-}
-
-.big-box img,
-.box img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.box {
-  height: 300px;
-  overflow: hidden;
-  border-radius: 10px;
-}
-
-.box img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top;
-}
+/* DISCORD STATS & PRESENCE */
 .discord-stats {
   margin: 30px auto;
   width: fit-content;
 }
+
 .discord-presence-wrapper {
   display: flex;
   justify-content: center;
@@ -514,19 +573,29 @@ body {
   background: rgba(255, 255, 255, 0.12);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
-
   border-radius: 18px;
   padding: 22px 26px;
-
   border: 1px solid rgba(255, 255, 255, 0.25);
-
   box-shadow:
     0 12px 30px rgba(0, 0, 0, 0.18),
     inset 0 1px 0 rgba(255, 255, 255, 0.25),
     inset 0 -2px 8px rgba(0, 0, 0, 0.08);
-
   position: relative;
   overflow: hidden;
+}
+
+.discord-presence-card::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 20px;
+  background: linear-gradient(
+    135deg,
+    rgba(46, 107, 79, 0.25),
+    transparent,
+    rgba(0, 0, 0, 0.15)
+  );
+  z-index: -1;
 }
 
 .discord-presence-card h3 {
@@ -538,18 +607,13 @@ body {
 .presence-row {
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.08);
-
   border-radius: 12px;
   padding: 12px 16px;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   margin-bottom: 10px;
-
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12);
-
   gap: 8px;
 }
 
@@ -561,11 +625,12 @@ body {
   flex: 1;
   text-align: left;
   font-weight: bold;
+  color: var(--text);
 }
 
 .presence-row .count {
   font-weight: bold;
-  color: #222;
+  color: var(--text);
 }
 
 .dot {
@@ -600,6 +665,131 @@ body {
     opacity: 1;
   }
 }
+
+/* DISCORD JOIN BTN */
+.discord-join-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 14px;
+  padding: 12px 20px;
+  background: #5865f2;
+  color: #ffffff !important;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 12px;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(88, 101, 242, 0.35);
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.discord-join-btn i {
+  font-size: 20px;
+}
+
+.discord-join-btn:hover {
+  background: #4752c4;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(88, 101, 242, 0.5);
+  color: #ffffff;
+}
+
+.discord-join-btn:active {
+  transform: translateY(0);
+}
+
+body.dark .discord-join-btn {
+  background: #5865f2;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 16px rgba(88, 101, 242, 0.45);
+}
+
+body.dark .discord-join-btn:hover {
+  background: #4752c4;
+  box-shadow: 0 6px 22px rgba(88, 101, 242, 0.65);
+}
+
+/* TEMA DEGISTIRME SWITH */
+.theme-switch {
+  position: relative;
+  width: 60px;
+  height: 30px;
+}
+
+.theme-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  inset: 0;
+  background: #ccc;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8px;
+  box-sizing: border-box;
+}
+
+.slider:before {
+  content: "";
+  position: absolute;
+  height: 22px;
+  width: 22px;
+  left: 4px;
+  bottom: 4px;
+  background: white;
+  border-radius: 50%;
+  transition: 0.3s;
+  z-index: 2;
+}
+
+.icon {
+  font-size: 14px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.sun,
+.moon {
+  opacity: 1;
+}
+
+input:checked + .slider {
+  background: #4699ef;
+}
+
+input:checked + .slider:before {
+  transform: translateX(30px);
+}
+
+/* ROL İKONLARI */
+.role {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-weight: bold;
+}
+
+.role-icon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.35));
+}
+
+/* DİĞER SAYFA BİLEŞENLERİ */
 .reklam-alani {
   width: 728px;
   height: 90px;
@@ -607,86 +797,274 @@ body {
   overflow: hidden;
   text-align: center;
 }
-.partner-grid {
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
+
+.donation-box {
+  background: rgba(255, 255, 255, 0.18);
+  border: 2px solid rgba(46, 107, 79, 0.2);
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
 }
 
-.partner-card h3 {
-  font-size: 18px;
+.form-layout {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 30px;
+  margin: 40px auto;
+  max-width: 1400px;
 }
 
-.partner-card p {
-  font-size: 14px;
+.form-layout iframe {
+  flex-shrink: 0;
 }
 
-@media (max-width: 768px) {
-  .reklam-alani {
-    width: 100%;
-    max-width: 728px;
-    transform: scale(0.85);
-    transform-origin: top center;
-    height: 90px;
-  }
-  .home-page .logo img {
-    height: 110px;
-  }
-  .donation-box {
-    overflow-x: auto;
-  }
-
-  .donation-box > div {
-    min-width: 700px;
-  }
+.info-card {
+  width: 220px;
+  padding: 20px;
+  background: var(--card);
+  color: var(--text);
+  border: 1px solid rgba(46, 107, 79, 0.2);
+  border-radius: 18px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(6px);
+  position: sticky;
+  top: 30px;
+  align-self: flex-start;
 }
 
-.cards .box {
-  aspect-ratio: 1 / 1;
-  height: auto;
+.info-card h2 {
+  margin-top: 0;
+  color: #284063;
+  font-size: 22px;
 }
 
-.cards .box img {
+.info-card p {
+  line-height: 1.6;
+}
+
+.info-card img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top;
-}
-.cards .card:nth-child(2) .box img {
-  object-fit: contain;
-  background: #111;
+  height: auto;
+  display: block;
+  margin-top: 15px;
+  border-radius: 12px;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.privacy-content {
+  max-width: 850px;
+  margin: 50px auto;
+  padding: 20px;
+  background: var(--card);
+  border: 1px solid rgba(46, 107, 79, 0.2);
+  border-radius: 18px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(6px);
+  text-align: center;
 }
 
-/* MOBİL UYUMLULUK */
-@media (max-width: 768px) {
-  .home-page .logo img {
-    height: 70px;
-    margin: 5px auto;
+.privacy-content h2 {
+  margin-top: 30px;
+  border-left: 4px solid var(--primary);
+  padding-left: 10px;
+}
+
+.privacy-section {
+  background: var(--card);
+  border: 1px solid rgba(46, 107, 79, 0.2);
+  border-radius: 18px;
+  padding: 25px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(6px);
+}
+
+.footer-links {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.footer-links a {
+  color: blue;
+  text-decoration: underline;
+  margin: 0 3px;
+  display: inline-block;
+}
+
+/* ==========================================
+   ANIMASYONLAR
+========================================== */
+@keyframes managerRotate {
+  from {
+    transform: rotate(0deg);
   }
+  to {
+    transform: rotate(360deg);
+  }
+}
 
+@keyframes scpSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ==========================================
+   KART EASTEREGG / SHILLLER MODE
+========================================== */
+html.shilller-mode {
+  --text: #ffffff;
+  --primary: #ff9d2e;
+  --card: rgba(255, 255, 255, 0.04);
+}
+
+html.shilller-mode body {
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(255, 157, 46, 0.08),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(80, 120, 255, 0.08),
+      transparent 40%
+    ),
+    linear-gradient(180deg, #152850 0%, #101c3d 35%, #0d1731 70%, #09101f 100%);
+  color: #fff;
+}
+
+html.shilller-mode .project-card,
+html.shilller-mode .team-card,
+html.shilller-mode .hero,
+html.shilller-mode .donation-box,
+html.shilller-mode .discord-presence-card,
+html.shilller-mode .partner-card,
+html.shilller-mode .card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 157, 46, 0.28);
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.35),
+    0 0 12px rgba(255, 157, 46, 0.1);
+  backdrop-filter: blur(6px);
+}
+
+html.shilller-mode h1,
+html.shilller-mode h2,
+html.shilller-mode h3 {
+  color: #ffb03b;
+  text-shadow: 0 0 6px rgba(255, 176, 59, 0.18);
+}
+
+html.shilller-mode p,
+html.shilller-mode span,
+html.shilller-mode li {
+  color: #ececec;
+}
+
+html.shilller-mode .btn {
+  background: #203e77;
+  border: 1px solid rgba(255, 157, 46, 0.35);
+  color: #fff;
+}
+
+html.shilller-mode .btn:hover {
+  background: #29509b;
+}
+
+html.shilller-mode .line {
+  background: linear-gradient(90deg, transparent, #ff9500, transparent);
+}
+
+html.shilller-mode a {
+  color: #ffd27a;
+}
+
+html.shilller-mode a:hover {
+  color: white;
+}
+
+html.shilller-mode .hero-wrapper {
+  background: #1b2f60;
+  border: 1px solid rgba(255, 157, 46, 0.25);
+}
+
+html.shilller-mode .discord-join-btn {
+  background: linear-gradient(135deg, #5865f2, #3b42a1);
+  border: 1px solid rgba(255, 157, 46, 0.4);
+  box-shadow: 0 0 14px rgba(88, 101, 242, 0.5);
+}
+
+html.shilller-mode .discord-join-btn:hover {
+  background: linear-gradient(135deg, #4752c4, #2d327d);
+  box-shadow: 0 0 20px rgba(255, 157, 46, 0.6);
+}
+
+html.shilller-mode .team-card {
+  animation: none !important;
+  transform: none !important;
+}
+
+html.shilller-mode .role-icon {
+  display: inline-block !important;
+  vertical-align: middle;
+}
+
+html.shilller-mode .manager-icon {
+  animation: managerRotate 8s linear infinite !important;
+  transform-origin: center center;
+  filter: drop-shadow(0 0 6px #ffd700) drop-shadow(0 0 12px #ffb300)
+    drop-shadow(0 0 22px rgba(255, 170, 0, 0.9)) !important;
+}
+
+html.shilller-mode .role-icon:not(.manager-icon) {
+  animation: none !important;
+  transform: none !important;
+  filter: drop-shadow(0 0 4px rgba(255, 170, 0, 0.8))
+    drop-shadow(0 0 8px rgba(159, 231, 4, 0.5)) !important;
+}
+
+/* ==========================================
+   MEDYA SORĞULARI (RESPONSIVE)
+========================================== */
+@media (max-width: 1100px) {
+  .project-grid,
+  .partner-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
   body {
     overflow-x: hidden;
     font-size: 16px;
+    font-family: "ComicCustom", "Comic Sans MS", sans-serif;
+    line-height: 1.5;
   }
 
   .logo {
     position: static;
     display: flex;
     justify-content: center;
-    margin-top: 15px;
+    margin: 15px 0;
   }
 
   .logo img {
     height: 90px;
   }
 
+  .home-page .logo img {
+    height: 70px;
+    margin: 5px auto;
+  }
+
   .top-menu,
   .bottom-menu {
     flex-wrap: wrap;
+    justify-content: center;
     gap: 10px;
     padding: 0 10px;
     margin: 15px 0;
@@ -718,7 +1096,7 @@ a {
     width: 100%;
     max-width: 400px;
     height: auto;
-    aspect-ratio: 16 / 10;
+    aspect-ratio: 16 / 9;
   }
 
   .hero-text img {
@@ -726,11 +1104,18 @@ a {
   }
 
   .cards {
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
   }
 
   .card {
     width: 100%;
+  }
+
+  .box {
+    aspect-ratio: 1 / 1;
+    height: auto;
   }
 
   .page-title {
@@ -744,11 +1129,6 @@ a {
   .project-section h2 {
     text-align: center;
     font-size: 25px;
-  }
-
-  .project-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
   }
 
   .project-card h3,
@@ -781,615 +1161,35 @@ a {
     text-align: center;
     gap: 6px;
   }
+
   .reklam-alani {
     width: 100%;
     max-width: 100%;
     transform: scale(0.8);
     transform-origin: top center;
+    height: 90px;
+  }
+
+  .donation-box {
+    overflow-x: auto;
+  }
+
+  .donation-box > div {
+    min-width: 700px;
   }
 }
 
-@media (max-width: 768px) {
-  body {
-    overflow-x: hidden;
-    font-family: "ComicCustom", "Comic Sans MS", sans-serif;
-    line-height: 1.5;
-  }
-
-  .logo {
-    position: static;
-    display: flex;
-    justify-content: center;
-    margin: 15px 0;
-  }
-
-  .top-menu,
-  .bottom-menu {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    padding: 0 10px;
-  }
-
-  .hero {
-    flex-direction: column;
-    text-align: center;
-    gap: 20px;
-  }
-
-  .big-box {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 16 / 9;
-  }
-
-  .cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-  }
-
-  .box {
-    aspect-ratio: 1 / 1;
-    height: auto;
-  }
-
-  .content {
-    width: 92%;
-  }
-}
-.footer-links {
-  text-align: center;
-  margin: 20px 0;
-}
-
-.footer-links a {
-  color: blue;
-  text-decoration: underline;
-  margin: 0 3px;
-  display: inline-block;
-}
-.theme-switch {
-  position: relative;
-  width: 55px;
-  height: 30px;
-}
-
-.theme-switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  transition: 0.4s;
-  border-radius: 34px;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 22px;
-  width: 22px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  transition: 0.4s;
-  border-radius: 50%;
-}
-
-/* aktif (dark) */
-input:checked + .slider {
-  background-color: #2e6b4f;
-}
-
-input:checked + .slider:before {
-  transform: translateX(24px);
-}
-
-.top-menu {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  padding: 10px 30px;
-  box-sizing: border-box;
-}
-.menu-left {
-  display: flex;
-  gap: 15px;
-  align-items: center;
-}
-.theme-switch {
-  position: relative;
-  width: 60px;
-  height: 30px;
-}
-
-.slider {
-  position: absolute;
-  inset: 0;
-  background: #ccc;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: 0.3s;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 8px;
-  box-sizing: border-box;
-}
-
-.slider:before {
-  content: "";
-  position: absolute;
-  height: 22px;
-  width: 22px;
-  left: 4px;
-  bottom: 4px;
-  background: white;
-  border-radius: 50%;
-  transition: 0.3s;
-  z-index: 2;
-}
-
-/* ikonlar */
-.icon {
-  font-size: 14px;
-  z-index: 1;
-  pointer-events: none;
-}
-
-.sun {
-  opacity: 1;
-}
-.moon {
-  opacity: 1;
-}
-
-/* dark aktifken */
-input:checked + .slider {
-  background: #4699ef;
-}
-
-input:checked + .slider:before {
-  transform: translateX(30px);
-}
-.presence-row .label,
-.presence-row .count {
-  color: var(--text);
-}
-.discord-presence-card::before {
-  content: "";
-  position: absolute;
-  inset: -2px;
-  border-radius: 20px;
-
-  background: linear-gradient(
-    135deg,
-    rgba(46, 107, 79, 0.25),
-    transparent,
-    rgba(0, 0, 0, 0.15)
-  );
-
-  z-index: -1;
-}
-body.dark .project-card p,
-body.dark .team-card p,
-body.dark .project-meta {
-  color: #ddd;
-}
-body.dark .project-card h3,
-body.dark .team-card h3 {
-  color: #81a9e3;
-}
-body.dark .project-card,
-body.dark .team-card {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-}
-.donation-box {
-  background: rgba(255, 255, 255, 0.18);
-  border: 2px solid rgba(46, 107, 79, 0.2);
-  border-radius: 18px;
-  padding: 20px;
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
-}
-
-body.dark .donation-box {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-}
-body.dark p {
-  color: #ddd !important;
-}
-
-body.dark .donation-box div {
-  color: #eee;
-}
-.project-image {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  overflow: hidden;
-  border-radius: 12px;
-  margin-bottom: 15px;
-}
-
-.partner-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.partner-card:hover {
-  transform: translateY(-5px);
-  background: rgba(255, 255, 255, 0.28);
-  box-shadow: 0 14px 24px rgba(0, 0, 0, 0.12);
-}
-
-.partner-card h3 {
-  margin: 10px 0 8px 0;
-  color: #284063;
-  font-size: 24px;
-}
-
-.partner-card p {
-  margin: 0 0 10px 0;
-  color: #333;
-  font-size: 18px;
-  line-height: 1.4;
-}
-.partner-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 18px;
-  width: 90%;
-  margin: auto;
-}
-.partner-card {
-  display: block;
-  background: rgba(255, 255, 255, 0.18);
-  backdrop-filter: blur(2px);
-  padding: 12px;
-  border-radius: 18px;
-  text-align: center;
-  text-decoration: none;
-  color: inherit;
-  border: 2px solid rgba(46, 107, 79, 0.2);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
-  transition: 0.18s ease;
-}
-
-.partner-image {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  overflow: hidden;
-  border-radius: 12px;
-  margin-bottom: 15px;
-}
-
-.partner-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.partner-card:hover {
-  transform: translateY(-5px);
-  background: rgba(255, 255, 255, 0.28);
-}
-
-body.dark .partner-card {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-body.dark .partner-card h3 {
-  color: #4699ef;
-}
-
-body.dark .partner-card p,
-body.dark .partner-card .project-meta {
-  color: #ddd;
-}
-
-/* tablet */
-@media (max-width: 1100px) {
-  .partner-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* telefon */
 @media (max-width: 650px) {
+  .project-grid,
   .partner-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
 }
-.role {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-
-  font-weight: bold;
-}
-
-.role-icon {
-  width: 30px;
-  height: 30px;
-  object-fit: contain;
-
-  filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.35));
-}
-body.dark .role-icon {
-  filter: brightness(0) invert(1) drop-shadow(0 0 4px rgba(255, 255, 255, 0.25));
-}
-html.dark,
-body.dark {
-  --bg: #121212;
-  --text: #f1f1f1;
-  --card: rgba(255, 255, 255, 0.08);
-  --primary: #4699ef;
-}
-.hero-wrapper {
-  background-color: #999;
-  max-width: 1100px;
-  margin: 20px auto 30px auto;
-  padding: 20px; /* dış katman kalınlığı */
-  border-radius: 22px;
-}
-#hero-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-}
-/* ===========================
-   KART EASTEREGG
-=========================== */
-
-html.shilller-mode {
-  --text: #ffffff;
-  --primary: #ff9d2e;
-  --card: rgba(255, 255, 255, 0.04);
-}
-
-html.shilller-mode body {
-  background:
-    radial-gradient(
-      circle at top left,
-      rgba(255, 157, 46, 0.08),
-      transparent 35%
-    ),
-    radial-gradient(
-      circle at bottom right,
-      rgba(80, 120, 255, 0.08),
-      transparent 40%
-    ),
-    linear-gradient(180deg, #152850 0%, #101c3d 35%, #0d1731 70%, #09101f 100%);
-
-  color: #fff;
-}
-
-/* Kartlar */
-
-html.shilller-mode .project-card,
-html.shilller-mode .team-card,
-html.shilller-mode .hero,
-html.shilller-mode .donation-box,
-html.shilller-mode .discord-presence-card,
-html.shilller-mode .partner-card,
-html.shilller-mode .card {
-  background: rgba(255, 255, 255, 0.05);
-
-  border: 1px solid rgba(255, 157, 46, 0.28);
-
-  box-shadow:
-    0 8px 24px rgba(0, 0, 0, 0.35),
-    0 0 12px rgba(255, 157, 46, 0.1);
-
-  backdrop-filter: blur(6px);
-}
-
-/* Başlıklar */
-
-html.shilller-mode h1,
-html.shilller-mode h2,
-html.shilller-mode h3 {
-  color: #ffb03b;
-  text-shadow: 0 0 6px rgba(255, 176, 59, 0.18);
-}
-
-/* Yazılar */
-
-html.shilller-mode p,
-html.shilller-mode span,
-html.shilller-mode li {
-  color: #ececec;
-}
-
-/* Butonlar */
-
-html.shilller-mode .btn {
-  background: #203e77;
-  border: 1px solid rgba(255, 157, 46, 0.35);
-  color: #fff;
-}
-
-html.shilller-mode .btn:hover {
-  background: #29509b;
-}
-
-/* Çizgiler */
-
-html.shilller-mode .line {
-  background: linear-gradient(90deg, transparent, #ff9500, transparent);
-}
-
-/* Linkler */
-
-html.shilller-mode a {
-  color: #ffd27a;
-}
-
-html.shilller-mode a:hover {
-  color: white;
-}
-
-/* Hero */
-
-html.shilller-mode .hero-wrapper {
-  background: #1b2f60;
-  border: 1px solid rgba(255, 157, 46, 0.25);
-}
-
-html.shilller-mode .role-icon {
-  filter: brightness(0) invert(1) drop-shadow(0 0 6px rgba(255, 255, 255, 0.35));
-}
-
-html.shilller-mode .manager-icon {
-  filter: none;
-}
-
-html.shilller-mode .manager-icon {
-  filter: drop-shadow(0 0 6px #ffd700) drop-shadow(0 0 12px #ffb300)
-    drop-shadow(0 0 22px rgba(255, 170, 0, 0.9));
-
-  animation: scpSpin 12s linear infinite;
-  transform-origin: center center;
-}
-
-html.shilller-mode .role-icon {
-  filter: brightness(0) invert(1) drop-shadow(0 0 6px rgba(255, 255, 255, 0.4));
-
-  animation: scpSpin 12s linear infinite;
-  transform-origin: center center;
-}
-
-@keyframes managerGlow {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(1.08);
-  }
-}
-
-@keyframes managerSpin {
-  0% {
-    transform: rotate(0deg) scale(1);
-  }
-  25% {
-    transform: rotate(90deg) scale(1.05);
-  }
-  50% {
-    transform: rotate(180deg) scale(1);
-  }
-  75% {
-    transform: rotate(270deg) scale(1.05);
-  }
-  100% {
-    transform: rotate(360deg) scale(1);
-  }
-}
-
-@keyframes scpSpin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-/* ÇEVİRMEN FORMU DÜZENİ */
-
-.form-layout {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 30px;
-  margin: 40px auto;
-  max-width: 1400px;
-}
-
-.form-layout iframe {
-  flex-shrink: 0;
-}
-
-.info-card {
-  width: 220px;
-  padding: 20px;
-  background: var(--card);
-  color: var(--text);
-  border: 1px solid rgba(46, 107, 79, 0.2);
-  border-radius: 18px;
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
-  backdrop-filter: blur(6px);
-
-  position: sticky;
-  top: 30px;
-  align-self: flex-start;
-}
-
-.info-card h2 {
-  margin-top: 0;
-  color: #284063;
-  font-size: 22px;
-}
-
-.info-card p {
-  line-height: 1.6;
-}
-body.dark .info-card {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-body.dark .info-card h2 {
-  color: #81a9e3;
-}
-
-body.dark .page-title h1 {
-  color: #81a9e3;
-}
-.info-card img {
-  width: 100%;
-  height: auto;
-  display: block;
-  margin-top: 15px;
-  border-radius: 12px;
-}
-.privacy-content {
-  max-width: 850px;
-  margin: 50px auto;
-  padding: 35px;
-  background: var(--card);
-  border: 1px solid rgba(46, 107, 79, 0.2);
-  border-radius: 18px;
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
-  backdrop-filter: blur(6px);
-  text-align: center;
-  padding: 20px;
-}
-.privacy-content h2 {
-  margin-top: 30px;
-  border-left: 4px solid var(--primary);
-  padding-left: 10px;
-}
-.privacy-section {
-  background: var(--card);
-  border: 1px solid rgba(46, 107, 79, 0.2);
-  border-radius: 18px;
-  padding: 25px;
-  margin-bottom: 20px;
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
-  backdrop-filter: blur(6px);
+.theme-switch,
+.theme-switch * {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE / Edge */
+  user-select: none; /* Standart */
 }
