@@ -50,3 +50,27 @@ function setShilllerMode(enabled) {
 
   sessionStorage.setItem("shilller-mode", enabled);
 }
+
+/* CADILAR BAYRAMI TEMASI */
+(function () {
+  const now = new Date();
+  if (now.getMonth() === 9 && now.getDate() >= 10 && now.getDate() <= 31) {
+    // 1. Halloween aktif
+    document.documentElement.classList.add("halloween-mode");
+    document.documentElement.classList.remove("shilller-mode");
+    sessionStorage.setItem("shilller-mode", "false");
+
+    window.setShilllerMode = function () {
+      console.log("Cadılar Bayramı Modu etkinken Shilller Mode açılamaz!");
+    };
+
+    document
+      .querySelectorAll("#themeToggle, .theme-switch, .theme-btn")
+      .forEach((btn) => {
+        btn.style.pointerEvents = "none";
+        btn.style.opacity = "0.3";
+        if (btn.type === "checkbox") btn.checked = false;
+      });
+  }
+})();
+/* CADILAR BAYRAMI TEMASI */

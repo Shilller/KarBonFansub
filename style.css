@@ -1193,3 +1193,86 @@ html.shilller-mode .role-icon:not(.manager-icon) {
   -ms-user-select: none; /* IE / Edge */
   user-select: none; /* Standart */
 }
+/* ==========================================
+   CADILAR BAYRAMI TEMASI
+========================================== */
+html.halloween-mode body {
+  background: #0d0813 !important;
+  color: #e0d9ec !important;
+}
+
+html.halloween-mode .project-card,
+html.halloween-mode .team-card,
+html.halloween-mode .partner-card,
+html.halloween-mode .hero,
+html.halloween-mode .discord-presence-card,
+html.halloween-mode .donation-box,
+html.halloween-mode .info-card {
+  background: rgba(30, 20, 45, 0.7) !important;
+  border: 1px solid #ff6a00 !important;
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.55),
+    0 0 15px rgba(255, 106, 0, 0.15) !important;
+  animation: none !important;
+  transform: none;
+  color: #e0d9ec !important;
+  text-decoration: none !important;
+}
+
+html.halloween-mode .project-card:hover,
+html.halloween-mode .team-card:hover,
+html.halloween-mode .partner-card:hover,
+html.halloween-mode .hero:hover {
+  border-color: #ff9500 !important;
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.7),
+    0 0 25px rgba(255, 106, 0, 0.45) !important;
+  transform: translateY(-5px);
+  color: #e3e0e9 !important;
+}
+
+html.halloween-mode h1,
+html.halloween-mode h2,
+html.halloween-mode h3,
+html.halloween-mode .project-card h3,
+html.halloween-mode .team-card h3,
+html.halloween-mode .partner-card h3,
+html.halloween-mode .team-card h3 *,
+html.halloween-mode .project-card h3 * {
+  color: #ff6a00 !important;
+  text-shadow: 0 0 6px rgba(255, 106, 0, 0.2) !important;
+  animation: none !important;
+}
+
+html.halloween-mode p,
+html.halloween-mode span:not(.team-card h3 span):not(.project-card h3 span),
+html.halloween-mode .project-card p,
+html.halloween-mode .team-card p,
+html.halloween-mode .project-meta {
+  color: #e5e4e6 !important;
+}
+
+html.halloween-mode .btn,
+html.halloween-mode .discord-join-btn {
+  background: #ff6a00 !important;
+  color: #fff !important;
+  box-shadow: 0 4px 14px rgba(255, 106, 0, 0.3) !important;
+}
+
+html.halloween-mode .role-icon,
+html.halloween-mode .manager-icon {
+  animation: none !important;
+  filter: drop-shadow(0 0 4px #ff6a00) brightness(1.1) !important;
+}
+
+html.halloween-mode .line {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #ff6a00,
+    transparent
+  ) !important;
+}
+/* ==========================================
+   CADILAR BAYRAMI TEMASI
+========================================== */

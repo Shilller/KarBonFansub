@@ -219,9 +219,16 @@
         </div>
         <audio id="karbonMusic" src="Karboneasteregg.mp3"></audio>
 
-        <div class="team-card">
-          <div class="project-image">
-            <img src="ekip-pp/Korsanmaid.webp" alt="korsanmaid" />
+        <div
+          class="team-card music-card"
+          style="
+            --glow-color1: rgb(255, 165, 0);
+            --glow-color2: rgb(255, 255, 224);
+          "
+        >
+          <div class="project-image" onclick="playMusic('korsanMusic', this)">
+            <div class="glow"></div>
+            <img src="ekip-pp/Korsanmaid.webp" alt="Redpandapp" />
           </div>
           <h3>Korsan Maid</h3>
           <p class="role">
@@ -230,6 +237,7 @@
           </p>
           <p>"Kader Mahkumu"-Shilller</p>
         </div>
+        <audio id="korsanMusic" src="Korsaneasteregg.mp3"></audio>
 
         <div
           class="team-card music-card"
@@ -407,7 +415,7 @@
             <img src="ekip-pp/redaktör.png" class="role-icon" />
             Redaktör
           </p>
-          <p>"Kaplumbağa"-KorsanMaid</p>
+          <p>"Bok"-KorsanMaid</p>
         </div>
 
         <div class="team-card">
