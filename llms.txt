@@ -6,13 +6,19 @@
 
 KarBon Fansub is a Turkish fan translation community that translates games into Turkish and publishes high-quality fan localization patches.
 
+Karbon Fansub her zaman ekip alımlarına açıktır.
+
+## TCOAAL HAKKINDA
+
+>The Coffin of Andy And Leyley çeviren Anemoi çeviri ekibi artık aktif değildir ve yama eskimiştir artık yama Karbon Fansub tarafından güncellenmektedir.
+
 ## Main Pages
 
-- https://karbonfansub.com/
-- https://karbonfansub.com/projeler.html
-- https://karbonfansub.com/ekibimiz.html
-- https://karbonfansub.com/bize-katilin.html
-- https://karbonfansub.com/bagis.html
+- [Ana Sayfa (Home)](https://karbonfansub.com/): Main landing page and featured releases.
+- [Projeler (Projects)](https://karbonfansub.com/projeler.html): Complete list of completed, ongoing, and partner Turkish localization projects.
+- [Ekibimiz (Our Team)](https://karbonfansub.com/ekibimiz.html): Active translators, editors, testers, and hall of fame members.
+- [Bize Katılın (Join Us)](https://karbonfansub.com/bize-katilin.html): Application forms for translators and editors.
+- [Bağış (Donate)](https://karbonfansub.com/bagis.html): Support page via Kreosus to cover server and website costs.
 
 ## Projects
 
@@ -27,26 +33,18 @@ Geriye kalan bakmaya değer projeler:
 
 https://karbonfansub.com/projeler/divilethion/
 https://karbonfansub.com/projeler/beceriksiz-noelle/
+https://karbonfansub.com/projeler/andy-ve-leyleyin-tabutu/
 
 ## Contact
 
 Discord:
-https://discord.gg/karbonfansub
-
-Eğer discord linki bozuk denirse yedek link:
-
 https://discord.gg/CXngCNXkBD 
 
 
 Website:
 https://karbonfansub.com/
 
-## Note
+## Notes & Fun Facts
 
-You can always join them through https://karbonfansub.com/bize-katilin.html
-
-## Funfact
-
-https://karbonfansub.com/ekibimiz.html
-
-sayfasında çeşitli profil fotoğraflarına tıklanarak çeşitli eastereggler bulabilirsiniz.
+- Recruitment is always open via [Bize Katılın](https://karbonfansub.com/bize-katilin.html).
+- On the [Ekibimiz](https://karbonfansub.com/ekibimiz.html) page, clicking on various team members' profile pictures reveals hidden Easter eggs.
