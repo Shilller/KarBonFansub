@@ -354,14 +354,75 @@ body.dark .role-icon {
   border: 2px solid rgba(46, 107, 79, 0.2);
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
   transition:
-    transform 0.18s ease,
-    box-shadow 0.18s ease,
-    background 0.18s ease;
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+/* ==========================================
+   LEGENDARY MEMBER
+========================================== */
+
+.legendary-card {
+  background: linear-gradient(145deg, #fff4c2, #e6bd55 45%, #b8860b) !important;
+
+  border: 2px solid #ffd700 !important;
+
+  box-shadow:
+    0 0 12px rgba(255, 193, 7, 0.35),
+    0 0 25px rgba(255, 215, 0, 0.2),
+    inset 0 0 15px rgba(255, 255, 255, 0.35) !important;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.legendary-card:hover {
+  transform: translateY(-7px);
+  box-shadow:
+    0 0 18px rgba(255, 215, 0, 0.65),
+    0 0 35px rgba(255, 193, 7, 0.4) !important;
+}
+
+.legendary-card h3 {
+  color: #704900 !important;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.5);
+}
+
+.legendary-card p {
+  color: #49320b !important;
+}
+
+.legendary-title {
+  display: block;
+  margin-top: 12px;
+  color: #704900 !important;
+  font-weight: bold;
+  letter-spacing: 3px;
+  font-size: 13px;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.5);
+}
+
+/* Koyu tema */
+body.dark .legendary-card {
+  background: linear-gradient(145deg, #725719, #b8860b 50%, #513900) !important;
+}
+
+body.dark .legendary-card h3,
+body.dark .legendary-card p,
+body.dark .legendary-card .legendary-title {
+  color: #fff0b0 !important;
 }
 
 .project-card:hover {
   transform: translateY(-5px);
   background: rgba(255, 255, 255, 0.28);
+  box-shadow: 0 14px 24px rgba(0, 0, 0, 0.12);
+}
+
+.team-card:hover {
+  transform: translateY(-4px);
   box-shadow: 0 14px 24px rgba(0, 0, 0, 0.12);
 }
 
@@ -1005,7 +1066,15 @@ html.shilller-mode .discord-join-btn:hover {
 
 html.shilller-mode .team-card {
   animation: none !important;
-  transform: none !important;
+  transform: none;
+}
+
+html.shilller-mode .team-card:hover {
+  transform: translateY(-5px) !important;
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.5),
+    0 0 25px rgba(255, 157, 46, 0.4) !important;
+  border-color: #ff9d2e !important;
 }
 
 html.shilller-mode .role-icon {
