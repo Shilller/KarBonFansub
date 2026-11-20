@@ -20,7 +20,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>404</title>
 
+    <link rel="icon" href="/icon.ico" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css"
+    />
+
     <link rel="stylesheet" href="/style.css" />
+
+    <script>
+      if (localStorage.getItem("theme") === "dark") {
+        document.documentElement.classList.add("dark");
+      }
+    </script>
 
     <style>
       @font-face {
@@ -35,7 +48,7 @@
         justify-content: center;
         align-items: center;
         background: #c4d6da;
-        color: white;
+        color: rgb(148, 114, 114);
         text-align: center;
         font-family: "ComicCustom", sans-serif;
       }
@@ -51,6 +64,7 @@
       h1 {
         font-size: 110px;
         margin: 0;
+        color: black;
       }
 
       .logo {
@@ -68,10 +82,12 @@
 
       h2 {
         margin: 0;
+        color: black;
       }
 
       p {
         margin: 0;
+        color: black;
       }
 
       .btn {
@@ -79,6 +95,7 @@
         font-size: 22px;
         padding: 18px 36px;
         display: inline-block;
+        color: whitesmoke;
       }
 
       .error-image {
