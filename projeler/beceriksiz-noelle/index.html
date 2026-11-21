@@ -433,9 +433,9 @@
               </button>
 
               <div class="slides" id="slides">
-                <img src="ekran1.jpg" alt="Divilethion ekran görüntüsü 1" />
-                <img src="ekran2.jpg" alt="Divilethion ekran görüntüsü 2" />
-                <img src="ekran3.jpg" alt="Divilethion ekran görüntüsü 3" />
+                <img src="ekran1.jpg" alt="ekran görüntüsü 1" />
+                <img src="ekran2.jpg" alt="ekran görüntüsü 2" />
+                <img src="ekran3.jpg" alt="ekran görüntüsü 3" />
               </div>
 
               <button class="slider-btn next" onclick="changeSlide(1)">
@@ -588,6 +588,29 @@
         currentSlide = index;
         updateSlider();
       }
+      let autoSlide;
+
+      function startAutoSlide() {
+        clearInterval(autoSlide);
+        autoSlide = setInterval(() => {
+          changeSlide(1);
+        }, 5000);
+      }
+
+      function stopAutoSlide() {
+        clearInterval(autoSlide);
+      }
+
+      startAutoSlide();
+
+      document.querySelectorAll(".slides video").forEach((video) => {
+        video.addEventListener("play", stopAutoSlide);
+
+        video.addEventListener("ended", () => {
+          changeSlide(1);
+          startAutoSlide();
+        });
+      });
     </script>
   </body>
 </html>
