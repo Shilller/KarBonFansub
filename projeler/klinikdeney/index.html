@@ -537,6 +537,30 @@
         currentSlide = index;
         updateSlider();
       }
+      let autoSlide;
+
+      function startAutoSlide() {
+        clearInterval(autoSlide);
+        autoSlide = setInterval(() => {
+          changeSlide(1);
+        }, 5000);
+      }
+
+      function stopAutoSlide() {
+        clearInterval(autoSlide);
+      }
+
+      startAutoSlide();
+
+      // Video oynarken otomatik geçişi durdur
+      document.querySelectorAll(".slides video").forEach((video) => {
+        video.addEventListener("play", stopAutoSlide);
+
+        video.addEventListener("ended", () => {
+          changeSlide(1);
+          startAutoSlide();
+        });
+      });
     </script>
 
     <script

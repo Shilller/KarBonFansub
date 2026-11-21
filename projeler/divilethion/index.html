@@ -175,6 +175,20 @@
         background: #111;
       }
 
+      .slide {
+        min-width: 100%;
+        position: relative;
+      }
+
+      .slide img,
+      .slide video {
+        width: 100%;
+        display: block;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        background: #000;
+      }
+
       .slider-btn {
         position: absolute;
         top: 50%;
@@ -415,10 +429,27 @@
               </button>
 
               <div class="slides" id="slides">
-                <img src="4.png" alt="Divilethion ekran görüntüsü 4" />
-                <img src="1.png" alt="Divilethion ekran görüntüsü 1" />
-                <img src="2.png" alt="Divilethion ekran görüntüsü 2" />
-                <img src="3.png" alt="Divilethion ekran görüntüsü 3" />
+                <div class="slide">
+                  <video controls>
+                    <source src="Divilethion_Duyuru.mp4" type="video/mp4" />
+                  </video>
+                </div>
+
+                <div class="slide">
+                  <img src="4.png" alt="Divilethion ekran görüntüsü 4" />
+                </div>
+
+                <div class="slide">
+                  <img src="1.png" alt="Divilethion ekran görüntüsü 1" />
+                </div>
+
+                <div class="slide">
+                  <img src="2.png" alt="Divilethion ekran görüntüsü 2" />
+                </div>
+
+                <div class="slide">
+                  <img src="3.png" alt="Divilethion ekran görüntüsü 3" />
+                </div>
               </div>
 
               <button class="slider-btn next" onclick="changeSlide(1)">
@@ -431,6 +462,7 @@
               <span class="dot" onclick="goToSlide(1)"></span>
               <span class="dot" onclick="goToSlide(2)"></span>
               <span class="dot" onclick="goToSlide(3)"></span>
+              <span class="dot" onclick="goToSlide(4)"></span>
             </div>
           </div>
         </div>
@@ -607,6 +639,29 @@
         currentSlide = index;
         updateSlider();
       }
+      let autoSlide;
+
+      function startAutoSlide() {
+        clearInterval(autoSlide);
+        autoSlide = setInterval(() => {
+          changeSlide(1);
+        }, 7000);
+      }
+
+      function stopAutoSlide() {
+        clearInterval(autoSlide);
+      }
+
+      startAutoSlide();
+
+      document.querySelectorAll(".slides video").forEach((video) => {
+        video.addEventListener("play", stopAutoSlide);
+
+        video.addEventListener("ended", () => {
+          changeSlide(1);
+          startAutoSlide();
+        });
+      });
     </script>
   </body>
 </html>
