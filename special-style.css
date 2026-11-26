@@ -1,0 +1,285 @@
+/* ==========================================
+   CADILAR BAYRAMI TEMASI
+========================================== */
+html.halloween-mode body {
+  background: #0d0813 !important;
+  color: #e0d9ec !important;
+}
+
+html.halloween-mode .project-card,
+html.halloween-mode .team-card,
+html.halloween-mode .partner-card,
+html.halloween-mode .hero,
+html.halloween-mode .discord-presence-card,
+html.halloween-mode .donation-box,
+html.halloween-mode .info-card {
+  background: rgba(30, 20, 45, 0.7) !important;
+  border: 1px solid #ff6a00 !important;
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.55),
+    0 0 15px rgba(255, 106, 0, 0.15) !important;
+  animation: none !important;
+  transform: none;
+  color: #e0d9ec !important;
+  text-decoration: none !important;
+}
+
+html.halloween-mode .project-card:hover,
+html.halloween-mode .team-card:hover,
+html.halloween-mode .partner-card:hover,
+html.halloween-mode .hero:hover {
+  border-color: #ff9500 !important;
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.7),
+    0 0 25px rgba(255, 106, 0, 0.45) !important;
+  transform: translateY(-5px);
+  color: #e3e0e9 !important;
+}
+
+html.halloween-mode h1,
+html.halloween-mode h2,
+html.halloween-mode h3,
+html.halloween-mode .project-card h3,
+html.halloween-mode .team-card h3,
+html.halloween-mode .partner-card h3,
+html.halloween-mode .team-card h3 *,
+html.halloween-mode .project-card h3 * {
+  color: #ff6a00 !important;
+  text-shadow: 0 0 6px rgba(255, 106, 0, 0.2) !important;
+  animation: none !important;
+}
+
+html.halloween-mode p,
+html.halloween-mode span:not(.team-card h3 span):not(.project-card h3 span),
+html.halloween-mode .project-card p,
+html.halloween-mode .team-card p,
+html.halloween-mode .project-meta {
+  color: #e5e4e6 !important;
+}
+
+html.halloween-mode .btn,
+html.halloween-mode .discord-join-btn {
+  background: #ff6a00 !important;
+  color: #fff !important;
+  box-shadow: 0 4px 14px rgba(255, 106, 0, 0.3) !important;
+}
+
+html.halloween-mode .role-icon,
+html.halloween-mode .manager-icon {
+  animation: none !important;
+  filter: drop-shadow(0 0 4px #ff6a00) brightness(1.1) !important;
+}
+
+html.halloween-mode .line {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #ff6a00,
+    transparent
+  ) !important;
+}
+/* ==========================================
+   CADILAR BAYRAMI TEMASI SON
+========================================== */
+
+/* ==========================================
+   YENİ YIL TEMASI
+========================================== */
+
+html.newyear-mode body {
+  background: #16325b !important;
+  color: #f4f9ff !important;
+}
+
+/* KARTLAR */
+html.newyear-mode .project-card,
+html.newyear-mode .team-card,
+html.newyear-mode .partner-card,
+html.newyear-mode .hero,
+html.newyear-mode .discord-presence-card,
+html.newyear-mode .donation-box,
+html.newyear-mode .info-card {
+  background: rgba(34, 65, 110, 0.88) !important;
+
+  border: 1px solid #7dd3fc !important;
+
+  box-shadow:
+    0 10px 28px rgba(5, 15, 32, 0.28),
+    0 0 15px rgba(125, 211, 252, 0.14) !important;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  animation: none !important;
+  transform: none;
+  color: #f4f9ff !important;
+  text-decoration: none !important;
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease !important;
+}
+
+/* KART HOVER */
+html.newyear-mode .project-card:hover,
+html.newyear-mode .team-card:hover,
+html.newyear-mode .partner-card:hover,
+html.newyear-mode .hero:hover {
+  background: rgba(42, 78, 130, 0.95) !important;
+
+  border-color: #ffe299 !important;
+
+  box-shadow:
+    0 14px 34px rgba(5, 15, 32, 0.38),
+    0 0 24px rgba(255, 226, 153, 0.26) !important;
+
+  transform: translateY(-5px);
+
+  color: #ffffff !important;
+}
+
+/* BAŞLIKLAR */
+html.newyear-mode h1,
+html.newyear-mode h2,
+html.newyear-mode h3,
+html.newyear-mode .project-card h3,
+html.newyear-mode .team-card h3,
+html.newyear-mode .partner-card h3,
+html.newyear-mode .team-card h3 *,
+html.newyear-mode .project-card h3 * {
+  color: #ffe39e !important;
+
+  text-shadow: 0 0 8px rgba(255, 227, 158, 0.2) !important;
+
+  animation: none !important;
+}
+
+/* NORMAL METİNLER */
+html.newyear-mode p,
+html.newyear-mode span:not(.team-card h3 span):not(.project-card h3 span),
+html.newyear-mode .project-card p,
+html.newyear-mode .team-card p,
+html.newyear-mode .project-meta {
+  color: #eaf3ff !important;
+}
+
+/* BUTONLAR */
+html.newyear-mode .btn,
+html.newyear-mode .discord-join-btn {
+  background: #d92b3a !important;
+
+  color: #ffffff !important;
+
+  box-shadow: 0 4px 14px rgba(217, 43, 58, 0.32) !important;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease !important;
+}
+
+html.newyear-mode .btn:hover,
+html.newyear-mode .discord-join-btn:hover {
+  background: #eb3b4a !important;
+
+  box-shadow: 0 6px 20px rgba(217, 43, 58, 0.45) !important;
+
+  transform: translateY(-2px);
+}
+
+/* ROL VE YÖNETİCİ İKONLARI */
+html.newyear-mode .role-icon,
+html.newyear-mode .manager-icon {
+  animation: none !important;
+
+  filter: drop-shadow(0 0 5px rgba(255, 227, 158, 0.55)) brightness(1.12) !important;
+}
+
+/* DEKORATİF ÇİZGİ */
+html.newyear-mode .line {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #7dd3fc,
+    transparent
+  ) !important;
+}
+
+/* HAFİF KAR YAĞIŞI (SADECE YENİ YIL TEMASINDA) */
+html.newyear-mode .top-menu,
+html.newyear-mode .bottom-menu,
+html.newyear-mode .content,
+html.newyear-mode .hero-wrapper,
+html.newyear-mode .partner-grid,
+html.newyear-mode .page-title,
+html.newyear-mode .discord-presence-wrapper,
+html.newyear-mode .footer-links,
+html.newyear-mode .line {
+  position: relative;
+  z-index: 1;
+}
+
+html.newyear-mode .logo {
+  z-index: 2;
+}
+
+html.newyear-mode body::before {
+  content: "";
+  position: fixed;
+  inset: -100% 0 0 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.35;
+  background-image:
+    radial-gradient(2px 2px at 15% 20%, #ffffff 70%, transparent),
+    radial-gradient(
+      2.5px 2.5px at 45% 65%,
+      rgba(255, 255, 255, 0.85) 70%,
+      transparent
+    ),
+    radial-gradient(
+      1.5px 1.5px at 75% 35%,
+      rgba(255, 255, 255, 0.75) 70%,
+      transparent
+    ),
+    radial-gradient(
+      2px 2px at 90% 80%,
+      rgba(255, 255, 255, 0.8) 70%,
+      transparent
+    );
+  background-size: 320px 320px;
+  animation: hafifKarYagisi 18s linear infinite;
+}
+
+@keyframes hafifKarYagisi {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(24px, 320px, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.newyear-mode body::before {
+    animation: none;
+    display: none;
+  }
+}
+
+html.newyear-mode .bagis-modal-icerik {
+  background: #22416e !important;
+  color: #f4f9ff !important;
+  border: 1px solid #7dd3fc !important;
+}
+
+html.newyear-mode .bagis-modal-icerik h2,
+html.newyear-mode .bagis-kapat {
+  color: #ffe39e !important;
+}
+
+/* ==========================================
+   YENİ YIL TEMASI SON
+========================================== */

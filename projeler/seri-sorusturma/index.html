@@ -1,0 +1,676 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-W2VBWNL723"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-W2VBWNL723");
+    </script>
+
+    <link rel="icon" href="icon.ico" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seri Soruşturma</title>
+    <link rel="stylesheet" href="../../style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css"
+    />
+    <link
+      rel="canonical"
+      href="https://karbonfansub.com/projeler/seri-sorusturma/index.html"
+    />
+
+    <style>
+      @font-face {
+        font-family: "atwriter";
+        src: url("atwriter.ttf") format("truetype");
+        font-display: swap;
+      }
+
+      body {
+        font-family: "atwriter", Georgia, serif;
+        background:
+          linear-gradient(rgba(20, 12, 8, 0.85), rgba(14, 9, 6, 0.94)),
+          url("arka-plan.jpg") center/cover fixed no-repeat;
+        color: #efe4d2;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+
+      .theme-overlay {
+        width: 100%;
+        min-height: 100vh;
+        background: linear-gradient(
+          to bottom,
+          rgba(40, 25, 15, 0.12),
+          rgba(20, 13, 9, 0.45)
+        );
+      }
+
+      .top-menu .btn,
+      .bottom-menu .btn {
+        background: rgba(48, 33, 23, 0.94);
+        color: #f2e6d0;
+        border: 1px solid rgba(190, 155, 111, 0.35);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        transition: 0.25s ease;
+      }
+
+      .top-menu .btn:hover,
+      .bottom-menu .btn:hover {
+        background: #725039;
+        color: #fff7e8;
+        border-color: #c7a274;
+        box-shadow: 0 0 15px rgba(173, 128, 77, 0.25);
+      }
+
+      .line {
+        width: 80%;
+        height: 1px;
+        margin: 24px auto;
+        background: linear-gradient(
+          to right,
+          transparent,
+          rgba(193, 157, 112, 0.48),
+          transparent
+        );
+      }
+
+      .content {
+        width: 82%;
+        margin: auto;
+      }
+
+      .game-title {
+        text-align: center;
+        margin: 30px 0 15px 0;
+      }
+
+      .game-title h1 {
+        margin: 0;
+        font-size: 46px;
+        color: #f6e7cc;
+        letter-spacing: 2px;
+        text-shadow: 2px 3px 8px rgba(0, 0, 0, 0.85);
+      }
+
+      .section-box {
+        background: linear-gradient(
+          145deg,
+          rgba(56, 40, 28, 0.96),
+          rgba(32, 23, 17, 0.98)
+        );
+        border: 1px solid rgba(195, 156, 110, 0.3);
+        border-radius: 8px;
+        padding: 28px;
+        box-shadow:
+          0 10px 28px rgba(0, 0, 0, 0.45),
+          inset 0 0 0 1px rgba(255, 235, 200, 0.03);
+        backdrop-filter: blur(4px);
+      }
+
+      .logo-area {
+        text-align: center;
+      }
+
+      .logo-area img {
+        max-width: 100%;
+        width: 500px;
+        filter: drop-shadow(0 5px 12px rgba(0, 0, 0, 0.55));
+      }
+
+      .section-title {
+        text-align: center;
+        margin: 0 0 20px 0;
+        font-size: 32px;
+        color: #f0d5ad;
+        letter-spacing: 1px;
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+      }
+
+      .description-text {
+        max-width: 900px;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 20px;
+        line-height: 1.85;
+        letter-spacing: 0.2px;
+        color: #e6d7be;
+      }
+
+      .description-text p {
+        margin: 0 0 14px 0;
+      }
+
+      .description-text p:last-child {
+        margin-bottom: 0;
+      }
+
+      .content-link {
+        color: #eab97c;
+        text-decoration: underline;
+        text-underline-offset: 4px;
+        transition: color 0.2s ease;
+      }
+
+      .content-link:hover {
+        color: #ffe0b5;
+      }
+
+      .features-box {
+        max-width: 900px;
+        margin: 22px auto 0 auto;
+        padding: 16px 24px;
+        background: rgba(24, 16, 11, 0.42);
+        border-left: 3px solid #c49a66;
+        border-radius: 0 6px 6px 0;
+      }
+
+      .features-box h3 {
+        margin: 0 0 10px 0;
+        font-size: 22px;
+        color: #f2dab6;
+      }
+
+      .features-box ul {
+        margin: 0;
+        padding-left: 22px;
+        font-size: 19px;
+        line-height: 1.75;
+        color: #e2d2b7;
+      }
+
+      .features-box li {
+        margin-bottom: 6px;
+      }
+
+      .about-visual {
+        display: block;
+        max-width: 100%;
+        margin: 22px auto 0 auto;
+        border-radius: 8px;
+      }
+
+      .staff-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px;
+      }
+
+      .staff-card {
+        background: rgba(75, 53, 37, 0.7);
+        border: 1px solid rgba(190, 155, 111, 0.25);
+        border-radius: 8px;
+        padding: 20px;
+        text-align: center;
+        box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.2);
+        transition: 0.25s ease;
+      }
+
+      .staff-card:hover {
+        background: rgba(99, 69, 45, 0.85);
+        border-color: rgba(210, 174, 126, 0.55);
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+      }
+
+      .staff-card h3 {
+        margin: 0 0 10px 0;
+        font-size: 24px;
+        color: #f4e3c6;
+      }
+
+      .staff-card p {
+        margin: 0;
+        font-size: 19px;
+        line-height: 1.6;
+        color: #e2d1b6;
+      }
+
+      .download-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 18px;
+      }
+
+      .download-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+        padding: 16px 28px;
+        border-radius: 8px;
+        font-size: 20px;
+        background: linear-gradient(145deg, #866447, #543b26);
+        color: #fff3e0;
+        border: 1px solid rgba(218, 181, 132, 0.4);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+        transition: 0.25s ease;
+      }
+
+      .download-btn:hover {
+        transform: translateY(-3px);
+        background: linear-gradient(145deg, #a67d53, #755236);
+        box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
+        color: #ffffff;
+      }
+
+      /* SLIDER */
+      .slider-wrapper {
+        max-width: 950px;
+        margin: 0 auto;
+      }
+
+      .image-slider {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        border-radius: 18px;
+        border: 1px solid rgba(184, 95, 95, 0.25);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+      }
+
+      .slides {
+        display: flex;
+        transition: transform 0.4s ease;
+      }
+
+      .slides img {
+        width: 100%;
+        flex-shrink: 0;
+        display: block;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        background: #111;
+        filter: brightness(0.86) contrast(1.04) saturate(0.85);
+      }
+
+      .slider-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 52px;
+        height: 52px;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        background: rgba(43, 29, 20, 0.88);
+        color: #f1dfc2;
+        font-size: 24px;
+        z-index: 2;
+        border: 1px solid rgba(199, 159, 108, 0.3);
+      }
+
+      .slider-btn:hover {
+        background: rgba(115, 78, 48, 0.95);
+      }
+
+      .slider-btn.prev {
+        left: 16px;
+      }
+
+      .slider-btn.next {
+        right: 16px;
+      }
+
+      .dots {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 18px;
+      }
+
+      .dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.22);
+        cursor: pointer;
+        transition: 0.2s ease;
+      }
+
+      .dot.active {
+        background: #c49a66;
+        box-shadow: 0 0 10px rgba(196, 154, 102, 0.5);
+      }
+
+      @media (max-width: 900px) {
+        .staff-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .game-title h1 {
+          font-size: 34px;
+        }
+
+        .section-title {
+          font-size: 26px;
+        }
+
+        .description-text {
+          font-size: 18px;
+          line-height: 1.78;
+        }
+
+        .features-box ul {
+          font-size: 17px;
+        }
+
+        .section-box {
+          padding: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="theme-overlay">
+      <!-- LOGO -->
+      <a href="../../index.html" class="logo">
+        <img src="Logomuz.png" alt="KarBon Fansub Logo" />
+      </a>
+
+      <!-- ÜST MENÜ -->
+      <div class="top-menu">
+        <a href="../../index.html" class="btn">Ana Sayfa</a>
+        <a href="../../projeler.html" class="btn">Projeler</a>
+
+        <a
+          href="https://www.youtube.com/@KarBonFansub"
+          target="_blank"
+          class="social yt"
+          aria-label="YouTube"
+        >
+          <i class="bi bi-youtube"></i>
+        </a>
+
+        <a
+          href="https://discord.gg/CXngCNXkBD"
+          target="_blank"
+          class="social dc"
+          aria-label="Discord"
+        >
+          <i class="bi bi-discord"></i>
+        </a>
+
+        <a href="../../bize-katilin.html" class="btn">Bize Katılın</a>
+        <a href="../../bagis.html" class="btn">Bağış</a>
+      </div>
+
+      <div class="line"></div>
+
+      <div class="content">
+        <!-- OYUN LOGOSU -->
+        <div class="game-title">
+          <h1>Seri Soruşturma</h1>
+        </div>
+
+        <div class="section-box logo-area">
+          <img src="oyunlogo.png" alt="OYUN ADI Logo" />
+        </div>
+
+        <div class="line"></div>
+
+        <!-- EKRAN GÖRÜNTÜLERİ -->
+        <div class="section-box">
+          <h2 class="section-title">Ekran Görüntüleri</h2>
+
+          <div class="slider-wrapper">
+            <div class="image-slider">
+              <button class="slider-btn prev" onclick="changeSlide(-1)">
+                <i class="bi bi-chevron-left"></i>
+              </button>
+
+              <div class="slides" id="slides">
+                <img src="Dönenfoto1.png" alt="Ekran görüntüsü 1" />
+                <img src="dönenfoto2.png" alt="Ekran görüntüsü 2" />
+                <img src="dönenfoto3.png" alt="Ekran görüntüsü 3" />
+              </div>
+
+              <button class="slider-btn next" onclick="changeSlide(1)">
+                <i class="bi bi-chevron-right"></i>
+              </button>
+            </div>
+
+            <div class="dots">
+              <span class="dot active" onclick="goToSlide(0)"></span>
+              <span class="dot" onclick="goToSlide(1)"></span>
+              <span class="dot" onclick="goToSlide(2)"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="line"></div>
+
+        <!-- HASSAS İÇERİK UYARISI -->
+        <div class="section-box">
+          <h2 class="section-title">Hassas İçerik Uyarısı</h2>
+          <div class="description-text">
+            <p>
+              Bu oyunda şiddet, ölüm, rahatsız edici içerik ve öğeler, kaçırma
+              ve şantaj teklifleri, cinsel laflar ve silahlar bulunur; bu
+              konulara karşı hassasiyetiniz varsa lütfen dikkatli oynayınız.
+            </p>
+          </div>
+        </div>
+
+        <div class="line"></div>
+
+        <!-- AÇIKLAMA -->
+        <div class="section-box">
+          <h2 class="section-title">Oyun Hakkında</h2>
+          <div class="description-text">
+            <p>
+              Bu oyun
+              <a
+                href="https://pitouhui.itch.io/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="content-link"
+                >Pitouhui</a
+              >
+              tarafından yapılmıştır. KarBon Fansub sadece bu oyunu çevirmiştir;
+              bütün görseller, müzikler ve ses yapımcısına aittir.
+            </p>
+            <p>
+              Seri Soruşturma (Serial Investigation), kasaba dedektifi
+              Eleanora'nın bir seri cinayet davasını devralmasını konu alan kısa
+              bir görsel romandır.
+            </p>
+            <p>
+              Önceki dedektifin davadan vazgeçip emekli olmasından birkaç ay
+              sonra, Dedektif Eleanora kasabadaki katilin peşine düşme görevini
+              üstlenir. İlk kurbanın hayatını kaybetmesinin üzerinden bir yıl
+              geçti. Acaba o, kasabayı korku içinde bırakan suçluyu nihayet
+              bulabilecek mi?
+            </p>
+          </div>
+
+          <div class="features-box">
+            <h3>Bu oyunda:</h3>
+            <ul>
+              <li>3 Son</li>
+              <li>4 Özel çizim</li>
+              <li>2500'den fazla kelime</li>
+              <li>Oyunu bitirdikten sonra ekstra içerik</li>
+            </ul>
+          </div>
+
+          <img src="Görsel.png" alt="" class="about-visual" />
+        </div>
+
+        <div class="line"></div>
+
+        <!-- EMEĞİ GEÇENLER -->
+        <div class="section-box">
+          <h2 class="section-title">Emeği Geçenler</h2>
+
+          <div class="staff-grid">
+            <div class="staff-card">
+              <h3>Çeviri</h3>
+              <p>NorthWind</p>
+            </div>
+
+            <div class="staff-card">
+              <h3>Redakte</h3>
+              <p>KarBon Sama</p>
+            </div>
+
+            <div class="staff-card">
+              <h3>Kalite Kontrol Ve Test</h3>
+              <p>Shilller / KarBon Sama</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="line"></div>
+
+        <!-- YÜKLEME LİNKLERİ -->
+        <div class="section-box">
+          <h2 class="section-title">Yükleme Linkleri</h2>
+
+          <div class="download-links">
+            <a
+              href="https://github.com/Shilller/KarBonFansub/releases/download/v1.0/Seri.Sorusturma.rar"
+              class="download-btn"
+              download="Seri Sorusturma.zip"
+            >
+              <i class="bi bi-download"></i>
+              İndir
+            </a>
+
+            <a
+              href="https://drive.google.com/file/d/1Fey_RPLuP4younBtsnEmZ2A2hXKU32KW/view?usp=sharing"
+              class="download-btn"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="bi bi-box-arrow-up-right"></i>
+              Alternatif Link
+            </a>
+          </div>
+        </div>
+        <br /><br />
+
+        <!-- YORUMLAR -->
+        <div class="section-box">
+          <h2 class="section-title">Yorumlar</h2>
+
+          <div id="disqus_thread"></div>
+          <script>
+            var disqus_config = function () {
+              this.page.url =
+                "https://karbonfansub.com/projeler/seri-sorusturma/";
+              this.page.identifier = "seri-sorusturma";
+            };
+
+            (function () {
+              var d = document,
+                s = d.createElement("script");
+              s.src = "https://karbon-fansub.disqus.com/embed.js";
+              s.setAttribute("data-timestamp", +new Date());
+              (d.head || d.body).appendChild(s);
+            })();
+          </script>
+          <noscript
+            >Please enable JavaScript to view the
+            <a href="https://disqus.com/?ref_noscript"
+              >comments powered by Disqus.</a
+            ></noscript
+          >
+        </div>
+      </div>
+
+      <div class="line"></div>
+
+      <!-- ALT MENÜ -->
+      <div class="bottom-menu">
+        <a href="../../index.html" class="btn">Ana Sayfa</a>
+        <a href="../../projeler.html" class="btn">Projeler</a>
+
+        <a
+          href="https://www.youtube.com/@KarBonFansub"
+          target="_blank"
+          class="social yt"
+          aria-label="YouTube"
+        >
+          <i class="bi bi-youtube"></i>
+        </a>
+
+        <a
+          href="https://discord.gg/CXngCNXkBD"
+          target="_blank"
+          class="social dc"
+          aria-label="Discord"
+        >
+          <i class="bi bi-discord"></i>
+        </a>
+
+        <a href="../../bize-katilin.html" class="btn">Bize Katılın</a>
+        <a href="../../bagis.html" class="btn">Bağış</a>
+      </div>
+    </div>
+
+    <script>
+      let currentSlide = 0;
+      const slides = document.getElementById("slides");
+      const dots = document.querySelectorAll(".dot");
+      const totalSlides = slides.children.length;
+
+      function updateSlider() {
+        slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+        dots.forEach((dot, index) => {
+          dot.classList.toggle("active", index === currentSlide);
+        });
+      }
+
+      function changeSlide(step) {
+        currentSlide += step;
+
+        if (currentSlide < 0) currentSlide = totalSlides - 1;
+        if (currentSlide >= totalSlides) currentSlide = 0;
+
+        updateSlider();
+      }
+
+      function goToSlide(index) {
+        currentSlide = index;
+        updateSlider();
+      }
+      let autoSlide;
+
+      function startAutoSlide() {
+        clearInterval(autoSlide);
+        autoSlide = setInterval(() => {
+          changeSlide(1);
+        }, 5000);
+      }
+
+      function stopAutoSlide() {
+        clearInterval(autoSlide);
+      }
+
+      startAutoSlide();
+
+      document.querySelectorAll(".slides video").forEach((video) => {
+        video.addEventListener("play", stopAutoSlide);
+
+        video.addEventListener("ended", () => {
+          changeSlide(1);
+          startAutoSlide();
+        });
+      });
+    </script>
+  </body>
+</html>

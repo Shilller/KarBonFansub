@@ -24,12 +24,9 @@ if (sessionStorage.getItem("shilller-mode") === "true") {
 
 function setShilllerMode(enabled) {
   if (enabled) {
-    // Kullanıcının mevcut temasını hatırla
     previousTheme = localStorage.getItem("theme") || "light";
 
     document.documentElement.classList.add("shilller-mode");
-
-    // Zorla koyu tema
     document.documentElement.classList.add("dark");
     document.body.classList.add("dark");
 
@@ -38,7 +35,6 @@ function setShilllerMode(enabled) {
   } else {
     document.documentElement.classList.remove("shilller-mode");
 
-    // Kullanıcının eski temasını geri yükle
     const isDark = previousTheme === "dark";
 
     document.documentElement.classList.toggle("dark", isDark);
@@ -51,17 +47,30 @@ function setShilllerMode(enabled) {
   sessionStorage.setItem("shilller-mode", enabled);
 }
 
-/* CADILAR BAYRAMI TEMASI */
+/* ÖZEL GÜN TEMALARI */
 (function () {
   const now = new Date();
-  if (now.getMonth() === 9 && now.getDate() >= 10 && now.getDate() <= 31) {
-    // 1. Halloween aktif
-    document.documentElement.classList.add("halloween-mode");
+  const month = now.getMonth(); // 0 = Ocak, 9 = Ekim, 11 = Aralık
+  const day = now.getDate();
+
+  let activeSpecialClass = null;
+
+  // Cadılar Bayramı: 10 Ekim - 31 Ekim
+  if (month === 9 && day >= 10 && day <= 31) {
+    activeSpecialClass = "halloween-mode";
+  }
+  // Yeni Yıl: 28 Aralık - 3 Ocak
+  else if ((month === 11 && day >= 28) || (month === 0 && day <= 3)) {
+    activeSpecialClass = "newyear-mode";
+  }
+
+  if (activeSpecialClass) {
+    document.documentElement.classList.add(activeSpecialClass);
     document.documentElement.classList.remove("shilller-mode");
     sessionStorage.setItem("shilller-mode", "false");
 
     window.setShilllerMode = function () {
-      console.log("Cadılar Bayramı Modu etkinken Shilller Mode açılamaz!");
+      console.log("Özel tema aktifken Shilller Mode açılamaz!");
     };
 
     document
@@ -73,4 +82,3 @@ function setShilllerMode(enabled) {
       });
   }
 })();
-/* CADILAR BAYRAMI TEMASI */
